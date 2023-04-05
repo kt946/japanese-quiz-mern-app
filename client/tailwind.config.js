@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         primary: '#D90429', // set primary color
-        primaryHover: '#FA1F44', // set primary hover color
+        secondary: '#FA0B33', // set secondary color
       },
     },
   },
