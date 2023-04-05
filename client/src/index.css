@@ -18,3 +18,7 @@ html {
 .app {
   @apply relative w-full h-screen overflow-hidden;
 }
+
+.btn-transition {
+  @apply transition duration-300 ease-in-out;
+}

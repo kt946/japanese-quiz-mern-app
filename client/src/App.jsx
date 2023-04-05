@@ -2,7 +2,7 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <main>
+    <main className='app transition-all ease-in text-slate-900'>
       <Home />
     </main>
   );
