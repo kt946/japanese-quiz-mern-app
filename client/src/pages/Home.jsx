@@ -1,11 +1,13 @@
 import React from 'react';
-import Header from '../components/Header';
 
 const Home = () => {
   return (
-    <div>
-      <Header />
-    </div>
+    <section
+      id="hero"
+      className="w-full h-screen px-4 pt-14 lg:px-8 bg-slate-500"
+    >
+      Hero
+    </section>
   );
 };
 

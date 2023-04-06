@@ -1,16 +1,25 @@
 import React from 'react';
 import logo from '../assets/CampfireLogo.svg';
+import logoText from '../assets/LogoTextBlack.svg';
 
 const Header = () => {
   return (
     <header className="bg-[#EDF2F4]">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
         {/* Logo image */}
-        <a href="/">
+        <a
+          href="/"
+          className="flex items-center gap-3 btn-transition hover:opacity-80"
+        >
           <img
             src={logo}
-            alt="campfire logo"
-            className="w-10 h-10 btn-transition hover:brightness-[1.15]"
+            alt="Kanji Camp Logo"
+            className="w-10 h-10"
+          />
+          <img
+            src={logoText}
+            alt="Kanji Camp Full Logo"
+            className="w-auto h-8 hidden sm:inline-block"
           />
         </a>
         {/* Login and Sign Up Links */}
