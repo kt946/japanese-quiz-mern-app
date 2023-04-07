@@ -8,14 +8,14 @@ const Home = () => {
       id="hero"
       className="w-full min-h-[calc(100vh-72px)] py-14 bg-slate-200 hero-bg"
     >
-      <div className="mx-auto max-w-7xl px-4 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
         {/* Call to Action */}
-        <div className="flex flex-col gap-8 font-bold items-center md:items-start text-center md:text-left order-last md:order-first">
-          <h1 className="text-2xl md:text-3xl shrink">
-            The Easiest Way To Learn <br />
-            <span className="text-primary text-6xl md:text-7xl uppercase">Japanese</span>
+        <div className="flex flex-col items-center md:items-start font-bold text-center md:text-left gap-8 order-last md:order-first">
+          <h1 className="text-xl md:text-2xl lg:text-3xl uppercase">
+            The Best Way To Learn <br />
+            <span className="text-primary text-5xl md:text-6xl lg:text-7xl">Japanese</span>
           </h1>
-          <p className="text-xl max-w-lg">
+          <p className="max-w-md md:text-xl text-[#4D516D]">
             Explore Japanese culture and language with our engaging lessons and quizzes.
           </p>
           <div className="md:w-80 flex flex-col text-center gap-4">
