@@ -4,8 +4,8 @@ import logoText from '../assets/LogoTextBlack.svg';
 
 const Header = () => {
   return (
-    <header className="bg-[#EDF2F4]">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
+    <header className="bg-[#EDF2F4] z-50">
+      <nav className="mx-auto max-w-7xl flex items-center justify-between p-4 lg:px-8">
         {/* Logo image */}
         <a
           href="/"
@@ -19,7 +19,7 @@ const Header = () => {
           <img
             src={logoText}
             alt="Kanji Camp Full Logo"
-            className="w-auto h-8 hidden sm:inline-block"
+            className="w-auto h-6 hidden sm:inline-block"
           />
         </a>
         {/* Login and Sign Up Links */}

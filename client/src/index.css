@@ -16,9 +16,14 @@ html {
 }
 
 .app {
-  @apply relative w-full h-screen overflow-hidden;
+  @apply relative w-full h-screen overflow-x-hidden overflow-y-auto;
 }
 
 .btn-transition {
   @apply transition duration-300 ease-in-out;
+}
+
+.hero-bg {
+  background-image: url('./assets/endless-clouds.svg');
+  background-size: 80px;
 }

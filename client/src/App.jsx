@@ -3,7 +3,7 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="app transition-all ease-in text-slate-900">
+    <div className="app transition-all ease-in text-slate-800">
       <Header />
       <main>
         <Home />
