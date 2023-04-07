@@ -6,7 +6,7 @@ const Home = () => {
     // Hero Section with Logo and Call to Action
     <section
       id="hero"
-      className="hero-bg w-full h-screen py-14 bg-slate-200"
+      className="w-full min-h-[calc(100vh-72px)] py-14 bg-slate-200 hero-bg"
     >
       <div className="mx-auto max-w-7xl px-4 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
         {/* Call to Action */}
@@ -18,13 +18,21 @@ const Home = () => {
           <p className="text-xl max-w-lg">
             Explore Japanese culture and language with our engaging lessons and quizzes.
           </p>
-          <div className="flex flex-col gap-4 md:w-80">
-            <button className="btn-transition py-3 px-6 text-white bg-primary hover:bg-secondary rounded-xl uppercase">
+          <div className="md:w-80 flex flex-col text-center gap-4">
+            {/* Sign Up Button */}
+            <a
+              href="/signup"
+              className="btn-transition py-3 px-6 text-white bg-primary hover:bg-secondary rounded-xl uppercase"
+            >
               Start Learning
-            </button>
-            <button className="btn-transition py-3 px-6 text-primary border-2 border-primary bg-slate-200 hover:bg-slate-300 rounded-xl uppercase">
+            </a>
+            {/* Login Button */}
+            <a
+              href="/login"
+              className="btn-transition py-3 px-6 text-primary border-2 border-primary bg-slate-200 hover:bg-slate-300 rounded-xl uppercase"
+            >
               I Already Have An Account
-            </button>
+            </a>
           </div>
         </div>
         {/* Country Logo */}
