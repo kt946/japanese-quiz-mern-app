@@ -5,7 +5,7 @@ import logoText from '../assets/LogoTextBlack.svg';
 
 const Header = () => {
   return (
-    <header className="bg-[#EDF2F4] z-50">
+    <header className="bg-white z-50">
       <nav className="mx-auto max-w-7xl flex items-center justify-between p-4 lg:px-8">
         {/* Logo image */}
         <Link
