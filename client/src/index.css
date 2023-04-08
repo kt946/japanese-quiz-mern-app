@@ -23,6 +23,10 @@ html {
   @apply transition duration-300 ease-in-out;
 }
 
+.social-link {
+  @apply w-8 h-8 btn-transition hover:text-white;
+}
+
 .hero-bg {
   background-image: url('./assets/waves.svg'), url('./assets/endless-clouds.svg');
   background-size: 105%, 80px;
