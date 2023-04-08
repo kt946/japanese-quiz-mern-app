@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import countryLogo from '../assets/JapanCountryLogo.png';
 
 const Home = () => {
@@ -18,28 +19,28 @@ const Home = () => {
           <p className="max-w-md md:text-xl text-[#4D516D]">
             Explore Japanese culture and language with our engaging lessons and quizzes.
           </p>
-          <div className="md:w-80 flex flex-col text-center gap-4">
+          <div className="w-72 flex flex-col text-center gap-4">
             {/* Sign Up Button */}
-            <a
-              href="/signup"
-              className="btn-transition py-3 px-6 text-white bg-primary hover:bg-secondary rounded-xl uppercase"
+            <Link
+              to="/signup"
+              className="btn-transition py-3 px-6 text-white bg-primary hover:bg-secondary rounded-xl uppercase shadow-lg"
             >
               Start Learning
-            </a>
+            </Link>
             {/* Login Button */}
-            <a
-              href="/login"
-              className="btn-transition py-3 px-6 text-primary border-2 border-primary bg-slate-200 hover:bg-slate-300 rounded-xl uppercase"
+            <Link
+              to="/login"
+              className="btn-transition py-3 px-6 text-primary border-2 border-primary bg-slate-200 hover:bg-slate-300 rounded-xl uppercase shadow-lg"
             >
-              I Already Have An Account
-            </a>
+              Already Have Account?
+            </Link>
           </div>
         </div>
         {/* Country Logo */}
         <img
           src={countryLogo}
           alt="Japan Country Logo"
-          className="w-48 h-48 md:w-80 md:h-80 lg:w-[480px] lg:h-[480px]"
+          className="w-48 h-48 md:w-80 md:h-80 lg:w-[480px] lg:h-[480px] transition-all duration-300 ease-in-out"
         />
       </div>
     </section>
