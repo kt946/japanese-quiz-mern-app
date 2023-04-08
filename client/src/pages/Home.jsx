@@ -23,16 +23,16 @@ const Home = () => {
             {/* Sign Up Button */}
             <Link
               to="/signup"
-              className="btn-transition py-3 px-6 text-white bg-primary hover:bg-secondary rounded-xl uppercase shadow-lg"
+              className="btn-transition py-3 px-3 text-white bg-primary hover:bg-secondary rounded-xl uppercase shadow-lg"
             >
               Start Learning
             </Link>
             {/* Login Button */}
             <Link
               to="/login"
-              className="btn-transition py-3 px-6 text-primary border-2 border-primary bg-slate-200 hover:bg-slate-300 rounded-xl uppercase shadow-lg"
+              className="btn-transition py-3 px-3 text-primary border-2 border-primary bg-slate-200 hover:bg-slate-300 rounded-xl uppercase shadow-lg"
             >
-              Already Have Account?
+              Already Have An Account?
             </Link>
           </div>
         </div>
