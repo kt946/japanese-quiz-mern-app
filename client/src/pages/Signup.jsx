@@ -11,14 +11,14 @@ const Signup = () => {
       id="signup"
       className="w-full min-h-[calc(100vh-72px)] py-14 flex justify-center bg-slate-200 hero-bg"
     >
-      {/* Signup Form */}
+      {/* Sign Up Form */}
       <form className="w-full max-w-sm h-fit flex flex-col justify-center items-center bg-white p-8 rounded-xl shadow-xl">
         <img
           src={logo}
           alt="Campfire Logo"
           className="w-12 h-12 mx-auto mb-2"
         />
-        <h1 className="text-2xl font-bold mb-6 text-center">Sign Up</h1>
+        <h1 className="text-2xl font-bold mb-6 text-center">Sign up</h1>
         {/* Fields Container */}
         <div className="w-full flex flex-col gap-4">
           {/* Username Field Wrapper*/}
@@ -89,7 +89,7 @@ const Signup = () => {
           className="w-full my-6 py-3 px-6 bg-primary hover:bg-secondary btn-transition text-white font-bold rounded-xl "
           type="submit"
         >
-          Create Account
+          Create account
         </button>
         {/* Login Link */}
         <p className="text-[#4D516D] text-center">
@@ -98,7 +98,7 @@ const Signup = () => {
             to="/login"
             className="font-bold text-primary hover:text-secondary btn-transition hover:underline"
           >
-            Login
+            Log in
           </Link>
         </p>
       </form>

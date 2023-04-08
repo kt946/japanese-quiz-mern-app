@@ -29,13 +29,13 @@ const Header = () => {
             to="/login"
             className="btn-transition py-2 px-4 hover:text-secondary"
           >
-            Login
+            Log in
           </Link>
           <Link
             to="/signup"
             className="btn-transition py-2 px-4 text-white bg-primary hover:bg-secondary rounded-xl"
           >
-            Sign Up
+            Sign up
           </Link>
         </div>
       </nav>
