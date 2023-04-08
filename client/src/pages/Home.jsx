@@ -32,7 +32,7 @@ const Home = () => {
               to="/login"
               className="btn-transition py-3 px-3 text-primary border-2 border-primary bg-white hover:bg-slate-200 rounded-xl shadow-xl"
             >
-              Already have an acount?
+              Already have an account?
             </Link>
           </div>
         </div>
