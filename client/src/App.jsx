@@ -1,4 +1,4 @@
-import { Header } from './components';
+import { Header, Footer } from './components';
 import Home from './pages/Home';
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
       <main>
         <Home />
       </main>
+      <Footer />
     </div>
   );
 }

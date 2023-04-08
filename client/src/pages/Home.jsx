@@ -8,9 +8,9 @@ const Home = () => {
       id="hero"
       className="w-full min-h-[calc(100vh-72px)] py-14 bg-slate-200 hero-bg"
     >
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Call to Action */}
-        <div className="flex flex-col items-center md:items-start font-bold text-center md:text-left gap-8 order-last md:order-first">
+        <div className="flex flex-col items-center lg:items-start font-bold text-center lg:text-left gap-8 order-last lg:order-first">
           <h1 className="text-xl md:text-2xl lg:text-3xl uppercase">
             The Best Way To Learn <br />
             <span className="text-primary text-5xl md:text-6xl lg:text-7xl">Japanese</span>
@@ -39,7 +39,7 @@ const Home = () => {
         <img
           src={countryLogo}
           alt="Japan Country Logo"
-          className="w-[192px] h-[192px] md:w-[360px] md:h-[360px] lg:w-[480px] lg:h-[480px]"
+          className="w-48 h-48 md:w-80 md:h-80 lg:w-[480px] lg:h-[480px]"
         />
       </div>
     </section>

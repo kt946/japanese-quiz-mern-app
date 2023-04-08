@@ -24,7 +24,8 @@ html {
 }
 
 .hero-bg {
-  background-image: url('./assets/endless-clouds.svg'), url('./assets/waves.svg');
-  background-size: 80px, cover;
-  background-position: top left, top left;
+  background-image: url('./assets/waves.svg'), url('./assets/endless-clouds.svg');
+  background-size: 105%, 80px;
+  background-position: bottom, top left;
+  background-repeat: no-repeat, repeat;
 }
