@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/CampfireLogo.svg';
+import logo from '../assets/SakuraStudyLogo.svg';
 import { HiEye, HiEyeOff } from 'react-icons/hi';
 
 const Signup = () => {
@@ -15,7 +15,7 @@ const Signup = () => {
       <form className="w-full max-w-sm h-fit flex flex-col justify-center items-center bg-white p-8 rounded-xl shadow-xl">
         <img
           src={logo}
-          alt="Campfire Logo"
+          alt="Sakura Study Logo"
           className="w-12 h-12 mx-auto mb-2"
         />
         <h1 className="text-2xl font-bold mb-6 text-center">Sign up</h1>
@@ -65,7 +65,7 @@ const Signup = () => {
             </label>
             <div className="relative">
               <input
-                className="password-input"
+                className="password-input text-base"
                 type={showPassword ? 'text' : 'password'}
                 id="password"
                 name="password"

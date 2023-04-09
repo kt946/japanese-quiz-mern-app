@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/CampfireLogo.svg';
-import logoText from '../assets/LogoTextBlack.svg';
+import logo from '../assets/SakuraStudyLogo.svg';
+import logoText from '../assets/SakuraStudyTextBlack.svg';
 
 const Header = () => {
   return (
@@ -14,12 +14,12 @@ const Header = () => {
         >
           <img
             src={logo}
-            alt="Kanji Camp Logo"
+            alt="Logo"
             className="w-10 h-10"
           />
           <img
             src={logoText}
-            alt="Kanji Camp Full Logo"
+            alt="Sakura Study Text Logo"
             className="w-auto h-6 hidden sm:inline-block"
           />
         </Link>
