@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         primary: '#D90429', // set primary color
-        secondary: '#FA0B33', // set secondary color
+        'primary-tint': '#FA0B33', // set primary tint color
+        'primary-shade': '#B80422', // set primary shade color
       },
     },
   },

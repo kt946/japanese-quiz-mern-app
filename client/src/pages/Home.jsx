@@ -17,13 +17,13 @@ const Home = () => {
             <span className="text-primary text-5xl md:text-6xl lg:text-7xl">Japanese</span>
           </h1>
           <p className="max-w-md md:text-xl text-[#4D516D]">
-            Explore Japanese culture and language with our engaging lessons and quizzes.
+            Practice Japanese vocabulary and phrases with our engaging lessons and quizzes.
           </p>
           <div className="w-72 flex flex-col text-center gap-4">
             {/* Sign Up Button */}
             <Link
               to="/signup"
-              className="btn-transition py-3 px-3 text-white bg-primary hover:bg-secondary rounded-xl shadow-xl"
+              className="btn-transition py-3 px-3 text-white bg-primary hover:bg-primary-shade rounded-xl shadow-xl"
             >
               Start learning
             </Link>

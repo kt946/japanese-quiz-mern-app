@@ -27,6 +27,14 @@ html {
   @apply w-8 h-8 btn-transition hover:text-white;
 }
 
+.form-input-style {
+  @apply bg-slate-100 border border-gray-300 rounded-xl focus:outline-none focus:border-sky-400;
+}
+
+.password-input {
+  @apply form-input-style w-full pl-3 pr-12 py-2 overflow-hidden;
+}
+
 .hero-bg {
   background-image: url('./assets/waves.svg'), url('./assets/endless-clouds.svg');
   background-size: 105%, 80px;

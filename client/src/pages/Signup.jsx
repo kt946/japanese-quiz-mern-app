@@ -30,7 +30,7 @@ const Signup = () => {
               Username
             </label>
             <input
-              className="px-3 py-2 bg-slate-100 border border-gray-300 rounded-xl focus:outline-none focus:border-primary"
+              className="form-input-style px-3 py-2"
               type="text"
               id="username"
               name="username"
@@ -47,7 +47,7 @@ const Signup = () => {
               Email
             </label>
             <input
-              className="px-3 py-2 bg-slate-100 border border-gray-300 rounded-xl focus:outline-none focus:border-primary"
+              className="form-input-style px-3 py-2"
               type="email"
               id="email"
               name="email"
@@ -56,16 +56,16 @@ const Signup = () => {
             />
           </div>
           {/* Password Field Wrapper */}
-          <div className="relative w-full flex flex-col gap-1">
+          <div className="flex flex-col gap-1">
             <label
               className="font-bold"
               for="password"
             >
               Password
             </label>
-            <div className="flex">
+            <div className="relative">
               <input
-                className="w-full px-3 py-2 pr-12 bg-slate-100 border border-gray-300 rounded-xl focus:outline-none focus:border-primary overflow-hidden"
+                className="password-input"
                 type={showPassword ? 'text' : 'password'}
                 id="password"
                 name="password"
@@ -76,7 +76,7 @@ const Signup = () => {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-0 btn-transition m-[1px] px-3 py-3 rounded-r-xl hover:bg-slate-200"
+                className="absolute inset-y-0 right-0 btn-transition m-[1px] px-3 py-3 rounded-r-xl hover:bg-slate-200"
               >
                 {showPassword ? <HiEyeOff /> : <HiEye />}
               </button>
@@ -86,7 +86,7 @@ const Signup = () => {
 
         {/* Submit Button */}
         <button
-          className="w-full my-6 py-3 px-6 bg-primary hover:bg-secondary btn-transition text-white font-bold rounded-xl "
+          className="w-full my-6 py-3 px-6 bg-primary hover:bg-primary-shade btn-transition text-white font-bold rounded-xl "
           type="submit"
         >
           Create account
@@ -96,7 +96,7 @@ const Signup = () => {
           Already have an account?{' '}
           <Link
             to="/login"
-            className="font-bold text-primary hover:text-secondary btn-transition hover:underline"
+            className="font-bold text-primary hover:text-primary-shade btn-transition hover:underline"
           >
             Log in
           </Link>

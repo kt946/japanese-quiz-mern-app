@@ -10,7 +10,7 @@ const Header = () => {
         {/* Logo image */}
         <Link
           to="/"
-          className="flex items-center gap-3 btn-transition hover:opacity-80"
+          className="flex items-center gap-3 btn-transition"
         >
           <img
             src={logo}
@@ -27,13 +27,13 @@ const Header = () => {
         <div className="flex items-center gap-4 font-bold">
           <Link
             to="/login"
-            className="btn-transition py-2 px-4 hover:text-secondary"
+            className="btn-transition py-2 px-4 hover:text-primary-shade"
           >
             Log in
           </Link>
           <Link
             to="/signup"
-            className="btn-transition py-2 px-4 text-white bg-primary hover:bg-secondary rounded-xl"
+            className="btn-transition py-2 px-4 text-white bg-primary hover:bg-primary-shade rounded-xl"
           >
             Sign up
           </Link>
