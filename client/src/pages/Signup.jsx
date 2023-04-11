@@ -10,7 +10,7 @@ import Auth from '../utils/auth'; // import the Auth utility function
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false); // state for toggling password visibility
-  const [addUser, { loading, error }] = useMutation(ADD_USER);
+  const [addUser, { loading, error }] = useMutation(ADD_USER); // use the useMutation hook to execute the ADD_USER mutation
 
   const formRef = useRef(null); // reference to the form element
 
