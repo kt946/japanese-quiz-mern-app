@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import { Home, Login, Signup, NoMatch } from './pages';
+import { Home, Login, Signup, NoMatch, Dashboard } from './pages';
 
 // This will connect to the server's GraphQL endpoint
 const httpLink = createHttpLink({
@@ -47,6 +47,10 @@ function App() {
               <Route
                 path="/signup"
                 element={<Signup />}
+              />
+              <Route
+                path="/dashboard"
+                element={<Dashboard />}
               />
               <Route
                 path="*"
