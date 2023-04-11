@@ -1,0 +1,24 @@
+{
+  "name": "japanese-quiz-mern-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "concurrently \"cd server && npm run start\" \"cd client && npm run dev\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kt946/japanese-quiz-mern-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kt946/japanese-quiz-mern-app/issues"
+  },
+  "homepage": "https://github.com/kt946/japanese-quiz-mern-app#readme",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
