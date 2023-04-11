@@ -28,7 +28,7 @@ html {
 }
 
 .form-input-style {
-  @apply bg-slate-100 border border-gray-300 rounded-xl focus:outline-none focus:border-sky-400;
+  @apply bg-slate-100 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-sky-400;
 }
 
 .password-input {
