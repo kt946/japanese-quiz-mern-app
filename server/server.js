@@ -1,6 +1,5 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express'; // import ApolloServer for GraphQL
-import path from 'path';
 import * as dotenv from 'dotenv';
 
 import connectDB from './config/connection.js'; // import connection to MongoDB
@@ -21,16 +20,6 @@ const server = new ApolloServer({
 const app = express(); // Create a new instance of an Express server
 app.use(express.urlencoded({ extended: true })); // This sets up middleware to parse incoming requests with urlencoded payloads
 app.use(express.json()); // This sets up middleware to parse incoming requests with JSON payloads
-
-// This will serve up static assets from the client/dist folder
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/dist')));
-}
-
-// This is a catch-all route that sends every other request to the React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
-});
 
 const startServer = async (typeDefs, resolvers) => {
   try {
