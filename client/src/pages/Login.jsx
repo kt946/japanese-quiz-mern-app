@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/SakuraStudyLogo.svg';
 import { HiEye, HiEyeOff } from 'react-icons/hi';
 import { FaExclamationCircle } from 'react-icons/fa';
+import { AiOutlineLoading } from 'react-icons/ai';
 
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations';
@@ -112,7 +113,7 @@ const Login = () => {
           className="w-full my-6 py-3 px-6 bg-primary hover:bg-primary-shade btn-transition text-white font-bold rounded-xl "
           type="submit"
         >
-          {loading ? 'Logging in' : 'Log in'}
+          {loading ? <AiOutlineLoading className="animate-spin h-6 w-6 mx-auto" /> : 'Log in'}
         </button>
         {/* Sign Up Link */}
         <p className="text-[#4D516D] text-center">
