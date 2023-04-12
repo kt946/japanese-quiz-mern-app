@@ -1,36 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaFacebook, FaDiscord, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { socialLinks } from '../constants/constants';
 
 const Footer = () => {
-  const socialLinks = [
-    {
-      name: 'Github',
-      url: 'https://github.com/',
-      icon: <FaGithub className="social-link" />,
-    },
-    {
-      name: 'Discord',
-      url: 'https://discord.com/',
-      icon: <FaDiscord className="social-link" />,
-    },
-    {
-      name: 'Facebook',
-      url: 'https://facebook.com/',
-      icon: <FaFacebook className="social-link" />,
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/',
-      icon: <FaTwitter className="social-link" />,
-    },
-    {
-      name: 'Instagram',
-      url: 'https://instagram.com/',
-      icon: <FaInstagram className="social-link" />,
-    },
-  ];
-
   return (
     <footer className="bg-[#2B2D42] text-slate-300 py-10">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">

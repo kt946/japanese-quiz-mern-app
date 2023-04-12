@@ -15,10 +15,6 @@ html {
   }
 }
 
-.app {
-  @apply relative w-full h-screen overflow-x-hidden overflow-y-auto;
-}
-
 .btn-transition {
   @apply transition duration-300 ease-in-out;
 }
@@ -33,6 +29,14 @@ html {
 
 .password-input {
   @apply form-input-style w-full pl-3 pr-12 py-2 overflow-hidden;
+}
+
+.sidebar-btn {
+  @apply btn-transition py-2 px-4 flex items-center text-white font-bold bg-primary hover:bg-primary-shade rounded-xl;
+}
+
+.sidebar-btn-icon {
+  @apply h-6 w-6 mr-2;
 }
 
 .hero-bg {

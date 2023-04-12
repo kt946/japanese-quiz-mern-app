@@ -1,20 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Auth from '../utils/auth';
 import logo from '../assets/SakuraStudyLogo.svg';
 import logoText from '../assets/SakuraStudyTextBlack.svg';
 
 const Header = () => {
-  // check the logged in status of a user; returns true if logged in
-  const loggedIn = Auth.loggedIn();
-
   return (
     <header className="bg-white z-50">
       <nav className="mx-auto max-w-7xl flex items-center justify-between p-4 lg:px-8">
         {/* Logo image */}
         <Link
           to="/"
-          className="flex items-center gap-3 btn-transition"
+          className="flex items-center gap-3"
         >
           <img
             src={logo}
