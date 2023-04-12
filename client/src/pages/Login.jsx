@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import logo from '../assets/SakuraStudyLogo.svg';
 import { HiEye, HiEyeOff } from 'react-icons/hi';
 import { FaExclamationCircle } from 'react-icons/fa';
@@ -10,6 +10,11 @@ import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const Login = () => {
+  const loggedIn = Auth.loggedIn();
+  if (loggedIn) {
+    return <Navigate to="/dashboard" />;
+  }
+
   const [showPassword, setShowPassword] = useState(false); // state for toggling password visibility
   const [login, { loading, error }] = useMutation(LOGIN); // use the useMutation hook to execute the LOGIN mutation
 

@@ -1,8 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import countryLogo from '../assets/JapanCountryLogo.png';
+import Auth from '../utils/auth';
 
 const Home = () => {
+  const loggedIn = Auth.loggedIn();
+  if (loggedIn) {
+    return <Navigate to="/dashboard" />;
+  }
+
   return (
     // Hero Section with Logo and Call to Action
     <section

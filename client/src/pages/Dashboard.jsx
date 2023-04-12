@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Navigate } from 'react-router-dom';
 
 import { useQuery, useMutation } from '@apollo/client';
@@ -42,10 +42,10 @@ const Dashboard = () => {
 
   return (
     <section
-      id="Dashboard"
-      className="w-full min-h-[calc(100vh-72px)] py-4 bg-slate-200 hero-bg"
+      id="dashboard"
+      className="w-full min-h-screen p-6 bg-slate-200 hero-bg"
     >
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-2">
+      <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-bold">Dashboard</h1>
         {/* Get username*/}
         <p className="text-xl font-semibold">Welcome, {user.username}!</p>

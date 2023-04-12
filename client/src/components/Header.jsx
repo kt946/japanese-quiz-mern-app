@@ -27,33 +27,21 @@ const Header = () => {
             className="w-auto h-6 hidden sm:inline-block"
           />
         </Link>
-        {/* Renders logout button if logged in */}
-        {loggedIn ? (
-          // Logout button
-          <button
-            type="button"
-            onClick={() => Auth.logout()}
-            className="btn-transition py-2 px-4 text-white bg-primary hover:bg-primary-shade rounded-xl font-bold"
+        {/* Login and Sign Up Links */}
+        <div className="flex items-center gap-4 font-bold">
+          <Link
+            to="/login"
+            className="btn-transition py-2 px-4 hover:text-primary-shade"
           >
-            Log out
-          </button>
-        ) : (
-          // Login and Sign Up Links
-          <div className="flex items-center gap-4 font-bold">
-            <Link
-              to="/login"
-              className="btn-transition py-2 px-4 hover:text-primary-shade"
-            >
-              Log in
-            </Link>
-            <Link
-              to="/signup"
-              className="btn-transition py-2 px-4 text-white bg-primary hover:bg-primary-shade rounded-xl"
-            >
-              Sign up
-            </Link>
-          </div>
-        )}
+            Log in
+          </Link>
+          <Link
+            to="/signup"
+            className="btn-transition py-2 px-4 text-white bg-primary hover:bg-primary-shade rounded-xl"
+          >
+            Sign up
+          </Link>
+        </div>
       </nav>
     </header>
   );
