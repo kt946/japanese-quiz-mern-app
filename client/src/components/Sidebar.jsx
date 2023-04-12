@@ -32,28 +32,26 @@ const Sidebar = () => {
       </Link>
 
       {/* Navigation Links */}
-      <nav className="h-full mt-8 flex flex-col justify-between">
-        <div className="flex flex-col gap-2">
-          {sidebarNavItems.map((item) => (
-            <Link
-              key={item.title}
-              to={item.path}
-              className="sidebar-btn"
-            >
-              {item.icon}
-              {item.title}
-            </Link>
-          ))}
-
-          {/* Dark Mode Button */}
-          <button
-            type="button"
+      <nav className="mt-8 flex flex-col justify-between gap-2">
+        {sidebarNavItems.map((item) => (
+          <Link
+            key={item.title}
+            to={item.path}
             className="sidebar-btn"
           >
-            <HiOutlineMoon className="sidebar-btn-icon" />
-            Dark mode
-          </button>
-        </div>
+            {item.icon}
+            {item.title}
+          </Link>
+        ))}
+
+        {/* Dark Mode Button */}
+        <button
+          type="button"
+          className="sidebar-btn"
+        >
+          <HiOutlineMoon className="sidebar-btn-icon" />
+          Dark mode
+        </button>
         {/* Logout Button */}
         <button
           type="button"
