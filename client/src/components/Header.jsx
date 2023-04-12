@@ -7,7 +7,7 @@ import logoText from '../assets/SakuraStudyTextBlack.svg';
 const Header = () => {
   // check the logged in status of a user; returns true if logged in
   const loggedIn = Auth.loggedIn();
-  
+
   return (
     <header className="bg-white z-50">
       <nav className="mx-auto max-w-7xl flex items-center justify-between p-4 lg:px-8">
@@ -31,6 +31,7 @@ const Header = () => {
         {loggedIn ? (
           // Logout button
           <button
+            type="button"
             onClick={() => Auth.logout()}
             className="btn-transition py-2 px-4 text-white bg-primary hover:bg-primary-shade rounded-xl font-bold"
           >

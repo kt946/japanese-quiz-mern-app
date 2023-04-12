@@ -66,7 +66,12 @@ const resolvers = {
       // check if context.user exists, if not, throw authentication error
       if (context.user) {
         // find user by id and update experience
-        const updatedUser = await User.findOneAndUpdate({ _id: context.user._id }, { experience }, { new: true });
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $set: { experience } },
+          { new: true }
+        );
+
         // return updated user
         return updatedUser;
       }

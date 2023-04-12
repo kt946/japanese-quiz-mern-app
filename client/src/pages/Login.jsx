@@ -110,7 +110,7 @@ const Login = () => {
 
         {/* Submit Button */}
         <button
-          className="w-full my-6 py-3 px-6 bg-primary hover:bg-primary-shade btn-transition text-white font-bold rounded-xl "
+          className="w-full my-6 py-3 px-6 bg-primary hover:bg-primary-shade btn-transition text-white font-bold rounded-xl"
           type="submit"
         >
           {loading ? <AiOutlineLoading className="animate-spin h-6 w-6 mx-auto" /> : 'Log in'}
