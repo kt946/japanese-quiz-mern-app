@@ -20,7 +20,7 @@ html {
 }
 
 .social-link {
-  @apply w-8 h-8 btn-transition hover:text-white;
+  @apply w-8 h-8 btn-transition hover:opacity-60;
 }
 
 .form-input-style {
@@ -48,4 +48,12 @@ html {
   background-size: 105%, 80px;
   background-position: bottom, top left;
   background-repeat: no-repeat, repeat;
+}
+
+.footer-bg-dark {
+  @apply bg-[#2B2D42] text-slate-300
+}
+
+.footer-bg-light {
+  @apply bg-slate-100
 }

@@ -43,7 +43,7 @@ const Dashboard = () => {
   return (
     <section
       id="dashboard"
-      className="w-full min-h-screen p-6 bg-slate-200 hero-bg"
+      className="w-full min-h-screen p-8 bg-slate-100"
     >
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-bold">Dashboard</h1>

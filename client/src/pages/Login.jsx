@@ -107,7 +107,7 @@ const Login = () => {
 
         {/* Error Message */}
         {error && (
-          <p className="text-red-500 mt-4 flex items-center">
+          <p className="text-red-500 mt-6 flex items-center">
             <FaExclamationCircle className="mr-1" />
             An error has occurred!
           </p>
@@ -115,13 +115,13 @@ const Login = () => {
 
         {/* Submit Button */}
         <button
-          className="w-full my-6 py-3 px-6 bg-primary hover:bg-primary-shade btn-transition text-white font-bold rounded-xl"
+          className="w-full mt-6 py-3 px-6 bg-primary hover:bg-primary-shade btn-transition text-white font-bold rounded-xl"
           type="submit"
         >
           {loading ? <AiOutlineLoading className="animate-spin h-6 w-6 mx-auto" /> : 'Log in'}
         </button>
         {/* Sign Up Link */}
-        <p className="text-[#4D516D] text-center">
+        <p className="mt-6 text-[#4D516D] text-center">
           Don't have an account?{' '}
           <Link
             to="/signup"
