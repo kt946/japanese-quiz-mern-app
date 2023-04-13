@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Auth from '../utils/auth';
 import logo from '../assets/SakuraStudyLogo.svg';
 import logoText from '../assets/SakuraStudyTextBlack.svg';
@@ -15,7 +15,7 @@ const Sidebar = () => {
       className="fixed z-20 w-full h-full min-h-full max-w-xs p-6 flex flex-col transition-all ease-in duration-300 bg-white border-2 border-r-primary"
     >
       {/* Logo */}
-      <Link
+      <NavLink
         to="/dashboard"
         className="w-fit flex items-center gap-3"
       >
@@ -29,19 +29,19 @@ const Sidebar = () => {
           alt="Sakura Study Text Logo"
           className="w-auto h-6 hidden sm:inline-block"
         />
-      </Link>
+      </NavLink>
 
       {/* Navigation Links */}
       <nav className="mt-8 flex flex-col justify-between gap-2">
         {sidebarNavItems.map((item) => (
-          <Link
+          <NavLink
             key={item.title}
             to={item.path}
             className="sidebar-btn"
           >
             {item.icon}
             {item.title}
-          </Link>
+          </NavLink>
         ))}
 
         {/* Dark Mode Button */}

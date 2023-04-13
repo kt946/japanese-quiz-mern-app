@@ -32,11 +32,15 @@ html {
 }
 
 .sidebar-btn {
-  @apply btn-transition py-2 px-4 flex items-center font-bold hover:bg-slate-200 rounded-xl;
+  @apply btn-transition py-2 px-4 flex items-center font-bold hover:bg-slate-200 border-2 border-transparent hover:border-slate-200 rounded-xl;
 }
 
 .sidebar-btn-icon {
   @apply h-6 w-6 mr-4;
+}
+
+.sidebar-btn.active {
+  @apply bg-sky-100 border-2 border-sky-300 text-sky-500;
 }
 
 .hero-bg {
