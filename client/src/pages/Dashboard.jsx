@@ -1,15 +1,13 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-
 import { useQuery, useMutation } from '@apollo/client';
 import { UPDATE_EXPERIENCE } from '../utils/mutations';
 import { QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
 const Dashboard = () => {
-  const loggedIn = Auth.loggedIn();
   // If the user is not logged in, redirect to the login page
-  if (!loggedIn) {
+  if (!Auth.loggedIn()) {
     return <Navigate to="/login" />;
   }
 

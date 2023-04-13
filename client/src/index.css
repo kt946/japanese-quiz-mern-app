@@ -51,8 +51,20 @@ html {
   @apply bg-slate-100;
 }
 
+.tab-style {
+  @apply btn-transition w-full px-4 py-2 rounded-t-xl border-b-4 border-transparent hover:border-primary-tint hover:text-primary-tint;
+}
+
+.tab-active-style {
+  @apply border-primary bg-red-100 text-primary-shade;
+}
+
 .h1-style {
-  @apply text-5xl font-bold;
+  @apply text-3xl font-bold;
+}
+
+.h2-style {
+  @apply text-4xl font-bold;
 }
 
 .hero-bg {
