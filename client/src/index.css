@@ -43,17 +43,21 @@ html {
   @apply bg-sky-100 border-2 border-sky-300 text-sky-500;
 }
 
+.footer-bg-dark {
+  @apply bg-[#2B2D42] text-slate-300;
+}
+
+.footer-bg-light {
+  @apply bg-slate-100;
+}
+
+.h1-style {
+  @apply text-5xl font-bold;
+}
+
 .hero-bg {
   background-image: url('./assets/waves.svg'), url('./assets/endless-clouds.svg');
   background-size: 105%, 80px;
   background-position: bottom, top left;
   background-repeat: no-repeat, repeat;
-}
-
-.footer-bg-dark {
-  @apply bg-[#2B2D42] text-slate-300
-}
-
-.footer-bg-light {
-  @apply bg-slate-100
 }

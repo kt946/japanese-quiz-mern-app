@@ -46,13 +46,13 @@ const Dashboard = () => {
       className="w-full min-h-screen p-8 bg-slate-100"
     >
       <div className="flex flex-col gap-2">
-        <h1 className="text-2xl font-bold">Dashboard</h1>
+        <h1 className="h1-style">Dashboard</h1>
         {/* Get username*/}
         <p className="text-xl font-semibold">Welcome, {user.username}!</p>
         {/* Get email */}
         <p className="text-xl font-semibold">Email: {user.email}</p>
         {/* Get experience */}
-        <p className="text-xl font-semibold">Experience: {user.experience}</p>
+        <p className="text-xl font-semibold">Experience: {user.experience} XP</p>
         {/* Update experience by 15 points */}
         <button
           type="button"

@@ -2,7 +2,14 @@ import React from 'react'
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <section
+      id="profile"
+      className="w-full min-h-screen p-8 bg-slate-100"
+    >
+      <div className="flex flex-col gap-2">
+        <h1 className="h1-style">Profile</h1>
+      </div>
+    </section>
   )
 }
 

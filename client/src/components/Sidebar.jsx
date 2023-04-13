@@ -14,7 +14,7 @@ const Sidebar = () => {
   return (
     <aside
       id="sidebar"
-      className="fixed z-20 w-full h-full min-h-full max-w-xs p-6 flex flex-col transition-all ease-in duration-300 bg-white border-2 border-r-primary"
+      className="fixed z-20 w-full h-full min-h-full max-w-xs p-6 flex flex-col transition-all ease-in duration-300 bg-white border-2 border-r-slate-300"
     >
       {/* Logo */}
       <NavLink
