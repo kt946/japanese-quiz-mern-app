@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Auth from '../utils/auth';
 import logo from '../assets/SakuraStudyLogo.svg';
@@ -6,9 +6,11 @@ import logoText from '../assets/SakuraStudyTextBlack.svg';
 
 import { sidebarNavItems } from '../constants/constants';
 import { FiLogOut } from 'react-icons/fi';
-import { HiOutlineMoon } from 'react-icons/hi';
+import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi';
 
 const Sidebar = () => {
+  const [darkmode, setDarkmode] = useState(false);
+
   return (
     <aside
       id="sidebar"
@@ -48,9 +50,10 @@ const Sidebar = () => {
         <button
           type="button"
           className="sidebar-btn"
+          onClick={() => setDarkmode(!darkmode)}
         >
-          <HiOutlineMoon className="sidebar-btn-icon" />
-          Dark mode
+          {darkmode ? <HiOutlineSun className="sidebar-btn-icon" /> : <HiOutlineMoon className="sidebar-btn-icon" />}
+          {darkmode ? 'Light mode' : 'Dark mode'}
         </button>
         {/* Logout Button */}
         <button

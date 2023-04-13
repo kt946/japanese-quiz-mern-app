@@ -5,7 +5,7 @@ import { FaGithub, FaFacebook, FaDiscord, FaTwitter, FaInstagram } from 'react-i
 
 const sidebarNavItems = [
   {
-    title: 'Learn',
+    title: 'Dashboard',
     path: '/dashboard',
     icon: <HiOutlineHome className="sidebar-btn-icon" />,
   },

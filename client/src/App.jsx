@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import { Home, Login, Signup, NoMatch, Dashboard } from './pages';
+import { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboard, Profile } from './pages';
 
 import Auth from './utils/auth';
 
@@ -57,6 +57,18 @@ function App() {
                 <Route
                   path="/dashboard"
                   element={<Dashboard />}
+                />
+                <Route
+                  path="/characters"
+                  element={<Characters />}
+                />
+                <Route
+                  path="/leaderboard"
+                  element={<Leaderboard />}
+                />
+                <Route
+                  path="/profile"
+                  element={<Profile />}
                 />
                 <Route
                   path="*"
