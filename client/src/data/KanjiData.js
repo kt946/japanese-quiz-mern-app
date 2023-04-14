@@ -1,4 +1,4 @@
-// array of objects of kanji characters and romaji grouped by units
+// array of objects of kanji characters grouped by subject
 const kanjiData = {
   unit1: {
     subject: 'Numbers and Money',

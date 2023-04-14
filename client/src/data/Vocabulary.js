@@ -1,3 +1,4 @@
+// array of objects of vocabulary words grouped by subject
 const vocabularyData = {
   unit1: {
     subject: 'Greeetings and Expressions',

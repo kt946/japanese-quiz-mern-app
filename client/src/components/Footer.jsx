@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="flex flex-row flex-wrap justify-center gap-4 order-first sm:order-last">
             {socialLinks.map((link) => (
               <Link
-                key={`link-${link.name}`}
+                key={`link-${link.title}`}
                 to={link.url}
               >
                 {link.icon}
