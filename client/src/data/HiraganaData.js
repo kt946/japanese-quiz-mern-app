@@ -81,7 +81,7 @@ const hiraganaData = {
       { character: ' ', romaji: '' },
     ],
   ],
-  dakuon: [
+  dakuten: [
     [
       { character: 'が', romaji: 'ga' },
       { character: 'ぎ', romaji: 'gi' },
@@ -118,7 +118,7 @@ const hiraganaData = {
       { character: 'ぽ', romaji: 'po' },
     ],
   ],
-  yoon: [
+  smallKana: [
     [
       { character: 'きゃ', romaji: 'kya' },
       { character: 'きゅ', romaji: 'kyu' },
@@ -153,26 +153,6 @@ const hiraganaData = {
       { character: 'りゃ', romaji: 'rya' },
       { character: 'りゅ', romaji: 'ryu' },
       { character: 'りょ', romaji: 'ryo' },
-    ],
-    [
-      { character: 'ぎゃ', romaji: 'gya' },
-      { character: 'ぎゅ', romaji: 'gyu' },
-      { character: 'ぎょ', romaji: 'gyo' },
-    ],
-    [
-      { character: 'じゃ', romaji: 'ja' },
-      { character: 'じゅ', romaji: 'ju' },
-      { character: 'じょ', romaji: 'jo' },
-    ],
-    [
-      { character: 'びゃ', romaji: 'bya' },
-      { character: 'びゅ', romaji: 'byu' },
-      { character: 'びょ', romaji: 'byo' },
-    ],
-    [
-      { character: 'ぴゃ', romaji: 'pya' },
-      { character: 'ぴゅ', romaji: 'pyu' },
-      { character: 'ぴょ', romaji: 'pyo' },
     ],
     [
       { character: 'ぎゃ', romaji: 'gya' },
