@@ -23,10 +23,10 @@ const kanjiData = {
     kanji: [
       { character: '本', romaji: 'hon', meanings: 'book' },
       { character: '今', romaji: 'ima', meanings: 'now' },
-      { character: '時', romaji: 'ji', meanings: 'time' },
+      { character: '時', romaji: 'ji', meanings: 'time/hour' },
       { character: '分', romaji: 'fun', meanings: 'minute' },
       { character: '秒', romaji: 'byou', meanings: 'second' },
-      { character: '月', romaji: 'getsu', meanings: 'month' },
+      { character: '月', romaji: 'getsu/gatsu', meanings: 'month' },
       { character: '日', romaji: 'ni/nichi', meanings: 'day/sun' },
       { character: '年', romaji: 'nen', meanings: 'year' },
       { character: '火', romaji: 'ka', meanings: 'fire' },
