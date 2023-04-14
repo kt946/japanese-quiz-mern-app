@@ -1,5 +1,5 @@
 // disable eslint for this file
-// array of objects of hiragana characters and romaji grouped by rows
+// array of objects of frequently used hiragana characters and romaji grouped by rows
 const hiraganaData = {
   basic: [
     [
@@ -176,3 +176,5 @@ const hiraganaData = {
     ],
   ],
 };
+
+export default hiraganaData;

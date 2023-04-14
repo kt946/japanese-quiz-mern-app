@@ -1,5 +1,5 @@
 // disable eslint for this file
-// array of objects of katakana characters and romaji grouped by rows
+// array of objects of frequently used katakana characters and romaji grouped by rows
 const katakanaData = {
   basic: [
     [
@@ -175,3 +175,5 @@ const katakanaData = {
     ],
   ],
 };
+
+export default katakanaData;
