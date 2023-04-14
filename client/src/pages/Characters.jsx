@@ -20,6 +20,10 @@ const Characters = () => {
     >
       <div className="flex flex-col gap-2">
         <h1 className="h1-style mb-8">Characters</h1>
+
+        <div className="mb-8 px-6 py-8 text-white bg-gradient-to-b from-primary to-red-800 rounded-xl">
+          <h2 className="banner-heading">Let's learn {activeTab}!</h2>
+        </div>
         <div className="border-b-2 border-b-slate-300 mb-4">
           <div className="max-w-sm flex justify-between font-bold text-lg text-center">
             <button
@@ -45,7 +49,6 @@ const Characters = () => {
             </button>
           </div>
         </div>
-        <h2 className="h2-style">Let's learn {activeTab}!</h2>
       </div>
     </section>
   );

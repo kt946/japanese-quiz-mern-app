@@ -60,11 +60,11 @@ html {
 }
 
 .h1-style {
-  @apply text-3xl font-bold;
+  @apply text-2xl font-bold;
 }
 
-.h2-style {
-  @apply text-4xl font-bold;
+.banner-heading {
+  @apply text-4xl font-semibold;
 }
 
 .hero-bg {
