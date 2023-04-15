@@ -42,17 +42,21 @@ const Characters = () => {
   return (
     <section
       id="characters"
-      className="w-full min-h-screen p-8 bg-slate-100"
+      className="w-full min-h-screen bg-slate-100"
     >
-      <div className="flex flex-col gap-2">
+      <div className="p-4 pb-0 sm:px-8 sm:pt-8 mb-8 flex flex-col gap-2">
         {/* Title */}
         <h1 className="h1-style mb-8">Characters</h1>
 
         {/* Banner */}
-        <div className="mb-8 p-8 text-white bg-gradient-to-b from-primary to-red-800 rounded-xl">
+        <div className="p-8 text-white bg-gradient-to-b from-primary to-red-800 rounded-xl">
           <h2 className="banner-heading mb-3">Let's learn {activeTab}!</h2>
           <p className="text-lg">{bannerText()}</p>
         </div>
+      </div>
+
+      {/* Content */}
+      <div className="sm:px-8">
         {/* Tabs */}
         <div className="border-b-2 border-b-slate-300 mb-4">
           <div className="max-w-sm flex justify-between font-bold text-lg text-center">
@@ -68,8 +72,6 @@ const Characters = () => {
             ))}
           </div>
         </div>
-
-        {/* Content */}
         <div className="p-4 bg-white rounded-xl shadow-md">{displayChart()}</div>
       </div>
     </section>

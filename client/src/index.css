@@ -72,11 +72,15 @@ html {
 }
 
 .chart-container {
-  @apply grid grid-cols-5 gap-4 text-4xl text-center font-bold;
+  @apply grid gap-2 sm:gap-4 text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center font-bold;
 }
 
 .chart-romaji {
-  @apply font-normal text-xl italic;
+  @apply font-normal text-sm sm:text-base md:text-xl italic;
+}
+
+.chart-break {
+  @apply my-8 border-2 border-slate-200;
 }
 
 .hero-bg {
