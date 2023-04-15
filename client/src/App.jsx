@@ -38,7 +38,11 @@ function App() {
       <BrowserRouter>
         <div className="transition-all ease-in text-slate-800">
           {loggedIn && <Sidebar />}
-          <div className={`overflow-x-hidden overflow-y-auto flex flex-col ${loggedIn && 'ms-80'}`}>
+          <div
+            className={`overflow-x-hidden overflow-y-auto flex flex-col ${
+              loggedIn && 'sm:ms-[88px] xl:ms-[300px]'
+            } btn-transition`}
+          >
             {!loggedIn && <Header />}
             <main>
               <Routes>

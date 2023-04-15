@@ -14,12 +14,12 @@ const Sidebar = () => {
   return (
     <aside
       id="sidebar"
-      className="fixed z-20 w-full h-full min-h-full max-w-xs p-6 flex flex-col transition-all ease-in duration-300 bg-white border-2 border-r-slate-300"
+      className="hidden sm:flex flex-col items-center xl:items-start fixed z-20 w-full h-full min-h-full max-w-[88px] xl:max-w-[300px] p-6 px-4 bg-white border-2 border-r-slate-300 btn-transition"
     >
       {/* Logo */}
       <NavLink
         to="/dashboard"
-        className="w-fit flex items-center gap-3"
+        className="w-fit xl:px-4 flex items-center gap-3"
       >
         <img
           src={logo}
@@ -29,12 +29,12 @@ const Sidebar = () => {
         <img
           src={logoText}
           alt="Sakura Study Text Logo"
-          className="w-auto h-6 hidden sm:inline-block"
+          className="w-auto h-6 sidebar-text"
         />
       </NavLink>
 
       {/* Navigation Links */}
-      <nav className="mt-8 flex flex-col justify-between gap-2">
+      <nav className="w-full mt-8 flex flex-col justify-between gap-2">
         {sidebarNavItems.map((item) => (
           <NavLink
             key={item.title}
@@ -42,7 +42,7 @@ const Sidebar = () => {
             className="sidebar-btn"
           >
             {item.icon}
-            {item.title}
+            <span className="sidebar-text">{item.title}</span>
           </NavLink>
         ))}
 
@@ -53,7 +53,7 @@ const Sidebar = () => {
           onClick={() => setDarkmode(!darkmode)}
         >
           {darkmode ? <HiOutlineSun className="sidebar-btn-icon" /> : <HiOutlineMoon className="sidebar-btn-icon" />}
-          {darkmode ? 'Light mode' : 'Dark mode'}
+          <span className="sidebar-text">{darkmode ? 'Light mode' : 'Dark mode'}</span>
         </button>
         {/* Logout Button */}
         <button
@@ -62,7 +62,7 @@ const Sidebar = () => {
           className="sidebar-btn"
         >
           <FiLogOut className="sidebar-btn-icon" />
-          Log out
+          <span className="sidebar-text">Log out</span>
         </button>
       </nav>
     </aside>

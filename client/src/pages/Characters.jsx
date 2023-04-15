@@ -9,10 +9,23 @@ const Characters = () => {
   if (!Auth.loggedIn()) {
     return <Navigate to="/login" />;
   }
+
+  const tabs = ['Hiragana', 'Katakana', 'Kanji'];
   const [activeTab, setActiveTab] = useState('Hiragana');
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+  };
+
+  const bannerText = () => {
+    switch (activeTab) {
+      case 'Hiragana':
+        return 'Master Japanese with the basics';
+      case 'Katakana':
+        return 'Improve your skills by practicing characters used for foreign words';
+      default:
+        return 'Discover the beauty and complexity of written Japanese';
+    }
   };
 
   const displayChart = () => {
@@ -36,36 +49,25 @@ const Characters = () => {
         <h1 className="h1-style mb-8">Characters</h1>
 
         {/* Banner */}
-        <div className="mb-8 px-6 py-8 text-white bg-gradient-to-b from-primary to-red-800 rounded-xl">
-          <h2 className="banner-heading">Let's learn {activeTab}!</h2>
+        <div className="mb-8 p-8 text-white bg-gradient-to-b from-primary to-red-800 rounded-xl">
+          <h2 className="banner-heading mb-3">Let's learn {activeTab}!</h2>
+          <p className="text-lg">{bannerText()}</p>
         </div>
         {/* Tabs */}
         <div className="border-b-2 border-b-slate-300 mb-4">
           <div className="max-w-sm flex justify-between font-bold text-lg text-center">
-            <button
-              type="button"
-              className={`tab-style ${activeTab === 'Hiragana' ? 'tab-active-style' : ''}`}
-              onClick={() => handleTabClick('Hiragana')}
-            >
-              Hiragana
-            </button>
-            <button
-              type="button"
-              className={`tab-style ${activeTab === 'Katakana' ? 'tab-active-style' : ''}`}
-              onClick={() => handleTabClick('Katakana')}
-            >
-              Katakana
-            </button>
-            <button
-              type="button"
-              className={`tab-style ${activeTab === 'Kanji' ? 'tab-active-style' : ''}`}
-              onClick={() => handleTabClick('Kanji')}
-            >
-              Kanji
-            </button>
+            {tabs.map((tab) => (
+              <button
+                key={`id-${tab}`}
+                type="button"
+                className={`tab-style ${activeTab === tab ? 'tab-active-style' : ''}`}
+                onClick={() => handleTabClick(tab)}
+              >
+                {tab}
+              </button>
+            ))}
           </div>
         </div>
-        {/* Content */}
 
         {/* Content */}
         <div className="p-4 bg-white rounded-xl shadow-md">{displayChart()}</div>
