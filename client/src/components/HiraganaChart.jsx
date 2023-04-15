@@ -9,13 +9,11 @@ const HiraganaChart = () => {
 
       {/* Basic Hiragana Container */}
       <div className="chart-container grid-cols-5">
-        {hiraganaData.basic.map((char) => (
+        {hiraganaData.basic.map((char, index) => (
           // Character Container
           <div
-            key={`id-${char.romaji}`}
-            className={`p-2 flex flex-col rounded-xl shadow-md ${
-              char.romaji ? 'bg-red-100/50 border-2 border-primary-shade/40' : 'bg-slate-100'
-            }`}
+            key={`id-${index}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
           >
             {/* Character */}
             {char.character}
@@ -29,12 +27,10 @@ const HiraganaChart = () => {
 
       {/* Diacritics Container */}
       <div className="chart-container grid-cols-5">
-        {hiraganaData.diacritics.map((char) => (
+        {hiraganaData.diacritics.map((char, index) => (
           <div
-            key={`id-${char.romaji}`}
-            className={`p-2 flex flex-col rounded-xl shadow-md ${
-              char.romaji ? 'bg-red-100/50 border-2 border-primary-shade/40' : 'bg-slate-100'
-            }`}
+            key={`id-${index}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
           >
             {char.character}
             <span className="chart-romaji">{char.romaji}</span>
@@ -46,12 +42,10 @@ const HiraganaChart = () => {
 
       {/* Contracted Sounds Container */}
       <div className="chart-container grid-cols-3">
-        {hiraganaData.contracted.map((char) => (
+        {hiraganaData.contracted.map((char, index) => (
           <div
-            key={`id-${char.romaji}`}
-            className={`p-2 flex flex-col rounded-xl shadow-md ${
-              char.romaji ? 'bg-red-100/50 border-2 border-primary-shade/40' : 'bg-slate-100'
-            }`}
+            key={`id-${index}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
           >
             {char.character}
             <span className="chart-romaji">{char.romaji}</span>
@@ -62,16 +56,28 @@ const HiraganaChart = () => {
       <hr className="chart-break" />
 
       {/* Double Consonants Container */}
-
       <div className="chart-container grid-cols-4">
-        {hiraganaData.doubleConsonants.map((char) => (
+        {hiraganaData.doubleConsonants.map((char, index) => (
           <div
-            key={`id-${char.romaji}`}
-            className={`py-2 flex flex-col rounded-xl shadow-md ${
-              char.romaji ? 'bg-red-100/50 border-2 border-primary-shade/40' : 'bg-slate-100'
-            }`}
+            key={`id-${index}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
           >
             <span className="text-base md:text-2xl lg:text-3xl xl:text-4xl">{char.character}</span>
+            <span className="chart-romaji">{char.romaji}</span>
+          </div>
+        ))}
+      </div>
+
+      <hr className="chart-break" />
+
+      {/* Long Vowels Container */}
+      <div className="chart-container grid-cols-5">
+        {hiraganaData.longVowels.map((char, index) => (
+          <div
+            key={`id-${index}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
+          >
+            {char.character}
             <span className="chart-romaji">{char.romaji}</span>
           </div>
         ))}

@@ -41,7 +41,7 @@ const hiraganaData = {
     { character: 'や', romaji: 'ya' },
     { character: '', romaji: '' },
     { character: 'ゆ', romaji: 'yu' },
-    { character: ' ', romaji: '' },
+    { character: '', romaji: '' },
     { character: 'よ', romaji: 'yo' },
     { character: 'ら', romaji: 'ra' },
     { character: 'り', romaji: 'ri' },
@@ -129,6 +129,19 @@ const hiraganaData = {
     { character: 'っ + s', romaji: 'ss' },
     { character: 'っ + t', romaji: 'tt' },
     { character: 'っ + p', romaji: 'pp' },
+  ],
+  // 5 columns
+  longVowels: [
+    { character: 'ああ', romaji: 'aa' },
+    { character: 'いい', romaji: 'ii' },
+    { character: 'うう', romaji: 'uu' },
+    { character: 'ええ', romaji: 'ee' },
+    { character: 'おお', romaji: 'oo' },
+    { character: '', romaji: '' },
+    { character: '', romaji: '' },
+    { character: '', romaji: '' },
+    { character: 'えい', romaji: 'ei' },
+    { character: 'おう', romaji: 'ou' },
   ],
 };
 

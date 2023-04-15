@@ -56,7 +56,7 @@ const Characters = () => {
       </div>
 
       {/* Content */}
-      <div className="sm:px-8">
+      <div className="pb-8 sm:px-8">
         {/* Tabs */}
         <div className="border-b-2 border-b-slate-300 mb-4">
           <div className="max-w-sm flex justify-between font-bold text-lg text-center">

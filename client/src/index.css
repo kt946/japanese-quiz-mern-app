@@ -75,6 +75,14 @@ html {
   @apply grid gap-2 sm:gap-4 text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center font-bold;
 }
 
+.chart-char-container {
+  @apply py-2 flex flex-col rounded-xl shadow-md;
+}
+
+.chart-filled-container {
+  @apply bg-red-50 border-2 border-primary-shade/40;
+}
+
 .chart-romaji {
   @apply font-normal text-sm sm:text-base md:text-xl italic;
 }
