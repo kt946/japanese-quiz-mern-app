@@ -71,6 +71,14 @@ html {
   @apply text-4xl font-semibold;
 }
 
+.chart-container {
+  @apply grid grid-cols-5 gap-4 text-4xl text-center font-bold;
+}
+
+.chart-romaji {
+  @apply font-normal text-xl italic;
+}
+
 .hero-bg {
   background-image: url('./assets/waves.svg'), url('./assets/endless-clouds.svg');
   background-size: 105%, 80px;
