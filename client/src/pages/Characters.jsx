@@ -42,9 +42,9 @@ const Characters = () => {
   return (
     <section
       id="characters"
-      className="w-full min-h-screen bg-slate-100"
+      className="w-full min-h-screen pb-8 bg-slate-100"
     >
-      <div className="p-4 pb-0 sm:px-8 sm:pt-8 mb-8 flex flex-col gap-2">
+      <div className="p-4 pb-0 sm:px-8 sm:pt-8 mb-8">
         {/* Title */}
         <h1 className="h1-style mb-8">Characters</h1>
 
@@ -56,7 +56,7 @@ const Characters = () => {
       </div>
 
       {/* Content */}
-      <div className="pb-8 sm:px-8">
+      <div className="sm:px-8">
         {/* Tabs */}
         <div className="border-b-2 border-b-slate-300 mb-4">
           <div className="max-w-sm flex justify-between font-bold text-lg text-center">
