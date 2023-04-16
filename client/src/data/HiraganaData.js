@@ -125,10 +125,10 @@ const hiraganaData = {
   ],
   // 4 columns
   doubleConsonants: [
-    { character: 'っ + k', romaji: 'kk' },
-    { character: 'っ + s', romaji: 'ss' },
-    { character: 'っ + t', romaji: 'tt' },
-    { character: 'っ + p', romaji: 'pp' },
+    { character: 'っ+k', romaji: 'kk' },
+    { character: 'っ+s', romaji: 'ss' },
+    { character: 'っ+t', romaji: 'tt' },
+    { character: 'っ+p', romaji: 'pp' },
   ],
   // 5 columns
   longVowels: [

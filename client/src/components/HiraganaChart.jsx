@@ -62,7 +62,7 @@ const HiraganaChart = () => {
             key={`id-${index}`}
             className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
           >
-            <span className="text-base md:text-2xl lg:text-3xl xl:text-4xl">{char.character}</span>
+            {char.character}
             <span className="chart-romaji">{char.romaji}</span>
           </div>
         ))}
