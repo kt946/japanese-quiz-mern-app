@@ -67,6 +67,21 @@ const KatakanaChart = () => {
           </div>
         ))}
       </div>
+
+      <hr className="chart-break" />
+
+      {/* Long Vowels Container */}
+      <div className="chart-container grid-cols-5">
+        {katakanaData.longVowels.map((char, index) => (
+          <div
+            key={`id-${index}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
+          >
+            {char.character}
+            <span className="chart-romaji">{char.romaji}</span>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
