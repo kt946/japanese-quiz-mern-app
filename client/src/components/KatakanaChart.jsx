@@ -37,6 +37,22 @@ const KatakanaChart = () => {
           </div>
         ))}
       </div>
+
+      <hr className="chart-break" />
+
+      {/* Contracted Sounds Container */}
+      <div className="chart-container grid-cols-3">
+        {katakanaData.contracted.map((char, index) => (
+          <div
+            key={`id-${index}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
+          >
+            {char.character}
+            <span className="chart-romaji">{char.romaji}</span>
+          </div>
+        ))}
+      </div>
+
     </section>
   );
 };
