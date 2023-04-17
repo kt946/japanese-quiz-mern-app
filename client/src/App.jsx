@@ -1,11 +1,9 @@
-import { Header, Footer, Sidebar } from './components';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboard, Profile } from './pages';
-
-import Auth from './utils/auth';
+// import Main component that contains all the routes
+import { Main } from './components';
 
 // This will connect to the server's GraphQL endpoint
 const httpLink = createHttpLink({
@@ -30,58 +28,13 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const loggedIn = Auth.loggedIn();
-
   return (
     // This will make the client available to all components
     <ApolloProvider client={client}>
       <BrowserRouter>
         <div className="transition-all ease-in text-slate-800">
-          {loggedIn && <Sidebar />}
-          <div
-            className={`overflow-x-hidden overflow-y-auto flex flex-col ${
-              loggedIn && 'sm:ms-[88px] xl:ms-[300px]'
-            } btn-transition`}
-          >
-            {!loggedIn && <Header />}
-            <main>
-              <Routes>
-                <Route
-                  path="/"
-                  element={<Home />}
-                />
-                <Route
-                  path="/login"
-                  element={<Login />}
-                />
-                <Route
-                  path="/signup"
-                  element={<Signup />}
-                />
-                <Route
-                  path="/dashboard"
-                  element={<Dashboard />}
-                />
-                <Route
-                  path="/characters"
-                  element={<Characters />}
-                />
-                <Route
-                  path="/leaderboard"
-                  element={<Leaderboard />}
-                />
-                <Route
-                  path="/profile"
-                  element={<Profile />}
-                />
-                <Route
-                  path="*"
-                  element={<NoMatch />}
-                />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
+          {/* Router and Routes are located in Main */}
+          <Main />
         </div>
       </BrowserRouter>
     </ApolloProvider>

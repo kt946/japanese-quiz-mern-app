@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import Auth from '../utils/auth';
 
 import { HiraganaChart, KatakanaChart, KanjiChart } from '../components';
@@ -43,7 +43,7 @@ const Characters = () => {
       {/* Content */}
       <div className="sm:px-8">
         {/* Tabs */}
-        <div className="border-b-2 border-b-slate-300 mb-4">
+        <div className="border-b-2 border-b-slate-300 mb-8 flex justify-center sm:justify-start">
           <div className="max-w-sm flex justify-between font-bold text-lg text-center">
             {tabs.map((tab) => (
               <button
@@ -57,6 +57,17 @@ const Characters = () => {
             ))}
           </div>
         </div>
+
+        {/* Start Quiz Button */}
+        <div className="mb-8 flex justify-center sm:justify-start">
+          <Link
+            to={`/quiz/${activeTab.toLowerCase()}`}
+            className="btn-transition px-8 py-4 text-lg text-white font-bold bg-blue-500 hover:bg-blue-700 rounded-xl"
+          >
+            Start Practice Quiz
+          </Link>
+        </div>
+
         <div className="p-4 bg-white rounded-xl shadow-md">{chartComponent[activeTab]}</div>
       </div>
     </section>
