@@ -56,7 +56,7 @@ html {
 }
 
 .tab-style {
-  @apply btn-transition w-full px-4 py-2 rounded-t-xl border-b-4 border-transparent hover:border-primary-tint hover:text-primary-tint;
+  @apply btn-transition w-full py-2 rounded-t-xl border-b-4 border-transparent hover:border-primary-tint hover:text-primary-tint;
 }
 
 .tab-active-style {
