@@ -1,6 +1,6 @@
 // This contains the routes for the app and additional styling for the app depending on logged in state and path
 import React from 'react';
-import { Header, Footer, Sidebar } from './';
+import { Header, Footer, Sidebar } from '.';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import {
@@ -18,7 +18,7 @@ import {
 
 import Auth from '../utils/auth';
 
-const Main = () => {
+const MainSection = () => {
   const loggedIn = Auth.loggedIn();
   const location = useLocation();
   // returns true if locations includes /quiz
@@ -85,4 +85,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MainSection;

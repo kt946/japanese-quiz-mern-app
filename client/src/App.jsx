@@ -3,7 +3,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 import { setContext } from '@apollo/client/link/context';
 
 // import Main component that contains all the routes
-import { Main } from './components';
+import { MainSection } from './components';
 
 // This will connect to the server's GraphQL endpoint
 const httpLink = createHttpLink({
@@ -34,7 +34,7 @@ function App() {
       <BrowserRouter>
         <div className="transition-all ease-in text-slate-800">
           {/* Router and Routes are located in Main */}
-          <Main />
+          <MainSection />
         </div>
       </BrowserRouter>
     </ApolloProvider>

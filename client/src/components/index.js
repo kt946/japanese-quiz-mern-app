@@ -4,6 +4,6 @@ import Sidebar from './Sidebar';
 import HiraganaChart from './HiraganaChart';
 import KatakanaChart from './KatakanaChart';
 import KanjiChart from './KanjiChart';
-import Main from './Main';
+import MainSection from './MainSection';
 
-export { Main, Header, Footer, Sidebar, HiraganaChart, KatakanaChart, KanjiChart };
+export { MainSection, Header, Footer, Sidebar, HiraganaChart, KatakanaChart, KanjiChart };
