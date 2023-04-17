@@ -54,4 +54,10 @@ const socialLinks = [
   },
 ];
 
-export { sidebarNavItems, socialLinks };
+const charBannerText = {
+  Hiragana: 'Master Japanese with the basics',
+  Katakana: 'Improve your skills by practicing characters used for foreign words',
+  Kanji: 'Discover the beauty and complexity of written Japanese',
+};
+
+export { sidebarNavItems, socialLinks, charBannerText };

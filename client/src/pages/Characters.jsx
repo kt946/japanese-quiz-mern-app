@@ -3,6 +3,7 @@ import { Navigate } from 'react-router-dom';
 import Auth from '../utils/auth';
 
 import { HiraganaChart, KatakanaChart, KanjiChart } from '../components';
+import { charBannerText } from '../constants/constants';
 
 const Characters = () => {
   // If the user is not logged in, redirect to the login page
@@ -17,26 +18,10 @@ const Characters = () => {
     setActiveTab(tab);
   };
 
-  const bannerText = () => {
-    switch (activeTab) {
-      case 'Hiragana':
-        return 'Master Japanese with the basics';
-      case 'Katakana':
-        return 'Improve your skills by practicing characters used for foreign words';
-      default:
-        return 'Discover the beauty and complexity of written Japanese';
-    }
-  };
-
-  const displayChart = () => {
-    switch (activeTab) {
-      case 'Hiragana':
-        return <HiraganaChart />;
-      case 'Katakana':
-        return <KatakanaChart />;
-      default:
-        return <KanjiChart />;
-    }
+  const chartComponent = {
+    Hiragana: <HiraganaChart />,
+    Katakana: <KatakanaChart />,
+    Kanji: <KanjiChart />,
   };
 
   return (
@@ -51,7 +36,7 @@ const Characters = () => {
         {/* Banner */}
         <div className="p-8 text-white bg-gradient-to-b from-primary to-red-800 rounded-xl">
           <h2 className="banner-heading mb-3">Let's learn {activeTab}!</h2>
-          <p className="text-lg">{bannerText()}</p>
+          <p className="text-lg">{charBannerText[activeTab]}</p>
         </div>
       </div>
 
@@ -72,7 +57,7 @@ const Characters = () => {
             ))}
           </div>
         </div>
-        <div className="p-4 bg-white rounded-xl shadow-md">{displayChart()}</div>
+        <div className="p-4 bg-white rounded-xl shadow-md">{chartComponent[activeTab]}</div>
       </div>
     </section>
   );
