@@ -58,11 +58,11 @@ const HiraganaQuiz = () => {
       </div>
 
       {/* Quiz Main */}
-      <div className="w-full h-full flex flex-col justify-center items-center">
-        <div className="w-full max-w-2xl h-full min-h-[450px] border-4 border-sky-500">
-          <h1 className="font-bold text-3xl">Question</h1>
-          <div className=" flex flex-col justify-center items-center">
-            <div className="h-full flex flex-col justify-center items-center text-4xl bg-red-300">{randomNumber}</div>
+      <div className="w-full h-full flex justify-center items-center">
+        <div className="w-full max-w-2xl h-full min-h-[450px] flex flex-col border-4 border-sky-500">
+          <h1 className="font-bold text-3xl">Select the correct character(s) for ""</h1>
+          <div className="flex flex-col grow justify-center items-center border-t-2 border-slate-300">
+            <div className="h-full flex flex-col justify-center items-center text-8xl font-bold">{randomNumber}</div>
           </div>
         </div>
       </div>
