@@ -14,6 +14,9 @@ const HiraganaQuiz = () => {
   }
 
   const [progressBarWidth, setProgressBarWidth] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [quizComplete, setQuizComplete] = useState(false);
 
   const handleProgressBarWidthChange = (width) => {
     let newWidth = progressBarWidth + width;
@@ -25,6 +28,26 @@ const HiraganaQuiz = () => {
     } else {
       setProgressBarWidth(newWidth);
     }
+  };
+
+  const checkAnswer = (answer) => {
+    if (answer === hiraganaQuiz[currentQuestion].answer) {
+      console.log('correct');
+      handleProgressBarWidthChange(20);
+    } else {
+      console.log('incorrect');
+      handleProgressBarWidthChange(-10);
+    }
+  };
+
+  const cycleNextQuestion = () => {
+    if (currentQuestion < hiraganaQuiz.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setQuizComplete(true);
+      console.log('Quiz completed!');
+    }
+    setSelectedOption(null);
   };
 
   return (
@@ -61,14 +84,25 @@ const HiraganaQuiz = () => {
 
       {/* Quiz Main */}
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-2xl h-full min-h-[450px] mx-4 flex flex-col border-4 border-sky-500">
+        <div className="w-full max-w-2xl h-full min-h-[450px] mx-4 flex flex-col">
           <h1 className="font-bold text-3xl">
-            Select the correct character(s) for "<span>{hiraganaQuiz[0].question}</span>"
+            Select the correct character(s) for "<span>{hiraganaQuiz[currentQuestion].question}</span>"
           </h1>
-          <div className="flex flex-col grow justify-center items-center border-t-2 border-slate-300">
-            <div className="h-full flex flex-col justify-center items-center text-8xl font-bold">
-              {hiraganaQuiz[0].answer}
-            </div>
+          <div className="flex flex-col grow justify-center items-center border-t-2 border-slate-300 font-medium text-5xl gap-4">
+            {hiraganaQuiz[currentQuestion].options.map((option) => (
+              <button
+                key={`id-${option}`}
+                type="button"
+                className={`w-full py-2 rounded-xl border-2 ${
+                  selectedOption === option
+                    ? 'bg-sky-200 border-2 border-sky-400'
+                    : 'border-slate-300 hover:bg-slate-200'
+                }`}
+                onClick={() => setSelectedOption(option)}
+              >
+                {option}
+              </button>
+            ))}
           </div>
         </div>
       </div>
@@ -80,14 +114,14 @@ const HiraganaQuiz = () => {
           <div className="flex flex-row justify-between w-full">
             <button
               type="button"
-              className="btn-transition min-w-[150px] py-2 px-3 font-bold text-lg text-primary border-2 border-primary bg-white hover:bg-slate-200 rounded-xl"
+              className="btn-transition min-w-[150px] py-2 px-3 font-bold text-lg text-blue-500 border-2 border-blue-500 bg-white hover:bg-slate-200 rounded-xl"
               onClick={() => handleProgressBarWidthChange(-10)}
             >
               Skip
             </button>
             <button
               type="button"
-              className="btn-transition min-w-[150px] py-2 px-3 font-bold text-lg text-white bg-primary hover:bg-primary-shade rounded-xl"
+              className="btn-transition min-w-[150px] py-2 px-3 font-bold text-lg text-white bg-blue-500 hover:bg-blue-600 rounded-xl"
               onClick={() => handleProgressBarWidthChange(20)}
             >
               Check

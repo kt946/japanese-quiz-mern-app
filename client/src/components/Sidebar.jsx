@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Auth from '../utils/auth';
 import logo from '../assets/SakuraStudyLogo.svg';
 import logoText from '../assets/SakuraStudyTextBlack.svg';
@@ -10,12 +10,6 @@ import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi';
 
 const Sidebar = () => {
   const [darkmode, setDarkmode] = useState(false);
-  const location = useLocation();
-
-  // Don't show sidebar on quiz pages
-  if (location.pathname.includes('/quiz')) {
-    return null;
-  }
 
   return (
     <aside

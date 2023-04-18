@@ -20,13 +20,12 @@ import Auth from '../utils/auth';
 
 const MainSection = () => {
   const loggedIn = Auth.loggedIn();
-  const location = useLocation();
   // returns true if locations includes /quiz
-  const quizLocation = location.pathname.includes('/quiz');
+  const quizLocation = useLocation().pathname.includes('/quiz');
 
   return (
     <>
-      {loggedIn && <Sidebar />}
+      {loggedIn && !quizLocation && <Sidebar />}
       <div
         className={`overflow-x-hidden overflow-y-auto flex flex-col ${
           loggedIn ? (quizLocation ? '' : 'sm:ms-[88px] xl:ms-[300px]') : ''
@@ -79,7 +78,7 @@ const MainSection = () => {
             />
           </Routes>
         </main>
-        <Footer />
+        {!quizLocation && <Footer />}
       </div>
     </>
   );

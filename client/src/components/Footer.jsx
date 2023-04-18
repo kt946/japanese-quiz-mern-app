@@ -1,17 +1,11 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { socialLinks } from '../constants/constants';
 import Auth from '../utils/auth';
 
 const Footer = () => {
   const loggedIn = Auth.loggedIn();
-  const location = useLocation();
-
-  // Don't show footer on quiz pages
-  if (location.pathname.includes('/quiz')) {
-    return null;
-  }
-
+  
   return (
     <footer className={`${loggedIn ? 'footer-bg-light' : 'footer-bg-dark'} py-10`}>
       <div className={`${loggedIn ? '' : 'max-w-7xl'} mx-auto px-4 lg:px-8`}>
