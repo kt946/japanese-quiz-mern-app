@@ -84,7 +84,7 @@ html {
 }
 
 .chart-romaji {
-  @apply font-normal text-sm sm:text-base md:text-xl italic;
+  @apply font-normal text-sm sm:text-base md:text-lg lg:text-xl italic;
 }
 
 .chart-break {

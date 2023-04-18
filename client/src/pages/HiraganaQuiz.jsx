@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import Auth from '../utils/auth';
 import { HiX } from 'react-icons/hi';
+import { generateQuiz } from '../utils/quiz';
+
+const hiraganaQuiz = generateQuiz(5);
+
+console.log(hiraganaQuiz);
 
 const HiraganaQuiz = () => {
   if (!Auth.loggedIn()) {
@@ -21,9 +26,6 @@ const HiraganaQuiz = () => {
       setProgressBarWidth(newWidth);
     }
   };
-
-  // Generate random number between 0 and 100
-  const randomNumber = Math.floor(Math.random() * 100);
 
   return (
     <div
@@ -59,10 +61,14 @@ const HiraganaQuiz = () => {
 
       {/* Quiz Main */}
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-2xl h-full min-h-[450px] flex flex-col border-4 border-sky-500">
-          <h1 className="font-bold text-3xl">Select the correct character(s) for ""</h1>
+        <div className="w-full max-w-2xl h-full min-h-[450px] mx-4 flex flex-col border-4 border-sky-500">
+          <h1 className="font-bold text-3xl">
+            Select the correct character(s) for "<span>{hiraganaQuiz[0].question}</span>"
+          </h1>
           <div className="flex flex-col grow justify-center items-center border-t-2 border-slate-300">
-            <div className="h-full flex flex-col justify-center items-center text-8xl font-bold">{randomNumber}</div>
+            <div className="h-full flex flex-col justify-center items-center text-8xl font-bold">
+              {hiraganaQuiz[0].answer}
+            </div>
           </div>
         </div>
       </div>
@@ -82,7 +88,7 @@ const HiraganaQuiz = () => {
             <button
               type="button"
               className="btn-transition min-w-[150px] py-2 px-3 font-bold text-lg text-white bg-primary hover:bg-primary-shade rounded-xl"
-              onClick={() => handleProgressBarWidthChange(25)}
+              onClick={() => handleProgressBarWidthChange(20)}
             >
               Check
             </button>

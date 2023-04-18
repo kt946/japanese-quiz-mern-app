@@ -52,7 +52,7 @@ const hiraganaData = {
     { character: '', romaji: '' },
     { character: '', romaji: '' },
     { character: '', romaji: '' },
-    { character: 'を', romaji: 'wo' },
+    { character: 'を', romaji: 'o' },
     { character: 'ん', romaji: 'n' },
     { character: '', romaji: '' },
     { character: '', romaji: '' },

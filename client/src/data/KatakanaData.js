@@ -52,7 +52,7 @@ const katakanaData = {
     { character: '', romaji: '' },
     { character: '', romaji: '' },
     { character: '', romaji: '' },
-    { character: 'ヲ', romaji: 'wo' },
+    { character: 'ヲ', romaji: 'o' },
     { character: 'ン', romaji: 'n' },
     { character: '', romaji: '' },
     { character: '', romaji: '' },
