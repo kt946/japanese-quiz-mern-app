@@ -5,7 +5,7 @@ import Auth from '../utils/auth';
 import { HiX } from 'react-icons/hi';
 import { CheckButton, NextButton, SkipButton, FeedbackMessage } from '../components';
 
-const HiraganaQuiz = ({ quiz }) => {
+const CharacterQuiz = ({ quiz }) => {
   if (!Auth.loggedIn()) {
     return <Navigate to="/login" />;
   }
@@ -20,17 +20,11 @@ const HiraganaQuiz = ({ quiz }) => {
       setQuestionState('correct');
       quiz.incrementNumCorrect();
       quiz.incrementProgress(20);
-      if (quiz.progress >= 100) {
-        quiz.progress = 100;
-      }
     } else {
       console.log('incorrect');
       setQuestionState('incorrect');
       quiz.incrementNumIncorrect();
       quiz.decrementProgress(10);
-      if (quiz.progress <= 0) {
-        quiz.progress = 0;
-      }
     }
 
     console.log(`${quiz.progress}%`);
@@ -93,7 +87,7 @@ const HiraganaQuiz = ({ quiz }) => {
               <button
                 key={`id-${choice}`}
                 type="button"
-                className={`grow md:grow-0 w-full py-2 rounded-xl border-2 ${
+                className={`grow md:grow-0 w-full md:py-3 rounded-xl border-2 ${
                   selectedOption === choice
                     ? 'bg-sky-200 border-2 border-sky-400'
                     : `border-slate-300 ${!questionState && 'hover:bg-slate-200'}`
@@ -153,4 +147,4 @@ const HiraganaQuiz = ({ quiz }) => {
   );
 };
 
-export default HiraganaQuiz;
+export default CharacterQuiz;

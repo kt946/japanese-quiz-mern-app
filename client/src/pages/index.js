@@ -6,7 +6,6 @@ import Dashboard from './Dashboard';
 import Characters from './Characters';
 import Leaderboard from './Leaderboard';
 import Profile from './Profile';
-import HiraganaQuiz from './HiraganaQuiz';
-import KatakanaQuiz from './KatakanaQuiz';
+import CharacterQuiz from './CharacterQuiz';
 
-export { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboard, Profile, HiraganaQuiz, KatakanaQuiz };
+export { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboard, Profile, CharacterQuiz };

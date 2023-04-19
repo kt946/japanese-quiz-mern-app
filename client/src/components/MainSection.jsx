@@ -3,18 +3,7 @@ import React from 'react';
 import { Header, Footer, Sidebar } from '.';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
-import {
-  Home,
-  Login,
-  Signup,
-  NoMatch,
-  Dashboard,
-  Characters,
-  Leaderboard,
-  Profile,
-  HiraganaQuiz,
-  KatakanaQuiz,
-} from '../pages';
+import { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboard, Profile, CharacterQuiz } from '../pages';
 
 import Auth from '../utils/auth';
 import QuizGenerator from '../utils/quizGenerator';
@@ -67,11 +56,19 @@ const MainSection = () => {
             <Route path="/quiz">
               <Route
                 path="hiragana"
-                element={<HiraganaQuiz quiz={new QuizGenerator(hiraganaData.basic, hiraganaData.diacritics)} />}
+                element={
+                  <CharacterQuiz
+                    quiz={new QuizGenerator(hiraganaData.basic, hiraganaData.diacritics, hiraganaData.contracted)}
+                  />
+                }
               />
               <Route
                 path="katakana"
-                element={<KatakanaQuiz />}
+                element={
+                  <CharacterQuiz
+                    quiz={new QuizGenerator(katakanaData.basic, katakanaData.diacritics, katakanaData.contracted)}
+                  />
+                }
               />
             </Route>
             <Route
