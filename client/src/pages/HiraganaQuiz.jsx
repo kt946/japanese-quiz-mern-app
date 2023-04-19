@@ -3,6 +3,7 @@ import { Navigate } from 'react-router-dom';
 import Auth from '../utils/auth';
 import { HiX } from 'react-icons/hi';
 import { generateQuiz } from '../utils/quiz';
+import { CheckButton, NextButton, SkipButton, FeedbackMessage } from '../components';
 
 const hiraganaQuiz = generateQuiz(5);
 
@@ -21,14 +22,13 @@ const HiraganaQuiz = () => {
 
   const handleProgressBarWidth = (width) => {
     let newWidth = progressBarWidth + width;
-    console.log(newWidth);
     if (newWidth >= 100) {
-      setProgressBarWidth(100);
+      newWidth = 100;
     } else if (newWidth <= 0) {
-      setProgressBarWidth(0);
-    } else {
-      setProgressBarWidth(newWidth);
+      newWidth = 0;
     }
+    setProgressBarWidth(newWidth);
+    console.log(`${newWidth}%`);
   };
 
   const checkAnswer = (answer) => {
@@ -115,44 +115,39 @@ const HiraganaQuiz = () => {
       <div
         className={`h-32 ${
           questionState === 'correct'
-            ? 'bg-[#DAFEBE]'
+            ? 'bg-[#CEFEA8]'
             : questionState === 'incorrect'
-            ? 'bg-[#FFEBEE]'
+            ? 'bg-[#FED6DD]'
             : 'border-t-2 border-slate-300 '
         }`}
       >
         <div className="w-full h-full max-w-5xl mx-auto px-4 flex items-center">
-          {/* Answer Buttons */}
-          <div className="flex flex-row justify-between w-full">
-            {/* Skip Button */}
-            <button
-              type="button"
-              className="quiz-btn-style text-blue-500 border-2 border-blue-500 bg-white hover:bg-slate-200 rounded-xl"
-              onClick={() => handleProgressBarWidth(-10)}
-            >
-              Skip
-            </button>
+          {/* Footer Buttons */}
+          <div className="flex flex-row justify-between items-center w-full">
+            {!questionState ? (
+              // Skip Button
+              <SkipButton checkAnswer={checkAnswer} />
+            ) : (
+              // Feedback Message
+              <FeedbackMessage
+                questionState={questionState}
+                answer={hiraganaQuiz[currentQuestion].answer}
+              />
+            )}
 
+            {/* Check and Next Buttons */}
             {!questionState ? (
               // Check Button
-              <button
-                type="button"
-                className="quiz-btn-style text-white bg-blue-500 hover:bg-blue-600 rounded-xl"
-                onClick={() => checkAnswer(selectedOption)}
-              >
-                Check
-              </button>
+              <CheckButton
+                selectedOption={selectedOption}
+                checkAnswer={checkAnswer}
+              />
             ) : (
               // Next Button
-              <button
-                type="button"
-                className={`quiz-btn-style text-white ${
-                  questionState === 'correct' ? 'bg-[#58CC02] hover:bg-[#4CAD02]' : 'bg-red-500 hover:bg-red-600'
-                } rounded-xl`}
-                onClick={() => cycleNextQuestion()}
-              >
-                Next
-              </button>
+              <NextButton
+                questionState={questionState}
+                cycleNextQuestion={cycleNextQuestion}
+              />
             )}
           </div>
         </div>
