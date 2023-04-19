@@ -1,57 +1,53 @@
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import Auth from '../utils/auth';
+
 import { HiX } from 'react-icons/hi';
-import { generateQuiz } from '../utils/quiz';
 import { CheckButton, NextButton, SkipButton, FeedbackMessage } from '../components';
 
-const hiraganaQuiz = generateQuiz(5);
-
-console.log(hiraganaQuiz);
-
-const HiraganaQuiz = () => {
+const HiraganaQuiz = ({ quiz }) => {
   if (!Auth.loggedIn()) {
     return <Navigate to="/login" />;
   }
 
-  const [progressBarWidth, setProgressBarWidth] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
-  const [quizComplete, setQuizComplete] = useState(false);
   const [questionState, setQuestionState] = useState(null);
-
-  const handleProgressBarWidth = (width) => {
-    let newWidth = progressBarWidth + width;
-    if (newWidth >= 100) {
-      newWidth = 100;
-    } else if (newWidth <= 0) {
-      newWidth = 0;
-    }
-    setProgressBarWidth(newWidth);
-    console.log(`${newWidth}%`);
-  };
+  const [question, setQuestion] = useState(quiz.generateQuestion());
 
   const checkAnswer = (answer) => {
-    if (answer === hiraganaQuiz[currentQuestion].answer) {
+    if (answer === question.answer) {
       console.log('correct');
       setQuestionState('correct');
-      handleProgressBarWidth(20);
+      quiz.incrementNumCorrect();
+      quiz.incrementProgress(20);
+      if (quiz.progress >= 100) {
+        quiz.progress = 100;
+      }
     } else {
       console.log('incorrect');
       setQuestionState('incorrect');
-      handleProgressBarWidth(-10);
+      quiz.incrementNumIncorrect();
+      quiz.decrementProgress(10);
+      if (quiz.progress <= 0) {
+        quiz.progress = 0;
+      }
     }
+
+    console.log(`${quiz.progress}%`);
   };
 
   const cycleNextQuestion = () => {
-    if (currentQuestion < hiraganaQuiz.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
+    if (quiz.progress < 100) {
+      setQuestion(quiz.generateQuestion());
+      setSelectedOption(null);
+      setQuestionState(null);
     } else {
-      setQuizComplete(true);
       console.log('Quiz completed!');
+      console.log(quiz.complete);
+      console.log(`Correct: ${quiz.numCorrect}`);
+      console.log(`Incorrect: ${quiz.numIncorrect}`);
+      console.log(`Total questions: ${quiz.numCorrect + quiz.numIncorrect}`);
     }
-    setSelectedOption(null);
-    setQuestionState(null);
   };
 
   return (
@@ -75,9 +71,9 @@ const HiraganaQuiz = () => {
           <div className="bg-slate-300 h-4 w-full rounded-2xl overflow-x-hidden">
             <div
               className={`${
-                progressBarWidth <= 0 ? 'opacity-0' : ''
+                quiz.progress <= 0 ? 'opacity-0' : ''
               } btn-transition h-full px-2 pt-1 bg-gradient-to-b from-primary-tint to-red-800 rounded-2xl`}
-              style={{ width: `${progressBarWidth}%` }}
+              style={{ width: `${quiz.progress}%` }}
             >
               {/* inner bar */}
               <div className="bg-white/30 h-1 rounded-2xl" />
@@ -90,22 +86,22 @@ const HiraganaQuiz = () => {
       <div className="grow w-full h-full my-6 flex flex-col justify-center items-center">
         <div className="grow md:grow-0 w-full md:max-w-2xl h-full md:min-h-[450px] flex flex-col justify-between gap-4">
           <h1 className="font-bold text-2xl md:text-3xl">
-            Select the correct character(s) for "<span>{hiraganaQuiz[currentQuestion].question}</span>"
+            Select the correct character(s) for "<span>{question.question}</span>"
           </h1>
           <div className="grow md:grow-0 h-full flex flex-col font-bold md:font-medium text-4xl md:text-5xl gap-2 md:gap-4">
-            {hiraganaQuiz[currentQuestion].options.map((option) => (
+            {question.choices.map((choice) => (
               <button
-                key={`id-${option}`}
+                key={`id-${choice}`}
                 type="button"
                 className={`grow md:grow-0 w-full py-2 rounded-xl border-2 ${
-                  selectedOption === option
+                  selectedOption === choice
                     ? 'bg-sky-200 border-2 border-sky-400'
                     : `border-slate-300 ${!questionState && 'hover:bg-slate-200'}`
                 }`}
-                onClick={() => setSelectedOption(option)}
+                onClick={() => setSelectedOption(choice)}
                 disabled={questionState}
               >
-                {option}
+                {choice}
               </button>
             ))}
           </div>
@@ -132,7 +128,7 @@ const HiraganaQuiz = () => {
               // Feedback Message
               <FeedbackMessage
                 questionState={questionState}
-                answer={hiraganaQuiz[currentQuestion].answer}
+                answer={question.answer}
               />
             )}
 

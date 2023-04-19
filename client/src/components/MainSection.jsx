@@ -17,6 +17,8 @@ import {
 } from '../pages';
 
 import Auth from '../utils/auth';
+import QuizGenerator from '../utils/quizGenerator';
+import { hiraganaData, katakanaData } from '../data';
 
 const MainSection = () => {
   const loggedIn = Auth.loggedIn();
@@ -65,7 +67,7 @@ const MainSection = () => {
             <Route path="/quiz">
               <Route
                 path="hiragana"
-                element={<HiraganaQuiz />}
+                element={<HiraganaQuiz quiz={new QuizGenerator(hiraganaData.basic, hiraganaData.diacritics)} />}
               />
               <Route
                 path="katakana"
