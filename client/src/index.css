@@ -92,7 +92,7 @@ html {
 }
 
 .quiz-btn-style {
-  @apply btn-transition h-12 w-full max-w-[150px] py-2 px-3 font-bold text-lg rounded-xl;
+  @apply btn-transition h-12 w-full md:max-w-[150px] py-2 px-3 font-bold text-lg rounded-xl;
 }
 
 .hero-bg {

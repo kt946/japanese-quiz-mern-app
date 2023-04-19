@@ -57,18 +57,18 @@ const HiraganaQuiz = () => {
   return (
     <div
       id="characters"
-      className="w-full min-h-screen bg-slate-100 flex flex-col justify-between"
+      className="w-full min-h-screen p-4 py-6 md:p-0 bg-slate-100 flex flex-col"
     >
       {/* Quiz Header */}
-      <div className="h-20">
-        <div className="w-full h-full max-w-5xl mx-auto pt-12 px-4 flex items-center">
+      <div className="md:h-20">
+        <div className="w-full h-full max-w-5xl mx-auto md:pt-12 md:px-4 flex items-center">
           {/* Back Button */}
           <button
             type="button"
             onClick={() => window.history.back()}
-            className="btn-transition hover:opacity-60"
+            className="btn-transition hover:opacity-60 mr-4"
           >
-            <HiX className="w-7 h-7 mr-4" />
+            <HiX className="w-7 h-7" />
           </button>
 
           {/* Progress Bar */}
@@ -87,22 +87,23 @@ const HiraganaQuiz = () => {
       </div>
 
       {/* Quiz Main */}
-      <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-2xl h-full min-h-[450px] mx-4 flex flex-col">
-          <h1 className="font-bold text-3xl">
+      <div className="grow w-full h-full my-6 flex flex-col justify-center items-center">
+        <div className="grow md:grow-0 w-full md:max-w-2xl h-full md:min-h-[450px] flex flex-col justify-between gap-4">
+          <h1 className="font-bold text-2xl md:text-3xl">
             Select the correct character(s) for "<span>{hiraganaQuiz[currentQuestion].question}</span>"
           </h1>
-          <div className="flex flex-col grow justify-center items-center border-t-2 border-slate-300 font-medium text-5xl gap-4">
+          <div className="grow md:grow-0 h-full flex flex-col font-bold md:font-medium text-4xl md:text-5xl gap-2 md:gap-4">
             {hiraganaQuiz[currentQuestion].options.map((option) => (
               <button
                 key={`id-${option}`}
                 type="button"
-                className={`w-full py-2 rounded-xl border-2 ${
+                className={`grow md:grow-0 w-full py-2 rounded-xl border-2 ${
                   selectedOption === option
                     ? 'bg-sky-200 border-2 border-sky-400'
-                    : 'border-slate-300 hover:bg-slate-200'
+                    : `border-slate-300 ${!questionState && 'hover:bg-slate-200'}`
                 }`}
                 onClick={() => setSelectedOption(option)}
+                disabled={questionState}
               >
                 {option}
               </button>
@@ -113,17 +114,17 @@ const HiraganaQuiz = () => {
 
       {/* Quiz Footer */}
       <div
-        className={`h-32 ${
+        className={`-mx-4 -mb-6 pb-6 md:m-0 md:pb-0 md:h-36 ${
           questionState === 'correct'
             ? 'bg-[#CEFEA8]'
             : questionState === 'incorrect'
             ? 'bg-[#FED6DD]'
-            : 'border-t-2 border-slate-300 '
+            : 'md:border-t-2 border-slate-300 '
         }`}
       >
         <div className="w-full h-full max-w-5xl mx-auto px-4 flex items-center">
           {/* Footer Buttons */}
-          <div className="flex flex-row justify-between items-center w-full">
+          <div className="w-full flex flex-col md:flex-row justify-between md:items-center">
             {!questionState ? (
               // Skip Button
               <SkipButton checkAnswer={checkAnswer} />
