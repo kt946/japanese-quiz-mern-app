@@ -17,8 +17,9 @@ const HiraganaQuiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [quizComplete, setQuizComplete] = useState(false);
+  const [questionState, setQuestionState] = useState(null);
 
-  const handleProgressBarWidthChange = (width) => {
+  const handleProgressBarWidth = (width) => {
     let newWidth = progressBarWidth + width;
     console.log(newWidth);
     if (newWidth >= 100) {
@@ -33,10 +34,12 @@ const HiraganaQuiz = () => {
   const checkAnswer = (answer) => {
     if (answer === hiraganaQuiz[currentQuestion].answer) {
       console.log('correct');
-      handleProgressBarWidthChange(20);
+      setQuestionState('correct');
+      handleProgressBarWidth(20);
     } else {
       console.log('incorrect');
-      handleProgressBarWidthChange(-10);
+      setQuestionState('incorrect');
+      handleProgressBarWidth(-10);
     }
   };
 
@@ -48,6 +51,7 @@ const HiraganaQuiz = () => {
       console.log('Quiz completed!');
     }
     setSelectedOption(null);
+    setQuestionState(null);
   };
 
   return (
@@ -108,24 +112,48 @@ const HiraganaQuiz = () => {
       </div>
 
       {/* Quiz Footer */}
-      <div className="h-32 border-t-2 border-slate-300">
+      <div
+        className={`h-32 ${
+          questionState === 'correct'
+            ? 'bg-[#DAFEBE]'
+            : questionState === 'incorrect'
+            ? 'bg-[#FFEBEE]'
+            : 'border-t-2 border-slate-300 '
+        }`}
+      >
         <div className="w-full h-full max-w-5xl mx-auto px-4 flex items-center">
           {/* Answer Buttons */}
           <div className="flex flex-row justify-between w-full">
+            {/* Skip Button */}
             <button
               type="button"
-              className="btn-transition min-w-[150px] py-2 px-3 font-bold text-lg text-blue-500 border-2 border-blue-500 bg-white hover:bg-slate-200 rounded-xl"
-              onClick={() => handleProgressBarWidthChange(-10)}
+              className="quiz-btn-style text-blue-500 border-2 border-blue-500 bg-white hover:bg-slate-200 rounded-xl"
+              onClick={() => handleProgressBarWidth(-10)}
             >
               Skip
             </button>
-            <button
-              type="button"
-              className="btn-transition min-w-[150px] py-2 px-3 font-bold text-lg text-white bg-blue-500 hover:bg-blue-600 rounded-xl"
-              onClick={() => handleProgressBarWidthChange(20)}
-            >
-              Check
-            </button>
+
+            {!questionState ? (
+              // Check Button
+              <button
+                type="button"
+                className="quiz-btn-style text-white bg-blue-500 hover:bg-blue-600 rounded-xl"
+                onClick={() => checkAnswer(selectedOption)}
+              >
+                Check
+              </button>
+            ) : (
+              // Next Button
+              <button
+                type="button"
+                className={`quiz-btn-style text-white ${
+                  questionState === 'correct' ? 'bg-[#58CC02] hover:bg-[#4CAD02]' : 'bg-red-500 hover:bg-red-600'
+                } rounded-xl`}
+                onClick={() => cycleNextQuestion()}
+              >
+                Next
+              </button>
+            )}
           </div>
         </div>
       </div>

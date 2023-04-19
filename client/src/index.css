@@ -91,6 +91,10 @@ html {
   @apply my-8 border-2 border-slate-200;
 }
 
+.quiz-btn-style {
+  @apply btn-transition w-full max-w-[150px] py-2 px-3 font-bold text-lg;
+}
+
 .hero-bg {
   background-image: url('./assets/waves.svg'), url('./assets/endless-clouds.svg');
   background-size: 105%, 80px;
