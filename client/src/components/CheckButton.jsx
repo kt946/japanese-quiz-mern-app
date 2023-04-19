@@ -4,8 +4,11 @@ const CheckButton = ({ selectedOption, checkAnswer }) => {
   return (
     <button
       type="button"
-      className="quiz-btn-style text-white bg-blue-500 hover:bg-blue-600"
+      className={`quiz-btn-style ${
+        !selectedOption ? 'text-slate-500 bg-slate-300' : 'text-white bg-blue-500 hover:bg-blue-600'
+      }`}
       onClick={() => checkAnswer(selectedOption)}
+      disabled={!selectedOption}
     >
       Check
     </button>
