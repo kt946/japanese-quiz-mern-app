@@ -1,6 +1,6 @@
-import React from 'react';
+import { AiOutlineLoading } from 'react-icons/ai';
 
-const NextButton = ({ questionState, cycleNextQuestion }) => {
+const NextButton = ({ questionState, cycleNextQuestion, loading }) => {
   return (
     <button
       type="button"
@@ -9,7 +9,7 @@ const NextButton = ({ questionState, cycleNextQuestion }) => {
       }`}
       onClick={() => cycleNextQuestion()}
     >
-      Next
+      {loading ? <AiOutlineLoading className="text-white animate-spin h-6 w-6 mx-auto" /> : 'Next'}
     </button>
   );
 };

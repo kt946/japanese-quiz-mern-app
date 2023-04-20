@@ -6,6 +6,17 @@ class QuizGenerator {
     this.numCorrect = 0;
     this.numIncorrect = 0;
     this.complete = false;
+    this.startTime = new Date();
+    this.endTime = null;
+    this.elapsedTime = null;
+  }
+  
+  // end the quiz timer
+  endQuiz() {
+    this.complete = true;
+    this.endTime = new Date();
+    // calculate elapsed time
+    this.elapsedTime = (this.endTime - this.startTime) / 1000;
   }
 
   // combine selected data into one array and filter empty strings
@@ -71,7 +82,7 @@ class QuizGenerator {
     this.progress += num;
     if (this.progress >= 100) {
       this.progress = 100;
-      this.complete = true;
+      this.endQuiz();
     }
   }
 
@@ -91,6 +102,28 @@ class QuizGenerator {
   // increment numIncorrect
   incrementNumIncorrect() {
     this.numIncorrect += 1;
+  }
+
+  // calculate score and xp
+  getScoreAndXP() {
+    const totalQuestions = this.numCorrect + this.numIncorrect;
+    const percentage = Math.round((this.numCorrect / totalQuestions) * 100);
+
+    let score = percentage;
+    let xp = Math.round((percentage / 100) * 15);
+
+    if (score === 100) {
+      xp = 15;
+    }
+
+    return { score, xp };
+  }
+
+  // calculate time taken
+  getTime() {
+    const minutes = Math.floor(this.elapsedTime / 60);
+    const seconds = Math.floor(this.elapsedTime % 60);
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   }
 }
 

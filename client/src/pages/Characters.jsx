@@ -43,8 +43,8 @@ const Characters = () => {
       {/* Content */}
       <div className="sm:px-8">
         {/* Tabs */}
-        <div className="border-b-2 border-b-slate-300 mb-8 flex justify-center sm:justify-start">
-          <div className="w-full sm:max-w-md grid grid-cols-3 font-bold text-lg text-center">
+        <div className="mx-4 sm:mx-0 mb-8 border-b-2 border-b-slate-300 flex justify-center sm:justify-start">
+          <div className="w-full sm:max-w-md grid grid-cols-3 font-bold sm:text-lg text-center">
             {tabs.map((tab) => (
               <button
                 key={`id-${tab}`}
@@ -62,9 +62,9 @@ const Characters = () => {
         <div className="px-4 sm:px-0 mb-8 flex justify-center sm:justify-start">
           <Link
             to={`/quiz/${activeTab.toLowerCase()}`}
-            className="w-full sm:w-fit btn-transition px-8 py-4 text-lg text-center text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-xl"
+            className="w-full sm:w-fit btn-transition px-8 py-4 text-center text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-xl"
           >
-            Start Practice Quiz
+            Start {activeTab} Quiz
           </Link>
         </div>
 

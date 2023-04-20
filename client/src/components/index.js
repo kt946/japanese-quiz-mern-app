@@ -9,6 +9,7 @@ import NextButton from './NextButton';
 import CheckButton from './CheckButton';
 import SkipButton from './SkipButton';
 import FeedbackMessage from './FeedbackMessage';
+import ContinueButton from './ContinueButton';
 
 export {
   MainSection,
@@ -22,4 +23,5 @@ export {
   NextButton,
   SkipButton,
   FeedbackMessage,
+  ContinueButton
 };
