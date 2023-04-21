@@ -64,7 +64,7 @@ html {
 }
 
 .h1-style {
-  @apply text-2xl font-bold;
+  @apply text-xl font-bold;
 }
 
 .banner-heading {
@@ -95,9 +95,21 @@ html {
   @apply btn-transition h-12 w-full md:max-w-[150px] py-2 px-3 font-bold text-lg rounded-xl;
 }
 
+.quiz-stat-container {
+  @apply w-full h-full border-4 rounded-xl overflow-hidden flex flex-col;
+}
+
+.quiz-stat-body {
+  @apply py-2 h-20 flex flex-col justify-center items-center text-lg sm:text-2xl;
+}
+
 .hero-bg {
   background-image: url('./assets/waves.svg'), url('./assets/endless-clouds.svg');
   background-size: 105%, 80px;
   background-position: bottom, top left;
   background-repeat: no-repeat, repeat;
+}
+
+.text-shadow {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }

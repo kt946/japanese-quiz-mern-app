@@ -17,37 +17,32 @@ const CharacterQuiz = ({ quiz }) => {
   const [quizComplete, setQuizComplete] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  // check answer and update progress
   const checkAnswer = (answer) => {
     if (answer === question.answer) {
-      console.log('correct');
       setQuestionState('correct');
       quiz.incrementNumCorrect();
       quiz.incrementProgress(20);
     } else {
-      console.log('incorrect');
       setQuestionState('incorrect');
       quiz.incrementNumIncorrect();
       quiz.decrementProgress(10);
     }
-
-    console.log(`${quiz.progress}%`);
   };
 
+  // cycle to next question, or complete quiz
   const cycleNextQuestion = () => {
     if (quiz.progress < 100) {
       setQuestion(quiz.generateQuestion());
       setSelectedOption(null);
       setQuestionState(null);
     } else {
+      // set a brief loading state before completing quiz
       setLoading(true);
       setTimeout(() => {
         setQuizComplete(true);
         setQuestionState(null);
         setLoading(false);
-        console.log('Quiz completed!');
-        console.log(`Correct: ${quiz.numCorrect}`);
-        console.log(`Incorrect: ${quiz.numIncorrect}`);
-        console.log(`Total questions: ${quiz.numCorrect + quiz.numIncorrect}`);
       }, 1000);
     }
   };
@@ -93,7 +88,7 @@ const CharacterQuiz = ({ quiz }) => {
             <h1 className="font-bold text-3xl">
               Select the correct character(s) for <span className="inline-block">"{question.question}"</span>
             </h1>
-            <div className="grow md:grow-0 h-full grid grid-cols font-bold md:font-medium text-4xl md:text-5xl gap-2 md:gap-4">
+            <div className="grow md:grow-0 h-full grid grid-cols font-bold md:font-medium text-5xl gap-2 md:gap-4">
               {question.choices.map((choice) => (
                 <button
                   key={`id-${choice}`}

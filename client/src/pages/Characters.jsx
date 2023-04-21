@@ -34,7 +34,7 @@ const Characters = () => {
         <h1 className="h1-style mb-8">Characters</h1>
 
         {/* Banner */}
-        <div className="p-8 text-white bg-gradient-to-b from-primary to-red-800 rounded-xl">
+        <div className="p-8 text-white text-shadow bg-gradient-to-r from-primary to-red-800 rounded-xl">
           <h2 className="banner-heading mb-3">Let's learn {activeTab}!</h2>
           <p className="text-lg">{charBannerText[activeTab]}</p>
         </div>

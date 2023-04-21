@@ -10,7 +10,7 @@ class QuizGenerator {
     this.endTime = null;
     this.elapsedTime = null;
   }
-  
+
   // end the quiz timer
   endQuiz() {
     this.complete = true;
@@ -119,7 +119,7 @@ class QuizGenerator {
     return { score, xp };
   }
 
-  // calculate time taken
+  // calculate time taken, format as mm:ss
   getTime() {
     const minutes = Math.floor(this.elapsedTime / 60);
     const seconds = Math.floor(this.elapsedTime % 60);
