@@ -27,9 +27,9 @@ const Characters = () => {
   return (
     <section
       id="characters"
-      className="w-full min-h-screen pb-8 bg-slate-100"
+      className="w-full min-h-screen p-4 md:p-8 pb-8 bg-slate-100"
     >
-      <div className="p-4 pb-0 sm:px-8 sm:pt-8 mb-8">
+      <div className="mb-8">
         {/* Title */}
         <h1 className="h1-style mb-8">Characters</h1>
 
@@ -44,9 +44,9 @@ const Characters = () => {
       </div>
 
       {/* Content */}
-      <div className="sm:px-8">
+      <div>
         {/* Tabs */}
-        <div className="mx-4 sm:mx-0 mb-8 border-b-2 border-b-slate-300 flex justify-center sm:justify-start">
+        <div className="mb-8 border-b-2 border-b-slate-300 flex justify-center sm:justify-start">
           <div className="w-full sm:max-w-md grid grid-cols-3 font-bold sm:text-lg text-center">
             {tabs.map((tab) => (
               <button
@@ -63,7 +63,7 @@ const Characters = () => {
 
         {/* Start Quiz Button for Hiragana and Katakana */}
         {(activeTab === 'Hiragana' || activeTab === 'Katakana') && (
-          <div className="px-4 sm:px-0 mb-8 flex justify-center sm:justify-start">
+          <div className="mb-8 flex justify-center sm:justify-start">
             <Link
               to={`/quiz/${activeTab.toLowerCase()}`}
               className="w-full sm:w-fit btn-transition px-8 py-4 text-center text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-xl"
@@ -73,7 +73,7 @@ const Characters = () => {
           </div>
         )}
 
-        <div className="p-4 bg-white rounded-xl shadow-md">{chartComponent[activeTab]}</div>
+        <div className="">{chartComponent[activeTab]}</div>
       </div>
     </section>
   );

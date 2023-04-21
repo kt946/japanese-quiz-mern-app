@@ -1,21 +1,23 @@
 // array of objects of kanji characters grouped by subject
 const kanjiData = {
-  unit1: {
-    subject: 'Numbers and Money',
+  lesson3: {
+    subject: 'Daily Life',
     kanji: [
-      { character: '一', romaji: 'ichi', meanings: 'one' },
-      { character: '二', romaji: 'ni', meanings: 'two' },
-      { character: '三', romaji: 'san', meanings: 'three' },
-      { character: '四', romaji: 'shi/yon', meanings: 'four' },
-      { character: '五', romaji: 'go', meanings: 'five' },
-      { character: '六', romaji: 'roku', meanings: 'six' },
-      { character: '七', romaji: 'nana/shichi', meanings: 'seven' },
-      { character: '八', romaji: 'hachi', meanings: 'eight' },
-      { character: '九', romaji: 'kyuu', meanings: 'nine' },
-      { character: '十', romaji: 'juu', meanings: 'ten' },
-      { character: '百', romaji: 'hyaku', meanings: 'hundred' },
-      { character: '千', romaji: 'sen', meanings: 'thousand' },
-      { character: '円', romaji: 'en', meanings: 'yen' },
+      { character: '一', readings: 'いち', romaji: 'ichi', meanings: 'one' },
+      { character: '二', readings: 'に', romaji: 'ni', meanings: 'two' },
+      { character: '三', readings: 'さん', romaji: 'san', meanings: 'three' },
+      { character: '四', readings: 'し, よん', romaji: 'yon', meanings: 'four' },
+      { character: '五', readings: 'ご', romaji: 'go', meanings: 'five' },
+      { character: '六', readings: 'ろく', romaji: 'roku', meanings: 'six' },
+      { character: '七', readings: 'しち, なな', romaji: 'shichi, nana', meanings: 'seven' },
+      { character: '八', readings: 'はち', romaji: 'hachi', meanings: 'eight' },
+      { character: '九', readings: 'きゅう', romaji: 'kyuu', meanings: 'nine' },
+      { character: '十', readings: 'じゅう', romaji: 'juu', meanings: 'ten' },
+      { character: '百', readings: 'ひゃく', romaji: 'hyaku', meanings: 'hundred' },
+      { character: '千', readings: 'せん, ぜん', romaji: 'sen, zen', meanings: 'thousand' },
+      { character: '万', readings: 'まん', romaji: 'man', meanings: 'ten thousand' },
+      { character: '円', readings: 'えん', romaji: 'en', meanings: 'yen, circle' },
+      { character: '時', readings: 'じ, とき', romaji: 'ji, toki', meanings: 'time, moment' },
     ],
   },
   unit2: {

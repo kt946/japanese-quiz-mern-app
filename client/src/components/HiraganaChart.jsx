@@ -13,7 +13,7 @@ const HiraganaChart = () => {
           // Character Container
           <div
             key={`id-${index}`}
-            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-200'}`}
           >
             {/* Character */}
             {char.character}
@@ -30,7 +30,7 @@ const HiraganaChart = () => {
         {hiraganaData.diacritics.map((char, index) => (
           <div
             key={`id-${index}`}
-            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-200'}`}
           >
             {char.character}
             <span className="chart-romaji">{char.romaji}</span>
@@ -45,7 +45,7 @@ const HiraganaChart = () => {
         {hiraganaData.contracted.map((char, index) => (
           <div
             key={`id-${index}`}
-            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
+            className="chart-char-container chart-filled-container"
           >
             {char.character}
             <span className="chart-romaji">{char.romaji}</span>
@@ -60,7 +60,7 @@ const HiraganaChart = () => {
         {hiraganaData.doubleConsonants.map((char, index) => (
           <div
             key={`id-${index}`}
-            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
+            className="chart-char-container chart-filled-container"
           >
             {char.character}
             <span className="chart-romaji">{char.romaji}</span>
@@ -75,7 +75,7 @@ const HiraganaChart = () => {
         {hiraganaData.longVowels.map((char, index) => (
           <div
             key={`id-${index}`}
-            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-100'}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-200'}`}
           >
             {char.character}
             <span className="chart-romaji">{char.romaji}</span>

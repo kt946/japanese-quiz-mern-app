@@ -88,7 +88,7 @@ html {
 }
 
 .chart-break {
-  @apply my-8 border-2 border-slate-200;
+  @apply my-8 border border-slate-300;
 }
 
 .quiz-btn-style {
