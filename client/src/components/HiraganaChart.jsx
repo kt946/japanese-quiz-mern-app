@@ -5,7 +5,7 @@ const HiraganaChart = () => {
   return (
     // Hiragana Chart Section
     <section id="hiraganaChart">
-      <h3 className="font-bold mb-2 text-xl">Hiragana Chart</h3>
+      <h3 className="font-bold mb-4 text-xl">Hiragana Chart</h3>
 
       {/* Basic Hiragana Container */}
       <div className="chart-container grid-cols-5">

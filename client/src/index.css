@@ -68,7 +68,7 @@ html {
 }
 
 .banner-heading {
-  @apply text-4xl font-semibold;
+  @apply text-4xl font-bold;
 }
 
 .chart-container {
@@ -110,6 +110,15 @@ html {
   background-repeat: no-repeat, repeat;
 }
 
+.bg-clouds {
+  background-image: url('./assets/bannerBG/bg-endless-clouds.svg');
+  background-size: 80px;
+  background-position: top left;
+  background-repeat: repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+}
+
 .text-shadow {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }

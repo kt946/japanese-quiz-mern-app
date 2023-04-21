@@ -5,7 +5,7 @@ const KatakanaChart = () => {
   return (
     // Katakana Chart Section
     <section id="katakanaChart">
-      <h3 className="font-bold mb-2 text-xl">Katakana Chart</h3>
+      <h3 className="font-bold mb-4 text-xl">Katakana Chart</h3>
 
       {/* Basic Katakana Container */}
       <div className="chart-container grid-cols-5">
