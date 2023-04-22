@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const KanjiLesson = ({ data }) => {
   const [displayTable, setDisplayTable] = useState(false);
@@ -9,26 +10,25 @@ const KanjiLesson = ({ data }) => {
       {/* Header */}
       <div className="text-slate-100">
         {/* Lesson Number */}
-        <h4 className="uppercase tracking-wider text-shadow">Lesson {data.lessonNumber}</h4>
+        <h4 className="font-bold uppercase tracking-wider text-shadow">Lesson {data.lessonNumber}</h4>
         <div className="flex flex-col sm:flex-row justify-between">
           {/* Subject Title */}
           <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl text-shadow">{data.subject}</h3>
           <div className="flex mt-4 sm:mt-0 gap-4 font-bold">
+            {/* Start Quiz Button */}
+            <Link
+              to={`/quiz/kanji/${data.url}`}
+              className="btn-transition w-full sm:w-32 p-2 sm:px-4 bg-slate-100 hover:bg-slate-300 text-slate-800 rounded-xl flex items-center justify-center"
+            >
+              Start Quiz
+            </Link>
+
             {/* Display Table Button */}
             <button
-              className="btn-transition w-full sm:w-fit p-2 sm:px-4 border-2 border-slate-100 bg-slate-800/30 hover:bg-slate-800/50 backdrop-blur-sm text-shadow rounded-xl"
+              className="btn-transition w-full sm:w-32 p-2 sm:px-4 border-2 border-slate-100 bg-slate-800/30 hover:bg-slate-800/50 backdrop-blur-sm text-shadow rounded-xl"
               onClick={() => setDisplayTable(!displayTable)}
             >
               {displayTable ? 'Hide Table' : 'Show Table'}
-            </button>
-
-            {/* Start Quiz Button */}
-            <button
-              type="button"
-              className="btn-transition w-full sm:w-fit p-2 sm:px-4 bg-slate-100 hover:bg-slate-300 text-slate-800 rounded-xl"
-              onClick={() => {}}
-            >
-              Start Quiz
             </button>
           </div>
         </div>

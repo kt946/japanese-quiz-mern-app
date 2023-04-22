@@ -1,6 +1,7 @@
 // class to generate quiz, takes in arrays of hiragana or katakana data
 class QuizGenerator {
-  constructor(...arrays) {
+  constructor(type, ...arrays) {
+    this.quizType = type;
     this.selectedDataArray = this.combineAndFilterArrays(...arrays);
     this.progress = 0;
     this.numCorrect = 0;
@@ -9,6 +10,10 @@ class QuizGenerator {
     this.startTime = new Date();
     this.endTime = null;
     this.elapsedTime = null;
+  }
+
+  getQuizType() {
+    return this.quizType;
   }
 
   // end the quiz timer
@@ -30,20 +35,71 @@ class QuizGenerator {
     // choose random item from selected data array to create question
     const randomQuestion = this.selectedDataArray[Math.floor(Math.random() * this.selectedDataArray.length)];
 
+    // if quiz type is kanji, generate kanji question, else generate hiragana or katakana question
+    if (this.quizType === 'kanji') {
+      return this.generateKanjiQuestion(randomQuestion);
+    } else if (this.quizType === 'hiragana' || this.quizType === 'katakana') {
+      return this.generateHiraKataQuestion(randomQuestion);
+    }
+  }
+
+  // generate hiragana or kanji question, both have romaji and character
+  generateHiraKataQuestion(randomQuestion) {
+    // initialize variables for question, answer, and choices
+    let question, answer, choices;
+
     // randomly choose between romaji and character for question
     if (Math.random() < 0.5) {
-      return {
-        question: randomQuestion.romaji,
-        answer: randomQuestion.character,
-        choices: this.generateAnswerOptions(randomQuestion.character, 'character'),
-      };
+      question = `Select the correct character(s) for "${randomQuestion.romaji}"`;
+      answer = randomQuestion.character;
+      choices = this.generateAnswerOptions(answer, 'character');
     } else {
-      return {
-        question: randomQuestion.character,
-        answer: randomQuestion.romaji,
-        choices: this.generateAnswerOptions(randomQuestion.romaji, 'romaji'),
-      };
+      question = `Select the correct character(s) for "${randomQuestion.character}"`;
+      answer = randomQuestion.romaji;
+      choices = this.generateAnswerOptions(answer, 'romaji');
     }
+
+    // return question object
+    return { question, answer, choices };
+  }
+
+  // generate kanji question with readings, meanings, and character
+  generateKanjiQuestion(randomQuestion) {
+    // initialize variables for question, answer, and choices
+    let question, answer, choices;
+
+    // randomly choose between readings, meanings, and character for question
+    const randomIndex = Math.floor(Math.random() * 4);
+
+    switch (randomIndex) {
+      // Select the correct reading(s) for the character
+      case 0:
+        question = `Select the correct reading(s) for "${randomQuestion.character}"`;
+        answer = randomQuestion.readings;
+        choices = this.generateAnswerOptions(answer, 'readings');
+        break;
+      // Select the correct meaning(s) for the character
+      case 1:
+        question = `Select the correct meaning(s) for "${randomQuestion.character}"`;
+        answer = randomQuestion.meanings;
+        choices = this.generateAnswerOptions(answer, 'meanings');
+        break;
+      // Select the correct character for the reading(s)
+      case 2:
+        question = `Select the correct character for "${randomQuestion.readings}"`;
+        answer = randomQuestion.character;
+        choices = this.generateAnswerOptions(answer, 'character');
+        break;
+      // Select the correct character for the meaning(s)
+      default:
+        question = `Select the correct character for "${randomQuestion.meanings}"`;
+        answer = randomQuestion.character;
+        choices = this.generateAnswerOptions(answer, 'character');
+        break;
+    }
+
+    // return question object
+    return { question, answer, choices };
   }
 
   // generate array of choices for each question
@@ -52,17 +108,27 @@ class QuizGenerator {
     const choices = [correctAnswer];
 
     // while loop to generate 3 random choices, must not include correct answer or duplicate choices
-    // match choices to answer type
     while (choices.length < 4) {
+      // choose random item from selected data array
       const randomItem = this.selectedDataArray[Math.floor(Math.random() * this.selectedDataArray.length)];
-
       let randomChoice;
-      if (answerType === 'character') {
-        randomChoice = randomItem.character;
-      } else {
-        randomChoice = randomItem.romaji;
+
+      // match answer type to choice type
+      switch (answerType) {
+        case 'romaji':
+          randomChoice = randomItem.romaji;
+          break;
+        case 'readings':
+          randomChoice = randomItem.readings;
+          break;
+        case 'meanings':
+          randomChoice = randomItem.meanings;
+          break;
+        default:
+          randomChoice = randomItem.character;
       }
 
+      // add choice to array if not already in array
       if (!choices.includes(randomChoice)) {
         choices.push(randomChoice);
       }

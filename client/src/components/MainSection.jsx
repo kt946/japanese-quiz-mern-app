@@ -7,7 +7,7 @@ import { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboard, Profi
 
 import Auth from '../utils/auth';
 import QuizGenerator from '../utils/quizGenerator';
-import { hiraganaData, katakanaData } from '../data';
+import { hiraganaData, katakanaData, kanjiData } from '../data';
 
 const MainSection = () => {
   const loggedIn = Auth.loggedIn();
@@ -58,7 +58,14 @@ const MainSection = () => {
                 path="hiragana"
                 element={
                   <CharacterQuiz
-                    quiz={new QuizGenerator(hiraganaData.basic, hiraganaData.diacritics, hiraganaData.contracted)}
+                    quiz={
+                      new QuizGenerator(
+                        'hiragana',
+                        hiraganaData.basic,
+                        hiraganaData.diacritics,
+                        hiraganaData.contracted
+                      )
+                    }
                   />
                 }
               />
@@ -66,10 +73,31 @@ const MainSection = () => {
                 path="katakana"
                 element={
                   <CharacterQuiz
-                    quiz={new QuizGenerator(katakanaData.basic, katakanaData.diacritics, katakanaData.contracted)}
+                    quiz={
+                      new QuizGenerator(
+                        'katakana',
+                        katakanaData.basic,
+                        katakanaData.diacritics,
+                        katakanaData.contracted
+                      )
+                    }
                   />
                 }
               />
+              <Route path="kanji">
+                <Route
+                  path="lesson-3"
+                  element={<CharacterQuiz quiz={new QuizGenerator('kanji', kanjiData.lesson3.kanji)} />}
+                />
+                <Route
+                  path="lesson-4"
+                  element={<CharacterQuiz quiz={new QuizGenerator('kanji', kanjiData.lesson4.kanji)} />}
+                />
+                <Route
+                  path="lesson-5"
+                  element={<CharacterQuiz quiz={new QuizGenerator('kanji', kanjiData.lesson5.kanji)} />}
+                />
+              </Route>
             </Route>
             <Route
               path="*"

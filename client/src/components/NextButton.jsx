@@ -5,7 +5,7 @@ const NextButton = ({ questionState, cycleNextQuestion, loading }) => {
     <button
       type="button"
       className={`quiz-btn-style text-white ${
-        questionState === 'correct' ? 'bg-[#58CC02] hover:bg-[#4CAD02]' : 'bg-red-500 hover:bg-red-600'
+        questionState === 'correct' ? 'bg-[#58CC02] hover:bg-[#4CAD02]' : 'bg-red-600 hover:bg-red-700'
       }`}
       onClick={() => cycleNextQuestion()}
     >

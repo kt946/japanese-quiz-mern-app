@@ -2,6 +2,7 @@
 const kanjiData = {
   lesson3: {
     lessonNumber: 3,
+    url: 'lesson-3',
     subject: 'Daily Life',
     kanji: [
       {
@@ -98,6 +99,7 @@ const kanjiData = {
   },
   lesson4: {
     lessonNumber: 4,
+    url: 'lesson-4',
     subject: "Mary's Weekend",
     kanji: [
       {
@@ -188,6 +190,7 @@ const kanjiData = {
   },
   lesson5: {
     lessonNumber: 5,
+    url: 'lesson-5',
     subject: 'Travel',
     kanji: [
       {

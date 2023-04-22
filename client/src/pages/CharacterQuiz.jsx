@@ -85,10 +85,8 @@ const CharacterQuiz = ({ quiz }) => {
       {!quizComplete && (
         <div className="grow w-full h-full my-6 flex flex-col justify-center items-center">
           <div className="grow md:grow-0 w-full md:max-w-2xl h-full md:min-h-[450px] flex flex-col justify-around gap-4">
-            <h1 className="font-bold text-3xl">
-              Select the correct character(s) for <span className="inline-block">"{question.question}"</span>
-            </h1>
-            <div className="grow md:grow-0 h-full grid grid-cols font-bold md:font-medium text-5xl gap-2 md:gap-4">
+            <h1 className="font-bold text-3xl">{question.question}</h1>
+            <div className="grow md:grow-0 h-full grid grid-cols font-medium text-4xl sm:text-5xl gap-2 md:gap-4">
               {question.choices.map((choice) => (
                 <button
                   key={`id-${choice}`}
