@@ -103,6 +103,10 @@ html {
   @apply py-2 h-20 flex flex-col justify-center items-center text-lg sm:text-2xl;
 }
 
+.banner-bg-style {
+  @apply absolute inset-0 w-full h-full z-0;
+}
+
 .hero-bg {
   background-image: url('./assets/waves.svg'), url('./assets/endless-clouds.svg');
   background-size: 105%, 80px;
@@ -111,12 +115,31 @@ html {
 }
 
 .bg-clouds {
-  background-image: url('./assets/bannerBG/bg-endless-clouds.svg');
+  background: url('./assets/bannerBG/bg-endless-clouds.svg') repeat;
   background-size: 80px;
-  background-position: top left;
-  background-repeat: repeat;
   -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
   mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+}
+
+.bg-curtain {
+  background: url('./assets/bannerBG/bg-curtain.svg') repeat;
+  background-size: 60px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07));
+}
+
+.bg-circles {
+  background: url('./assets/bannerBG/bg-circles.svg') repeat;
+  background-size: 60px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07));
+}
+
+.bg-autumn {
+  background: url('./assets/bannerBG/bg-autumn.svg') repeat;
+  background-size: 80px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07));
 }
 
 .text-shadow {

@@ -39,7 +39,7 @@ const Characters = () => {
             <h2 className="banner-heading mb-3">Let's learn {activeTab}!</h2>
             <p className="text-lg">{charBannerText[activeTab]}</p>
           </div>
-          <div className="absolute inset-0 w-full h-full bg-clouds z-0" />
+          <div className="banner-bg-style bg-clouds" />
         </div>
       </div>
 
