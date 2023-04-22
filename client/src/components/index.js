@@ -23,5 +23,5 @@ export {
   NextButton,
   SkipButton,
   FeedbackMessage,
-  ContinueButton
+  ContinueButton,
 };

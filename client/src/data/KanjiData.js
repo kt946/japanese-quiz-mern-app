@@ -1,6 +1,7 @@
 // array of objects of kanji characters grouped by subject
 const kanjiData = {
   lesson3: {
+    lessonNumber: 3,
     subject: 'Daily Life',
     kanji: [
       { character: '一', readings: 'いち', romaji: 'ichi', meanings: 'one' },

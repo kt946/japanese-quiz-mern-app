@@ -73,7 +73,7 @@ const Characters = () => {
           </div>
         )}
 
-        <div className="">{chartComponent[activeTab]}</div>
+        <div>{chartComponent[activeTab]}</div>
       </div>
     </section>
   );
