@@ -9,7 +9,7 @@ const NoMatch = () => {
     <section
       className={`w-full ${
         loggedIn ? 'min-h-screen' : 'min-h-[calc(100vh-72px)] hero-bg'
-      } bg-slate-200 flex justify-center items-center text-center`}
+      } flex justify-center items-center text-center`}
     >
       {/* 404 Error Message */}
       <div>

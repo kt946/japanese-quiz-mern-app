@@ -27,7 +27,7 @@ const Characters = () => {
   return (
     <section
       id="characters"
-      className="w-full min-h-screen p-4 md:p-8 pb-8 bg-slate-100"
+      className="w-full min-h-screen p-4 md:p-8 pb-8 "
     >
       <div className="mb-8">
         {/* Title */}
@@ -46,7 +46,7 @@ const Characters = () => {
       {/* Content */}
       <div>
         {/* Tabs */}
-        <div className="mb-8 border-b-2 border-b-slate-300 flex justify-center sm:justify-start">
+        <div className="mb-8 border-b-2 border-b-gray-300 flex justify-center sm:justify-start">
           <div className="w-full sm:max-w-md grid grid-cols-3 font-bold sm:text-lg text-center">
             {tabs.map((tab) => (
               <button

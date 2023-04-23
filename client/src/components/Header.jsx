@@ -5,7 +5,7 @@ import logoText from '../assets/SakuraStudyTextBlack.svg';
 
 const Header = () => {
   return (
-    <header className="bg-white z-50">
+    <header className="bg-white border-b border-gray-100 z-50">
       <nav className="mx-auto max-w-7xl flex items-center justify-between p-4 lg:px-8">
         {/* Logo image */}
         <Link

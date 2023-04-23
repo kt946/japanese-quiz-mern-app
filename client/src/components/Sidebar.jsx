@@ -14,7 +14,7 @@ const Sidebar = () => {
   return (
     <aside
       id="sidebar"
-      className="hidden sm:flex flex-col items-center xl:items-start fixed z-20 w-full h-full min-h-full max-w-[88px] xl:max-w-[300px] p-6 px-4 bg-white border-2 border-r-slate-300 btn-transition"
+      className="hidden sm:flex flex-col items-center xl:items-start fixed z-20 w-full h-full min-h-full max-w-[88px] xl:max-w-[300px] p-6 px-4 bg-white border-2 border-r-gray-300 btn-transition"
     >
       {/* Logo */}
       <NavLink

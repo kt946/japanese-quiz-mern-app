@@ -13,7 +13,7 @@ const KatakanaChart = () => {
           // Character Container
           <div
             key={`id-${index}`}
-            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-slate-200'}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-gray-200/75'}`}
           >
             {/* Character */}
             {char.character}

@@ -7,9 +7,9 @@ const Footer = () => {
   const loggedIn = Auth.loggedIn();
   
   return (
-    <footer className={`${loggedIn ? 'footer-bg-light' : 'footer-bg-dark'} py-10`}>
-      <div className={`${loggedIn ? '' : 'max-w-7xl'} mx-auto px-4 lg:px-8`}>
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between border-t-2 border-slate-300/50 gap-8">
+    <footer className={`${!loggedIn && 'footer-bg-dark'} py-10`}>
+      <div className={`${!loggedIn && 'max-w-7xl'} mx-auto px-4 lg:px-8`}>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between border-t-2 border-gray-300 gap-8">
           {/* Copyright */}
           <p className="text-sm text-center sm:text-left">Copyright © 2023 Sakura Study. All rights reserved.</p>
           {/* Social Media Links */}

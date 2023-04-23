@@ -42,13 +42,13 @@ const Login = () => {
   return (
     <section
       id="login"
-      className="w-full min-h-[calc(100vh-72px)] py-14 flex justify-center bg-slate-200 hero-bg"
+      className="w-full min-h-[calc(100vh-72px)] py-14 flex justify-center hero-bg"
     >
       {/* Log In Form */}
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="w-full max-w-sm h-fit flex flex-col justify-center items-center bg-white p-8 rounded-xl shadow-xl"
+        className="w-full max-w-sm h-fit flex flex-col justify-center items-center bg-white p-8 rounded-xl shadow-2xl"
       >
         <img
           src={logo}
@@ -71,7 +71,6 @@ const Login = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="john@example.com"
               required
             />
           </div>
@@ -89,7 +88,6 @@ const Login = () => {
                 type={showPassword ? 'text' : 'password'}
                 id="password"
                 name="password"
-                placeholder="********"
                 autoComplete="off"
                 required
               />
@@ -97,7 +95,7 @@ const Login = () => {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute inset-y-0 right-0 h-fit w-fit my-auto mr-2 p-2 btn-transition rounded-full hover:bg-slate-300"
+                className="absolute inset-y-0 right-0 h-fit w-fit my-auto mr-2 p-2 btn-transition rounded-full hover:bg-gray-300"
               >
                 {showPassword ? <HiEyeOff /> : <HiEye />}
               </button>

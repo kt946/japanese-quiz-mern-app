@@ -13,7 +13,7 @@ const Home = () => {
     // Hero Section with Logo and Call to Action
     <section
       id="hero"
-      className="w-full min-h-[calc(100vh-72px)] py-14 bg-slate-200 hero-bg"
+      className="w-full min-h-[calc(100vh-72px)] py-14 hero-bg"
     >
       <div className="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Call to Action */}
@@ -22,7 +22,7 @@ const Home = () => {
             The Best Way To Learn <br />
             <span className="text-primary text-5xl md:text-6xl lg:text-7xl">Japanese</span>
           </h1>
-          <p className="max-w-md md:text-xl text-[#4D516D]">
+          <p className="max-w-md md:text-xl text-slate-600">
             Practice Japanese vocabulary and phrases with our engaging lessons and quizzes.
           </p>
           <div className="w-72 flex flex-col text-center gap-4">
@@ -36,7 +36,7 @@ const Home = () => {
             {/* Login Button */}
             <Link
               to="/login"
-              className="btn-transition py-3 px-3 text-primary border-2 border-primary bg-white hover:bg-slate-200 rounded-xl shadow-xl"
+              className="btn-transition py-3 px-3 text-primary border-2 border-primary bg-white hover:bg-gray-200 rounded-xl shadow-xl"
             >
               Already have an account?
             </Link>

@@ -11,9 +11,9 @@ const CompleteScreen = ({ quiz }) => {
   const time = quiz.getTime();
 
   return (
-    <div className="grow bg-slate-100 flex flex-col justify-center items-center text-center gap-8">
+    <div className="grow flex flex-col justify-center items-center text-center gap-8">
       <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl">Quiz Complete!</h1>
-      <hr className="w-full max-w-2xl border-4 border-primary-shade" />
+      <hr className="w-full max-w-2xl border-4 border-primary" />
       {/* Quiz Statistics Cards */}
       <div className="w-full max-w-2xl flex flex-row gap-2 sm:gap-4 md:gap-8 font-bold">
         {/* Score Card */}

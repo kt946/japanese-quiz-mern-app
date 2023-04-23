@@ -8,7 +8,7 @@ const KanjiLesson = ({ data }) => {
     // Kanji Lesson Container
     <div className="relative p-4 z-10">
       {/* Header */}
-      <div className="text-slate-100">
+      <div className="text-white">
         {/* Lesson Number */}
         <h4 className="font-bold uppercase tracking-wider text-shadow">Lesson {data.lessonNumber}</h4>
         <div className="flex flex-col sm:flex-row justify-between">
@@ -18,14 +18,14 @@ const KanjiLesson = ({ data }) => {
             {/* Start Quiz Button */}
             <Link
               to={`/quiz/kanji/${data.url}`}
-              className="btn-transition w-full sm:w-32 p-2 sm:px-4 bg-slate-100 hover:bg-slate-300 text-slate-800 rounded-xl flex items-center justify-center"
+              className="btn-transition w-full sm:w-32 p-2 sm:px-4 bg-white hover:bg-gray-200 text-slate-800 rounded-xl flex items-center justify-center"
             >
               Start Quiz
             </Link>
 
             {/* Display Table Button */}
             <button
-              className="btn-transition w-full sm:w-32 p-2 sm:px-4 border-2 border-slate-100 bg-slate-800/30 hover:bg-slate-800/50 backdrop-blur-sm text-shadow rounded-xl"
+              className="btn-transition w-full sm:w-32 p-2 sm:px-4 border-2 border-gray-100 bg-slate-800/30 hover:bg-slate-800/50 backdrop-blur-sm text-shadow rounded-xl"
               onClick={() => setDisplayTable(!displayTable)}
             >
               {displayTable ? 'Hide Table' : 'Show Table'}
@@ -38,7 +38,7 @@ const KanjiLesson = ({ data }) => {
       {displayTable && (
         <table className="table-auto mt-4 bg-white rounded-xl overflow-hidden shadow-md">
           <thead>
-            <tr className="bg-slate-100 text-sm sm:text-base">
+            <tr className="bg-gray-100 text-sm sm:text-base">
               <th className="p-3">Kanji</th>
               <th className="p-3">Readings</th>
               <th className="p-3">Meaning</th>

@@ -50,7 +50,7 @@ const CharacterQuiz = ({ quiz }) => {
   return (
     <div
       id="characters"
-      className="w-full min-h-screen p-4 py-6 md:p-0 bg-slate-100 flex flex-col"
+      className="w-full min-h-screen p-4 py-6 md:p-0 flex flex-col"
     >
       {/* Quiz Header */}
       {!quizComplete && (
@@ -66,7 +66,7 @@ const CharacterQuiz = ({ quiz }) => {
             </button>
 
             {/* Progress Bar */}
-            <div className="bg-slate-300 h-4 w-full rounded-2xl overflow-x-hidden">
+            <div className="bg-gray-300 h-4 w-full rounded-2xl overflow-x-hidden">
               <div
                 className={`${
                   quiz.progress <= 0 ? 'opacity-0' : ''
@@ -94,7 +94,7 @@ const CharacterQuiz = ({ quiz }) => {
                   className={`grow md:grow-0 w-full md:py-3 rounded-xl border-2 ${
                     selectedOption === choice
                       ? 'bg-sky-200 border-2 border-sky-400'
-                      : `border-slate-300 ${!questionState && 'hover:bg-slate-200'}`
+                      : `border-gray-300 ${!questionState && 'hover:bg-gray-200'}`
                   }`}
                   onClick={() => setSelectedOption(choice)}
                   disabled={questionState}
@@ -117,7 +117,7 @@ const CharacterQuiz = ({ quiz }) => {
             ? 'bg-[#CEFEA8]'
             : questionState === 'incorrect'
             ? 'bg-[#FED6DD]'
-            : 'md:border-t-2 border-slate-300 '
+            : 'md:border-t-2 border-gray-300 '
         }`}
       >
         <div className="w-full h-full max-w-5xl mx-auto px-4 flex items-center">

@@ -42,13 +42,13 @@ const Signup = () => {
   return (
     <section
       id="signup"
-      className="w-full min-h-[calc(100vh-72px)] py-14 flex justify-center bg-slate-200 hero-bg"
+      className="w-full min-h-[calc(100vh-72px)] py-14 flex justify-center hero-bg"
     >
       {/* Sign Up Form */}
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="w-full max-w-sm h-fit flex flex-col justify-center items-center bg-white p-8 rounded-xl shadow-xl"
+        className="w-full max-w-sm h-fit flex flex-col justify-center items-center bg-white p-8 rounded-xl shadow-2xl"
       >
         <img
           src={logo}
@@ -71,7 +71,6 @@ const Signup = () => {
               type="text"
               id="username"
               name="username"
-              placeholder="John Doe"
               required
             />
           </div>
@@ -88,7 +87,6 @@ const Signup = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="john@example.com"
               required
             />
           </div>
@@ -106,7 +104,6 @@ const Signup = () => {
                 type={showPassword ? 'text' : 'password'}
                 id="password"
                 name="password"
-                placeholder="********"
                 autoComplete="off"
                 required
               />
@@ -114,7 +111,7 @@ const Signup = () => {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute inset-y-0 right-0 h-fit w-fit my-auto mr-2 p-2 btn-transition rounded-full hover:bg-slate-300"
+                className="absolute inset-y-0 right-0 h-fit w-fit my-auto mr-2 p-2 btn-transition rounded-full hover:bg-gray-300"
               >
                 {showPassword ? <HiEyeOff /> : <HiEye />}
               </button>

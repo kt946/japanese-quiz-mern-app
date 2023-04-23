@@ -24,7 +24,7 @@ html {
 }
 
 .form-input-style {
-  @apply bg-slate-100 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-sky-400;
+  @apply bg-gray-100 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-sky-400;
 }
 
 .password-input {
@@ -32,7 +32,7 @@ html {
 }
 
 .sidebar-btn {
-  @apply btn-transition p-2 xl:px-4 flex justify-center xl:justify-start items-center font-bold hover:bg-slate-200 border-2 border-transparent hover:border-slate-200 rounded-xl;
+  @apply btn-transition p-2 xl:px-4 flex justify-center xl:justify-start items-center font-bold hover:bg-gray-200/75 border-2 border-transparent rounded-xl;
 }
 
 .sidebar-btn-icon {
@@ -48,11 +48,7 @@ html {
 }
 
 .footer-bg-dark {
-  @apply bg-[#2B2D42] text-slate-300;
-}
-
-.footer-bg-light {
-  @apply bg-slate-100;
+  @apply bg-[#2B2D42] text-gray-300;
 }
 
 .tab-style {
@@ -88,7 +84,7 @@ html {
 }
 
 .chart-break {
-  @apply my-8 border border-slate-300;
+  @apply my-8 border border-gray-300;
 }
 
 .quiz-btn-style {
@@ -105,6 +101,10 @@ html {
 
 .banner-bg-style {
   @apply absolute inset-0 w-full h-full z-0;
+}
+
+.lesson-container-style {
+  @apply relative overflow-hidden rounded-xl shadow-xl;
 }
 
 .hero-bg {
