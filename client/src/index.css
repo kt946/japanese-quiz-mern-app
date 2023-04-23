@@ -103,8 +103,12 @@ html {
   @apply absolute inset-0 w-full h-full z-0;
 }
 
-.lesson-container-style {
-  @apply relative overflow-hidden rounded-xl shadow-xl;
+.banner-container-style {
+  @apply relative overflow-hidden rounded-xl shadow-lg;
+}
+
+.box-container-style {
+  @apply bg-white w-full h-full p-4 rounded-xl shadow-lg shadow-gray-200;
 }
 
 .hero-bg {

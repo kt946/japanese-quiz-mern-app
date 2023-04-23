@@ -27,14 +27,14 @@ const Characters = () => {
   return (
     <section
       id="characters"
-      className="w-full min-h-screen p-4 md:p-8 pb-8 "
+      className="w-full min-h-screen p-4 md:p-8"
     >
       <div className="mb-8">
-        {/* Title */}
+        {/* Page Heading */}
         <h1 className="h1-style mb-8">Characters</h1>
 
         {/* Banner */}
-        <div className="relative text-white text-shadow bg-gradient-to-r from-primary to-red-800 rounded-xl overflow-hidden">
+        <div className="banner-container-style text-white text-shadow bg-gradient-to-r from-primary to-red-800">
           <div className="relative p-8 z-10">
             <h2 className="banner-heading mb-3">Let's learn {activeTab}!</h2>
             <p className="text-lg">{charBannerText[activeTab]}</p>

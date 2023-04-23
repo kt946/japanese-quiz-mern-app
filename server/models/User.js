@@ -1,5 +1,6 @@
 import { Schema, model } from 'mongoose'; // import Schema and model from mongoose
 import bcrypt from 'bcrypt'; // import bcrypt for password hashing
+import dateFormat from '../utils/helpers.js'; // import dateFormat helper function
 
 // create User schema with username, email, password, and experience fields
 const userSchema = new Schema({
@@ -21,6 +22,11 @@ const userSchema = new Schema({
     type: String,
     required: true,
     minlength: 5, // password must be at least 5 characters long
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+    get: (timestamp) => dateFormat(timestamp),
   },
   experience: {
     type: Number,
