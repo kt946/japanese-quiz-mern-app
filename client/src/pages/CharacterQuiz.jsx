@@ -16,6 +16,7 @@ const CharacterQuiz = ({ quiz }) => {
   const [question, setQuestion] = useState(quiz.generateQuestion());
   const [quizComplete, setQuizComplete] = useState(false);
   const [loading, setLoading] = useState(false);
+  const progress = quiz.getProgress();
 
   // check answer and update progress
   const checkAnswer = (answer) => {
@@ -32,7 +33,7 @@ const CharacterQuiz = ({ quiz }) => {
 
   // cycle to next question, or complete quiz
   const cycleNextQuestion = () => {
-    if (quiz.progress < 100) {
+    if (progress < 100) {
       setQuestion(quiz.generateQuestion());
       setSelectedOption(null);
       setQuestionState(null);
@@ -69,9 +70,9 @@ const CharacterQuiz = ({ quiz }) => {
             <div className="bg-gray-300 h-4 w-full rounded-2xl overflow-x-hidden">
               <div
                 className={`${
-                  quiz.progress <= 0 ? 'opacity-0' : ''
+                  progress <= 0 ? 'opacity-0' : ''
                 } btn-transition h-full px-2 pt-1 bg-gradient-to-b from-primary-tint to-red-800 rounded-2xl`}
-                style={{ width: `${quiz.progress}%` }}
+                style={{ width: `${progress}%` }}
               >
                 {/* inner bar */}
                 <div className="bg-white/30 h-1 rounded-2xl" />

@@ -12,6 +12,10 @@ class QuizGenerator {
     this.elapsedTime = null;
   }
 
+  getProgress() {
+    return this.progress;
+  }
+
   getQuizType() {
     return this.quizType;
   }
