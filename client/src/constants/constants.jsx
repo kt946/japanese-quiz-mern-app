@@ -15,8 +15,8 @@ const sidebarNavItems = [
     icon: <IoLanguage className="sidebar-btn-icon" />,
   },
   {
-    title: 'Leaderboard',
-    path: '/leaderboard',
+    title: 'Leaderboards',
+    path: '/leaderboards',
     icon: <MdOutlineLeaderboard className="sidebar-btn-icon" />,
   },
   {

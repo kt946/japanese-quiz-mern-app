@@ -4,7 +4,6 @@ import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
 import { AiOutlineLoading } from 'react-icons/ai';
-import picturePlaceholder from '../assets/profile-picture-placeholder.png';
 
 const Profile = () => {
   // If the user is not logged in, redirect to the login page
@@ -17,6 +16,9 @@ const Profile = () => {
   // set the user's data to a variable
   const user = data?.me || {};
 
+  // get the first letter of the user's username
+  const firstLetter = user.username?.charAt(0).toUpperCase();
+
   return (
     <section
       id="profile"
@@ -28,11 +30,9 @@ const Profile = () => {
       {loading && <AiOutlineLoading className="animate-spin h-12 w-12 mx-auto" />}
       {/* Profile Info */}
       <div className="box-container-style mb-8 flex flex-col sm:flex-row items-center gap-4">
-        <img
-          src={picturePlaceholder}
-          alt="Profile Picture"
-          className="w-32 h-32 rounded-full mx-auto sm:mx-0"
-        />
+        <div className="w-32 h-32 bg-primary rounded-full flex justify-center items-center uppercase font-bold text-6xl text-white">
+          {firstLetter}
+        </div>
         <div className="flex flex-col gap-2 text-center sm:text-left">
           <h2 className="text-2xl font-bold">{user.username}</h2>
           <p className="text-gray-500">{`Joined ${user.createdAt}`}</p>
@@ -42,8 +42,8 @@ const Profile = () => {
       <div className="box-container-style mb-8 flex flex-col gap-4">
         <h3 className="text-xl font-bold">Statistics</h3>
         <div>
-          <h4 className="font-bold">Total XP:</h4>
-          <h3 className="text-xl text-gray-500">{user.experience}</h3>
+          <h4 className="text-gray-500">Total XP:</h4>
+          <h2 className="text-2xl font-bold">{user.experience}</h2>
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@ import React from 'react';
 import { Header, Footer, Sidebar } from '.';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
-import { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboard, Profile, CharacterQuiz } from '../pages';
+import { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboards, Profile, CharacterQuiz } from '../pages';
 
 import Auth from '../utils/auth';
 import QuizGenerator from '../utils/quizGenerator';
@@ -46,8 +46,8 @@ const MainSection = () => {
               element={<Characters />}
             />
             <Route
-              path="/leaderboard"
-              element={<Leaderboard />}
+              path="/leaderboards"
+              element={<Leaderboards />}
             />
             <Route
               path="/profile"
