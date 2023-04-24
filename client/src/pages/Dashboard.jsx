@@ -60,7 +60,12 @@ const Dashboard = () => {
                 </Link>
               </li>
               <li>
-                <Link className="excercise-style">Numbers</Link>
+                <Link
+                  to="/quiz/lessons/lesson-0/numbers"
+                  className="excercise-style"
+                >
+                  Numbers
+                </Link>
               </li>
             </ul>
           </div>

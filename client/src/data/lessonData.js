@@ -101,6 +101,154 @@ const lessonData = {
           meanings: 'Nice to meet you.',
         },
       ],
+      numbers: [
+        {
+          character: 'ぜろ/れい',
+          romaji: 'zero/rei',
+          meanings: '0',
+        },
+        {
+          character: 'いち',
+          romaji: 'ichi',
+          meanings: '1',
+        },
+        {
+          character: 'に',
+          romaji: 'ni',
+          meanings: '2',
+        },
+        {
+          character: 'さん',
+          romaji: 'san',
+          meanings: '3',
+        },
+        {
+          character: 'よん/し/(よ)',
+          romaji: 'yon/shi/(yo)',
+          meanings: '4',
+        },
+        {
+          character: 'ご',
+          romaji: 'go',
+          meanings: '5',
+        },
+        {
+          character: 'ろく',
+          romaji: 'roku',
+          meanings: '6',
+        },
+        {
+          character: 'なな/しち',
+          romaji: 'nana/shichi',
+          meanings: '7',
+        },
+
+        {
+          character: 'はち',
+          romaji: 'hachi',
+          meanings: '8',
+        },
+        {
+          character: 'きゅう/く',
+          romaji: 'kyuu/ku',
+          meanings: '9',
+        },
+        {
+          character: 'じゅう',
+          romaji: 'juu',
+          meanings: '10',
+        },
+        {
+          character: 'じゅういち',
+          romaji: 'juuichi',
+          meanings: '11',
+        },
+        {
+          character: 'じゅうに',
+          romaji: 'juuni',
+          meanings: '12',
+        },
+        {
+          character: 'じゅうさん',
+          romaji: 'juusan',
+          meanings: '13',
+        },
+        {
+          character: 'じゅうよん/じゅうし',
+          romaji: 'juuyon/juushi',
+          meanings: '14',
+        },
+        {
+          character: 'じゅうご',
+          romaji: 'juugo',
+          meanings: '15',
+        },
+        {
+          character: 'じゅうろく',
+          romaji: 'juuroku',
+          meanings: '16',
+        },
+        {
+          character: 'じゅうなな/じゅうしち',
+          romaji: 'juunana/juushichi',
+          meanings: '17',
+        },
+        {
+          character: 'じゅうはち',
+          romaji: 'juuhachi',
+          meanings: '18',
+        },
+        {
+          character: 'じゅうきゅう/じゅうく',
+          romaji: 'juukyuu/juuku',
+          meanings: '19',
+        },
+        {
+          character: 'にじゅう',
+          romaji: 'nijuu',
+          meanings: '20',
+        },
+        {
+          character: 'さんじゅう',
+          romaji: 'sanjuu',
+          meanings: '30',
+        },
+        {
+          character: 'よんじゅう',
+          romaji: 'yonjuu',
+          meanings: '40',
+        },
+        {
+          character: 'ごじゅう',
+          romaji: 'gojuu',
+          meanings: '50',
+        },
+        {
+          character: 'ろくじゅう',
+          romaji: 'rokujuu',
+          meanings: '60',
+        },
+        {
+          character: 'ななじゅう',
+          romaji: 'nanajuu',
+          meanings: '70',
+        },
+        {
+          character: 'はちじゅう',
+          romaji: 'hachijuu',
+          meanings: '80',
+        },
+        {
+          character: 'きゅうじゅう',
+          romaji: 'kyuujuu',
+          meanings: '90',
+        },
+        {
+          character: 'ひゃく',
+          romaji: 'hyaku',
+          meanings: '100',
+        },
+      ],
     },
   },
   lesson1: {

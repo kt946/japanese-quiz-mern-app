@@ -103,6 +103,10 @@ const MainSection = () => {
                   path="lesson-0/greetings"
                   element={<QuizPage quiz={new VocabQuiz(lessonData.lesson0.greetings.vocabulary)} />}
                 />
+                <Route
+                  path="lesson-0/numbers"
+                  element={<QuizPage quiz={new VocabQuiz(lessonData.lesson0.greetings.numbers)} />}
+                />
               </Route>
             </Route>
             <Route
