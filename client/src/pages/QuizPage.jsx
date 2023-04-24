@@ -4,9 +4,13 @@ import Auth from '../utils/auth';
 
 import { HiX } from 'react-icons/hi';
 import { CheckButton, NextButton, SkipButton, FeedbackMessage, ContinueButton } from '../components';
-import { CompleteScreen } from '../pages';
+import { CompleteScreen } from './';
 
-const CharacterQuiz = ({ quiz }) => {
+import { useQuery, useMutation } from '@apollo/client';
+import { UPDATE_EXPERIENCE } from '../utils/mutations';
+import { QUERY_ME } from '../utils/queries';
+
+const QuizPage = ({ quiz }) => {
   if (!Auth.loggedIn()) {
     return <Navigate to="/login" />;
   }
@@ -15,7 +19,6 @@ const CharacterQuiz = ({ quiz }) => {
   const [questionState, setQuestionState] = useState(null);
   const [question, setQuestion] = useState(quiz.generateQuestion());
   const [quizComplete, setQuizComplete] = useState(false);
-  const [loading, setLoading] = useState(false);
   const progress = quiz.getProgress();
 
   // check answer and update progress
@@ -38,13 +41,39 @@ const CharacterQuiz = ({ quiz }) => {
       setSelectedOption(null);
       setQuestionState(null);
     } else {
-      // set a brief loading state before completing quiz
-      setLoading(true);
-      setTimeout(() => {
-        setQuizComplete(true);
-        setQuestionState(null);
-        setLoading(false);
-      }, 1000);
+      const { xp } = quiz.getScoreAndXP();
+      updateUserExperience(xp);
+    }
+  };
+
+  // get the user's data from the server
+  const { data } = useQuery(QUERY_ME);
+  // set the user's data to a variable
+  const user = data?.me || {};
+
+  // set up the mutation for updating user's experience
+  const [updateExperience, { loading }] = useMutation(UPDATE_EXPERIENCE);
+
+  // update current user's experience
+  const updateUserExperience = async (experience) => {
+    // increment the user's current experience
+    let currentExperience = user.experience;
+    currentExperience += experience;
+
+    try {
+      // execute the mutation
+      await updateExperience({
+        // pass the new experience value to the mutation under the experience variable
+        variables: {
+          experience: currentExperience,
+        },
+      });
+
+      // set the quiz to complete and render the complete screen
+      setQuizComplete(true);
+      setQuestionState(null);
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -86,8 +115,8 @@ const CharacterQuiz = ({ quiz }) => {
       {!quizComplete && (
         <div className="grow w-full h-full my-6 flex flex-col justify-center items-center">
           <div className="grow md:grow-0 w-full md:max-w-2xl h-full md:min-h-[450px] flex flex-col justify-around gap-4">
-            <h1 className="font-bold text-3xl">{question.question}</h1>
-            <div className="grow md:grow-0 h-full grid grid-cols font-medium text-4xl sm:text-5xl gap-2 md:gap-4">
+            <h1 className="font-bold text-2xl sm:text-3xl">{question.question}</h1>
+            <div className="grow md:grow-0 h-full grid grid-cols font-medium text-3xl sm:text-4xl gap-2 md:gap-4">
               {question.choices.map((choice) => (
                 <button
                   key={`id-${choice}`}
@@ -166,4 +195,4 @@ const CharacterQuiz = ({ quiz }) => {
   );
 };
 
-export default CharacterQuiz;
+export default QuizPage;

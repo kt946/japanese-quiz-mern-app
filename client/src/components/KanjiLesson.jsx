@@ -18,14 +18,14 @@ const KanjiLesson = ({ data }) => {
             {/* Start Quiz Button */}
             <Link
               to={`/quiz/kanji/${data.url}`}
-              className="btn-transition w-full sm:w-32 p-2 sm:px-4 bg-white hover:bg-gray-200 text-slate-800 rounded-xl flex items-center justify-center"
+              className="btn-transition w-full sm:w-32 p-2 sm:px-4 bg-white hover:bg-gray-200 text-gray-800 rounded-xl flex items-center justify-center"
             >
               Start Quiz
             </Link>
 
             {/* Display Table Button */}
             <button
-              className="btn-transition w-full sm:w-32 p-2 sm:px-4 border-2 border-gray-100 bg-slate-800/30 hover:bg-slate-800/50 backdrop-blur-sm text-shadow rounded-xl"
+              className="btn-transition w-full sm:w-32 p-2 sm:px-4 border-2 border-gray-100 bg-gray-800/30 hover:bg-gray-800/50 backdrop-blur-sm text-shadow rounded-xl"
               onClick={() => setDisplayTable(!displayTable)}
             >
               {displayTable ? 'Hide Table' : 'Show Table'}

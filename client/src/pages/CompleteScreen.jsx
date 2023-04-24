@@ -1,46 +1,14 @@
 import { useEffect } from 'react';
 import { runFireworks } from '../utils/confetti';
 
-import { useQuery, useMutation } from '@apollo/client';
-import { UPDATE_EXPERIENCE } from '../utils/mutations';
-import { QUERY_ME } from '../utils/queries';
-
 const CompleteScreen = ({ quiz }) => {
   useEffect(() => {
     runFireworks();
-    updateUserExperience(xp);
   }, []);
 
   // get score, xp, and formatted time from quiz
   const { score, xp } = quiz.getScoreAndXP();
   const time = quiz.getTime();
-
-  // get the user's data from the server
-  const { data } = useQuery(QUERY_ME);
-  // set the user's data to a variable
-  const user = data?.me || {};
-
-  // set up the mutation for updating user's experience
-  const [updateExperience] = useMutation(UPDATE_EXPERIENCE);
-
-  // update current user's experience
-  const updateUserExperience = async (experience) => {
-    // increment the user's current experience
-    let currentExperience = user.experience;
-    currentExperience += experience;
-
-    try {
-      // execute the mutation
-      await updateExperience({
-        // pass the new experience value to the mutation under the experience variable
-        variables: {
-          experience: currentExperience,
-        },
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   return (
     <div className="grow flex flex-col justify-center items-center text-center gap-8">

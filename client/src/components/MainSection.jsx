@@ -3,11 +3,11 @@ import React from 'react';
 import { Header, Footer, Sidebar } from '.';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
-import { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboards, Profile, CharacterQuiz } from '../pages';
+import { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboards, Profile, QuizPage } from '../pages';
 
 import Auth from '../utils/auth';
-import QuizGenerator from '../utils/quizGenerator';
-import { hiraganaData, katakanaData, kanjiData } from '../data';
+import { HiraKataKanjiQuiz, VocabQuiz } from '../utils/quizGenerator';
+import { hiraganaData, katakanaData, kanjiData, lessonData } from '../data';
 
 const MainSection = () => {
   const loggedIn = Auth.loggedIn();
@@ -57,9 +57,9 @@ const MainSection = () => {
               <Route
                 path="hiragana"
                 element={
-                  <CharacterQuiz
+                  <QuizPage
                     quiz={
-                      new QuizGenerator(
+                      new HiraKataKanjiQuiz(
                         'hiragana',
                         hiraganaData.basic,
                         hiraganaData.diacritics,
@@ -72,9 +72,9 @@ const MainSection = () => {
               <Route
                 path="katakana"
                 element={
-                  <CharacterQuiz
+                  <QuizPage
                     quiz={
-                      new QuizGenerator(
+                      new HiraKataKanjiQuiz(
                         'katakana',
                         katakanaData.basic,
                         katakanaData.diacritics,
@@ -87,15 +87,21 @@ const MainSection = () => {
               <Route path="kanji">
                 <Route
                   path="lesson-3"
-                  element={<CharacterQuiz quiz={new QuizGenerator('kanji', kanjiData.lesson3.kanji)} />}
+                  element={<QuizPage quiz={new HiraKataKanjiQuiz('kanji', kanjiData.lesson3.kanji)} />}
                 />
                 <Route
                   path="lesson-4"
-                  element={<CharacterQuiz quiz={new QuizGenerator('kanji', kanjiData.lesson4.kanji)} />}
+                  element={<QuizPage quiz={new HiraKataKanjiQuiz('kanji', kanjiData.lesson4.kanji)} />}
                 />
                 <Route
                   path="lesson-5"
-                  element={<CharacterQuiz quiz={new QuizGenerator('kanji', kanjiData.lesson5.kanji)} />}
+                  element={<QuizPage quiz={new HiraKataKanjiQuiz('kanji', kanjiData.lesson5.kanji)} />}
+                />
+              </Route>
+              <Route path="lessons">
+                <Route
+                  path="lesson-0/greetings"
+                  element={<QuizPage quiz={new VocabQuiz(lessonData.lesson0.greetings.vocabulary)} />}
                 />
               </Route>
             </Route>

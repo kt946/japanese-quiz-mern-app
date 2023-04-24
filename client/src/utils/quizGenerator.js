@@ -1,7 +1,6 @@
-// class to generate quiz, takes in arrays of hiragana or katakana data
+// class to generate quiz
 class QuizGenerator {
-  constructor(type, ...arrays) {
-    this.quizType = type;
+  constructor(...arrays) {
     this.selectedDataArray = this.combineAndFilterArrays(...arrays);
     this.progress = 0;
     this.numCorrect = 0;
@@ -32,78 +31,6 @@ class QuizGenerator {
   combineAndFilterArrays(...arrays) {
     const combinedArray = arrays.flat();
     return combinedArray.filter((item) => item.character !== '');
-  }
-
-  // return a question object with question, answer, and choices
-  generateQuestion() {
-    // choose random item from selected data array to create question
-    const randomQuestion = this.selectedDataArray[Math.floor(Math.random() * this.selectedDataArray.length)];
-
-    // if quiz type is kanji, generate kanji question, else generate hiragana or katakana question
-    if (this.quizType === 'kanji') {
-      return this.generateKanjiQuestion(randomQuestion);
-    } else if (this.quizType === 'hiragana' || this.quizType === 'katakana') {
-      return this.generateHiraKataQuestion(randomQuestion);
-    }
-  }
-
-  // generate hiragana or kanji question, both have romaji and character
-  generateHiraKataQuestion(randomQuestion) {
-    // initialize variables for question, answer, and choices
-    let question, answer, choices;
-
-    // randomly choose between romaji and character for question
-    if (Math.random() < 0.5) {
-      question = `Select the correct character(s) for "${randomQuestion.romaji}"`;
-      answer = randomQuestion.character;
-      choices = this.generateAnswerOptions(answer, 'character');
-    } else {
-      question = `Select the correct character(s) for "${randomQuestion.character}"`;
-      answer = randomQuestion.romaji;
-      choices = this.generateAnswerOptions(answer, 'romaji');
-    }
-
-    // return question object
-    return { question, answer, choices };
-  }
-
-  // generate kanji question with readings, meanings, and character
-  generateKanjiQuestion(randomQuestion) {
-    // initialize variables for question, answer, and choices
-    let question, answer, choices;
-
-    // randomly choose between readings, meanings, and character for question
-    const randomIndex = Math.floor(Math.random() * 4);
-
-    switch (randomIndex) {
-      // Select the correct reading(s) for the character
-      case 0:
-        question = `Select the correct reading(s) for "${randomQuestion.character}"`;
-        answer = randomQuestion.readings;
-        choices = this.generateAnswerOptions(answer, 'readings');
-        break;
-      // Select the correct meaning(s) for the character
-      case 1:
-        question = `Select the correct meaning(s) for "${randomQuestion.character}"`;
-        answer = randomQuestion.meanings;
-        choices = this.generateAnswerOptions(answer, 'meanings');
-        break;
-      // Select the correct character for the reading(s)
-      case 2:
-        question = `Select the correct character for "${randomQuestion.readings}"`;
-        answer = randomQuestion.character;
-        choices = this.generateAnswerOptions(answer, 'character');
-        break;
-      // Select the correct character for the meaning(s)
-      default:
-        question = `Select the correct character for "${randomQuestion.meanings}"`;
-        answer = randomQuestion.character;
-        choices = this.generateAnswerOptions(answer, 'character');
-        break;
-    }
-
-    // return question object
-    return { question, answer, choices };
   }
 
   // generate array of choices for each question
@@ -197,4 +124,113 @@ class QuizGenerator {
   }
 }
 
-export default QuizGenerator;
+// Class to generate hiragana, katakana, and kanji quizzes extends QuizGenerator
+class HiraKataKanjiQuiz extends QuizGenerator {
+  constructor(type, ...arrays) {
+    super(...arrays);
+    this.quizType = type;
+  }
+
+  // return a question object with question, answer, and choices
+  generateQuestion() {
+    // choose random item from selected data array to create question
+    const randomQuestion = this.selectedDataArray[Math.floor(Math.random() * this.selectedDataArray.length)];
+
+    // if quiz type is kanji, generate kanji question, else generate hiragana or katakana question
+    if (this.quizType === 'kanji') {
+      return this.generateKanjiQuestion(randomQuestion);
+    } else if (this.quizType === 'hiragana' || this.quizType === 'katakana') {
+      return this.generateHiraKataQuestion(randomQuestion);
+    }
+  }
+
+  // generate hiragana or kanji question, both have romaji and character
+  generateHiraKataQuestion(randomQuestion) {
+    // initialize variables for question, answer, and choices
+    let question, answer, choices;
+
+    // randomly choose between romaji and character for question
+    if (Math.random() < 0.5) {
+      question = `Select the correct character(s) for "${randomQuestion.romaji}"`;
+      answer = randomQuestion.character;
+      choices = this.generateAnswerOptions(answer, 'character');
+    } else {
+      question = `Select the correct character(s) for "${randomQuestion.character}"`;
+      answer = randomQuestion.romaji;
+      choices = this.generateAnswerOptions(answer, 'romaji');
+    }
+
+    // return question object
+    return { question, answer, choices };
+  }
+
+  // generate kanji question with readings, meanings, and character
+  generateKanjiQuestion(randomQuestion) {
+    // initialize variables for question, answer, and choices
+    let question, answer, choices;
+
+    // randomly choose between readings, meanings, and character for question
+    const randomIndex = Math.floor(Math.random() * 4);
+
+    switch (randomIndex) {
+      // Select the correct reading(s) for the character
+      case 0:
+        question = `Select the correct reading(s) for "${randomQuestion.character}"`;
+        answer = randomQuestion.readings;
+        choices = this.generateAnswerOptions(answer, 'readings');
+        break;
+      // Select the correct meaning(s) for the character
+      case 1:
+        question = `Select the correct meaning(s) for "${randomQuestion.character}"`;
+        answer = randomQuestion.meanings;
+        choices = this.generateAnswerOptions(answer, 'meanings');
+        break;
+      // Select the correct character for the reading(s)
+      case 2:
+        question = `Select the correct character for "${randomQuestion.readings}"`;
+        answer = randomQuestion.character;
+        choices = this.generateAnswerOptions(answer, 'character');
+        break;
+      // Select the correct character for the meaning(s)
+      default:
+        question = `Select the correct character for "${randomQuestion.meanings}"`;
+        answer = randomQuestion.character;
+        choices = this.generateAnswerOptions(answer, 'character');
+        break;
+    }
+
+    // return question object
+    return { question, answer, choices };
+  }
+}
+
+// VocabQuiz class extends from QuizGenerator; for vocabulary
+class VocabQuiz extends QuizGenerator {
+  constructor(...arrays) {
+    super(...arrays);
+  }
+
+  generateQuestion() {
+    // choose random item from selected data array to create question
+    const randomQuestion = this.selectedDataArray[Math.floor(Math.random() * this.selectedDataArray.length)];
+
+    // initialize variables for question, answer, and choices
+    let question, answer, choices;
+
+    // randomly choose between romaji and character for question
+    if (Math.random() < 0.5) {
+      question = `Select the correct meaning(s) for "${randomQuestion.character}"`;
+      answer = randomQuestion.meanings;
+      choices = this.generateAnswerOptions(answer, 'meanings');
+    } else {
+      question = `Select the correct character(s) for "${randomQuestion.meanings}"`;
+      answer = randomQuestion.character;
+      choices = this.generateAnswerOptions(answer, 'character');
+    }
+
+    // return question object
+    return { question, answer, choices };
+  }
+}
+
+export { HiraKataKanjiQuiz, VocabQuiz };

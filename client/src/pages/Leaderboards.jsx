@@ -43,7 +43,7 @@ const Leaderboards = () => {
       <h1 className="h1-style mb-8">Leaderboards</h1>
 
       {/* Banner */}
-      <div className="mb-8 banner-container-style text-white text-shadow bg-gradient-to-r from-blue-600 to-blue-900">
+      <div className="mb-8 banner-container-style text-white text-shadow bg-gradient-to-r from-green-600 to-green-800">
         <div className="relative p-8 z-10">
           <h2 className="banner-heading mb-3">Rise to the top!</h2>
           <p className="text-lg">Be the best and compete with others.</p>

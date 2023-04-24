@@ -127,6 +127,10 @@ html {
   @apply border-2 border-[#D7975D] bg-[#F7BE8B] text-[#CD7900];
 }
 
+.excercise-style {
+  @apply btn-transition w-full p-2 sm:p-4 bg-gray-800/30 hover:bg-gray-800/50 rounded-xl text-left text-shadow flex;
+}
+
 .hero-bg {
   background-image: url('./assets/waves.svg'), url('./assets/endless-clouds.svg');
   background-size: 105%, 80px;
@@ -165,6 +169,13 @@ html {
 .bg-connections {
   background: url('./assets/bannerBG/bg-connections.svg') repeat;
   background-size: 80px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+}
+
+.bg-parkay-floor {
+  background: url('./assets/bannerBG/bg-parkay-floor.svg') repeat;
+  background-size: 100px;
   -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
   mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
 }

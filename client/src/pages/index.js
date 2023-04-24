@@ -6,7 +6,7 @@ import Dashboard from './Dashboard';
 import Characters from './Characters';
 import Leaderboards from './Leaderboards';
 import Profile from './Profile';
-import CharacterQuiz from './CharacterQuiz';
+import QuizPage from './QuizPage';
 import CompleteScreen from './CompleteScreen';
 
-export { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboards, Profile, CharacterQuiz, CompleteScreen };
+export { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboards, Profile, QuizPage, CompleteScreen };
