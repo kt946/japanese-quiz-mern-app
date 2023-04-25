@@ -1,6 +1,6 @@
 // This contains the routes for the app and additional styling for the app depending on logged in state and path
 import React from 'react';
-import { Header, Footer, Sidebar } from '.';
+import { Header, Footer, Sidebar, MobileMenu } from '.';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboards, Profile, QuizPage } from '../pages';
@@ -19,7 +19,7 @@ const MainSection = () => {
       {loggedIn && !quizLocation && <Sidebar />}
       <div
         className={`overflow-x-hidden overflow-y-auto flex flex-col ${
-          loggedIn ? (quizLocation ? '' : 'sm:ms-[88px] xl:ms-[300px]') : ''
+          loggedIn ? (quizLocation ? '' : 'mb-20 sm:mb-0 sm:ms-[88px] xl:ms-[300px]') : ''
         }`}
       >
         {!loggedIn && <Header />}
@@ -117,6 +117,7 @@ const MainSection = () => {
         </main>
         {!quizLocation && <Footer />}
       </div>
+      {loggedIn && !quizLocation && <MobileMenu />}
     </>
   );
 };

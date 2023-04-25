@@ -47,6 +47,10 @@ html {
   @apply hidden xl:inline-block;
 }
 
+.mobile-btn {
+  @apply btn-transition w-full p-2 xl:px-4 flex items-center font-bold hover:bg-gray-200/75 border-2 border-transparent rounded-xl;
+}
+
 .footer-bg-dark {
   @apply bg-[#2B2D42] text-gray-300;
 }
