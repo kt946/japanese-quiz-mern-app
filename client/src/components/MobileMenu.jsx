@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Auth from '../utils/auth';
+// import useSelector and useDispatch hooks from react-redux to access state and dispatch actions
+import { useSelector, useDispatch } from 'react-redux';
+// import darkmode action
+import { TOGGLE_DARKMODE } from '../features/darkMode/darkModeSlice';
 
 import { sidebarNavItems } from '../constants/constants';
 import { MdOutlineMoreHoriz } from 'react-icons/md';
@@ -8,7 +12,11 @@ import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi';
 import { FiLogOut } from 'react-icons/fi';
 
 const MobileMenu = () => {
-  const [darkmode, setDarkmode] = useState(false);
+  // get darkmode state from store
+  const darkmode = useSelector((state) => state.darkMode.value);
+  // get dispatch function from useDispatch hook
+  const dispatch = useDispatch();
+  // toggleOptions state to toggle options menu
   const [toggleOptions, setToggleOptions] = useState(false);
 
   return (
@@ -46,8 +54,9 @@ const MobileMenu = () => {
                 <button
                   type="button"
                   className="mobile-btn"
+                  // dispatch toggleDarkmode action when button is clicked
                   onClick={() => {
-                    setDarkmode(!darkmode);
+                    dispatch(TOGGLE_DARKMODE(darkmode));
                     setToggleOptions(!toggleOptions);
                   }}
                 >

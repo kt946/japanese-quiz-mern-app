@@ -1,15 +1,21 @@
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Auth from '../utils/auth';
+// import useSelector and useDispatch hooks from react-redux to access state and dispatch actions
+import { useSelector, useDispatch } from 'react-redux';
+// import darkmode action
+import { TOGGLE_DARKMODE } from '../features/darkMode/darkModeSlice';
+
 import logo from '../assets/SakuraStudyLogo.svg';
 import logoText from '../assets/SakuraStudyTextBlack.svg';
-
 import { sidebarNavItems } from '../constants/constants';
 import { FiLogOut } from 'react-icons/fi';
 import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi';
 
 const Sidebar = () => {
-  const [darkmode, setDarkmode] = useState(false);
+  // get darkmode state from store
+  const darkMode = useSelector((state) => state.darkMode.value);
+  // get dispatch function from useDispatch hook
+  const dispatch = useDispatch();
 
   return (
     <aside
@@ -50,10 +56,11 @@ const Sidebar = () => {
         <button
           type="button"
           className="sidebar-btn"
-          onClick={() => setDarkmode(!darkmode)}
+          // dispatch toggleDarkmode action when button is clicked
+          onClick={() => dispatch(TOGGLE_DARKMODE(darkMode)) }
         >
-          {darkmode ? <HiOutlineSun className="sidebar-btn-icon" /> : <HiOutlineMoon className="sidebar-btn-icon" />}
-          <span className="sidebar-text">{darkmode ? 'Light mode' : 'Dark mode'}</span>
+          {darkMode ? <HiOutlineSun className="sidebar-btn-icon" /> : <HiOutlineMoon className="sidebar-btn-icon" />}
+          <span className="sidebar-text">{darkMode ? 'Light mode' : 'Dark mode'}</span>
         </button>
         {/* Logout Button */}
         <button
