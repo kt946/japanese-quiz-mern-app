@@ -66,7 +66,7 @@ const Characters = () => {
           <div className="mb-8 flex justify-center sm:justify-start">
             <Link
               to={`/quiz/${activeTab.toLowerCase()}`}
-              className="w-full sm:w-fit btn-transition px-8 py-4 text-center text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-xl"
+              className="w-full sm:w-fit custom-transition px-8 py-4 text-center text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-xl"
             >
               Start {activeTab} Quiz
             </Link>

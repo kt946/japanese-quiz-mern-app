@@ -90,7 +90,7 @@ const QuizPage = ({ quiz }) => {
             <button
               type="button"
               onClick={() => window.history.back()}
-              className="btn-transition hover:opacity-60 mr-4"
+              className="custom-transition hover:opacity-60 mr-4"
             >
               <HiX className="w-7 h-7" />
             </button>
@@ -100,7 +100,7 @@ const QuizPage = ({ quiz }) => {
               <div
                 className={`${
                   progress <= 0 ? 'opacity-0' : ''
-                } btn-transition h-full px-2 pt-1 bg-gradient-to-b from-primary-tint to-red-800 rounded-2xl`}
+                } custom-transition h-full px-2 pt-1 bg-gradient-to-b from-primary-tint to-red-800 rounded-2xl`}
                 style={{ width: `${progress}%` }}
               >
                 {/* inner bar */}

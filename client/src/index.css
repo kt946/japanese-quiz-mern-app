@@ -15,24 +15,32 @@ html {
   }
 }
 
-.btn-transition {
-  @apply transition-all duration-300 ease-in-out;
+.custom-transition {
+  @apply transition-all duration-150 ease-in-out;
 }
 
 .social-link {
-  @apply w-8 h-8 btn-transition hover:opacity-60;
+  @apply w-8 h-8 custom-transition hover:opacity-60;
+}
+
+.form-container-style {
+  @apply w-full max-w-sm h-fit flex flex-col justify-center items-center bg-white dark:bg-slate-800 px-4 py-8 sm:p-8 rounded-xl shadow-2xl;
 }
 
 .form-input-style {
-  @apply bg-gray-100 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-sky-400;
+  @apply bg-gray-100 dark:bg-slate-900 border-2 border-gray-300 dark:border-slate-700 rounded-xl focus:outline-none focus:border-sky-400 dark:focus:border-sky-400;
 }
 
 .password-input {
   @apply form-input-style w-full pl-3 pr-12 py-2 overflow-hidden;
 }
 
+.password-show-btn {
+  @apply absolute inset-y-0 right-0 h-fit w-fit my-auto mr-2 p-2 custom-transition rounded-full hover:bg-gray-300 dark:hover:bg-gray-700;
+}
+
 .sidebar-btn {
-  @apply btn-transition p-2 xl:px-4 flex justify-center xl:justify-start items-center font-bold hover:bg-gray-200/75 border-2 border-transparent rounded-xl;
+  @apply custom-transition p-2 xl:px-4 flex justify-center xl:justify-start items-center font-bold hover:bg-gray-200/75 dark:hover:bg-slate-700 border-2 border-transparent rounded-xl;
 }
 
 .sidebar-btn-icon {
@@ -48,7 +56,7 @@ html {
 }
 
 .mobile-btn {
-  @apply btn-transition w-full p-2 xl:px-4 flex items-center font-bold hover:bg-gray-200/75 border-2 border-transparent rounded-xl;
+  @apply custom-transition w-full p-2 xl:px-4 flex items-center font-bold hover:bg-gray-200/75 dark:hover:bg-slate-700 border-2 border-transparent rounded-xl;
 }
 
 .footer-bg-dark {
@@ -56,7 +64,7 @@ html {
 }
 
 .tab-style {
-  @apply btn-transition w-full py-2 rounded-t-xl border-b-4 border-transparent hover:border-primary-tint hover:text-primary-tint;
+  @apply custom-transition w-full py-2 rounded-t-xl border-b-4 border-transparent hover:border-primary-tint hover:text-primary-tint;
 }
 
 .tab-active-style {
@@ -92,7 +100,7 @@ html {
 }
 
 .quiz-btn-style {
-  @apply btn-transition h-12 w-full md:max-w-[150px] py-2 px-3 font-bold text-lg rounded-xl;
+  @apply custom-transition h-12 w-full md:max-w-[150px] py-2 px-3 font-bold text-lg rounded-xl;
 }
 
 .quiz-stat-container {
@@ -112,7 +120,7 @@ html {
 }
 
 .box-container-style {
-  @apply bg-white w-full h-full p-4 rounded-xl shadow-lg border border-gray-200/75;
+  @apply bg-white dark:bg-slate-800 w-full h-full p-4 rounded-xl shadow-lg;
 }
 
 .ranking-index-style {
@@ -132,7 +140,7 @@ html {
 }
 
 .excercise-style {
-  @apply btn-transition w-full p-2 sm:p-4 bg-gray-800/30 hover:bg-gray-800/50 rounded-xl text-left text-shadow flex;
+  @apply custom-transition w-full p-2 sm:p-4 bg-gray-800/30 hover:bg-gray-800/50 rounded-xl text-left text-shadow flex;
 }
 
 .hero-bg {

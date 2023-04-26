@@ -22,21 +22,21 @@ const Home = () => {
             The Best Way To Learn <br />
             <span className="text-primary text-5xl md:text-6xl lg:text-7xl">Japanese</span>
           </h1>
-          <p className="max-w-md md:text-xl text-slate-600">
+          <p className="max-w-md md:text-xl text-gray-500 dark:text-gray-400">
             Practice Japanese vocabulary and phrases with our engaging lessons and quizzes.
           </p>
           <div className="w-72 flex flex-col text-center gap-4">
             {/* Sign Up Button */}
             <Link
               to="/signup"
-              className="btn-transition py-3 px-3 text-white bg-primary hover:bg-primary-shade rounded-xl shadow-xl"
+              className="custom-transition py-3 px-3 text-white bg-primary hover:bg-primary-shade rounded-xl shadow-xl"
             >
               Start learning
             </Link>
             {/* Login Button */}
             <Link
               to="/login"
-              className="btn-transition py-3 px-3 text-primary border-2 border-primary bg-white hover:bg-gray-200 rounded-xl shadow-xl"
+              className="custom-transition py-3 px-3 text-primary dark:text-gray-300 border-2 border-primary dark:border-gray-300 bg-white dark:bg-transparent dark:hover:bg-gray-100/10 hover:bg-gray-300 rounded-xl shadow-xl"
             >
               Already have an account?
             </Link>

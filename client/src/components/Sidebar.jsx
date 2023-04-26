@@ -7,6 +7,7 @@ import { TOGGLE_DARKMODE } from '../features/darkMode/darkModeSlice';
 
 import logo from '../assets/SakuraStudyLogo.svg';
 import logoText from '../assets/SakuraStudyTextBlack.svg';
+import logoTextDarkMode from '../assets/SakuraStudyTextWhite.svg';
 import { sidebarNavItems } from '../constants/constants';
 import { FiLogOut } from 'react-icons/fi';
 import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi';
@@ -20,23 +21,32 @@ const Sidebar = () => {
   return (
     <aside
       id="sidebar"
-      className="hidden sm:flex flex-col items-center xl:items-start fixed z-20 w-full h-full min-h-full max-w-[88px] xl:max-w-[300px] p-6 px-4 bg-white border-2 border-r-gray-300 btn-transition"
+      className="hidden sm:flex flex-col items-center xl:items-start fixed z-20 w-full h-full min-h-full max-w-[88px] xl:max-w-[300px] p-6 px-4 bg-white dark:bg-slate-800 border-r-2 border-gray-300 dark:border-gray-700 custom-transition"
     >
       {/* Logo */}
       <NavLink
         to="/dashboard"
-        className="w-fit xl:px-4 flex items-center gap-3"
+        className="w-fit xl:px-4 flex items-center gap-3 hover:opacity-70 custom-transition"
       >
         <img
           src={logo}
           alt="Logo"
           className="w-10 h-10"
         />
-        <img
-          src={logoText}
-          alt="Sakura Study Text Logo"
-          className="w-auto h-6 sidebar-text"
-        />
+        {/* Show dark mode logo if dark mode is enabled */}
+        {darkMode ? (
+          <img
+            src={logoTextDarkMode}
+            alt="Sakura Study Text Logo"
+            className="w-auto h-6 sidebar-text"
+          />
+        ) : (
+          <img
+            src={logoText}
+            alt="Sakura Study Text Logo"
+            className="w-auto h-6 sidebar-text"
+          />
+        )}
       </NavLink>
 
       {/* Navigation Links */}
@@ -57,7 +67,7 @@ const Sidebar = () => {
           type="button"
           className="sidebar-btn"
           // dispatch toggleDarkmode action when button is clicked
-          onClick={() => dispatch(TOGGLE_DARKMODE(darkMode)) }
+          onClick={() => dispatch(TOGGLE_DARKMODE(darkMode))}
         >
           {darkMode ? <HiOutlineSun className="sidebar-btn-icon" /> : <HiOutlineMoon className="sidebar-btn-icon" />}
           <span className="sidebar-text">{darkMode ? 'Light mode' : 'Dark mode'}</span>

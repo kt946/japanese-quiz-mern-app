@@ -23,7 +23,7 @@ const MobileMenu = () => {
     // Display Mobile Menu on small screens
     <div
       id="mobileMenu"
-      className="sm:hidden btn-transition w-full h-20 fixed z-50 bottom-0 bg-white border-t-2 border-gray-300"
+      className="sm:hidden custom-transition w-full h-20 fixed z-50 bottom-0 bg-white dark:bg-slate-800 border-t-2 border-gray-300 dark:border-gray-700"
     >
       <ul className="h-full flex justify-around items-center">
         {/* Navigation Links */}
@@ -44,11 +44,11 @@ const MobileMenu = () => {
             className="sidebar-btn scale-110"
             onClick={() => setToggleOptions(!toggleOptions)}
           >
-            <MdOutlineMoreHoriz className="sidebar-btn-icon border-2 border-slate-800 rounded-full" />
+            <MdOutlineMoreHoriz className="sidebar-btn-icon border-2 border-slate-800 dark:border-gray-100 rounded-full" />
           </button>
           {/* Options Menu */}
           {toggleOptions && (
-            <ul className="absolute bottom-full w-36 right-0 mb-6 p-1 bg-white rounded-xl overflow-hidden flex flex-col gap-1 shadow-md ring-2 ring-gray-300">
+            <ul className="absolute bottom-full w-36 right-0 mb-6 p-1 bg-white dark:bg-slate-800 rounded-xl overflow-hidden flex flex-col gap-1 shadow-md border-2 border-gray-300 dark:border-gray-700">
               {/* Dark Mode Button */}
               <li>
                 <button
