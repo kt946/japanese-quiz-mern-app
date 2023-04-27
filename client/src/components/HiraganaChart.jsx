@@ -13,7 +13,7 @@ const HiraganaChart = () => {
           // Character Container
           <div
             key={`id-${index}`}
-            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-gray-200/75'}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'chart-empty-container'}`}
           >
             {/* Character */}
             {char.character}
@@ -75,7 +75,7 @@ const HiraganaChart = () => {
         {hiraganaData.longVowels.map((char, index) => (
           <div
             key={`id-${index}`}
-            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'bg-gray-200/75'}`}
+            className={`chart-char-container ${char.character ? 'chart-filled-container' : 'chart-empty-container'}`}
           >
             {char.character}
             <span className="chart-romaji">{char.romaji}</span>

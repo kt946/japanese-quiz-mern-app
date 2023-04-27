@@ -46,7 +46,7 @@ const Characters = () => {
       {/* Content */}
       <div>
         {/* Tabs */}
-        <div className="mb-8 border-b-2 border-b-gray-300 flex justify-center sm:justify-start">
+        <div className="mb-8 border-b-2 border-b-gray-300 dark:border-gray-700 flex justify-center sm:justify-start">
           <div className="w-full sm:max-w-md grid grid-cols-3 font-bold sm:text-lg text-center">
             {tabs.map((tab) => (
               <button

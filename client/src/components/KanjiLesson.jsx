@@ -8,7 +8,7 @@ const KanjiLesson = ({ data }) => {
     // Kanji Lesson Container
     <div className="relative p-4 z-10">
       {/* Header */}
-      <div className="text-white">
+      <div className="text-gray-100">
         {/* Lesson Number */}
         <h4 className="font-bold uppercase tracking-wider text-shadow">Lesson {data.lessonNumber}</h4>
         <div className="flex flex-col sm:flex-row justify-between">
@@ -36,9 +36,9 @@ const KanjiLesson = ({ data }) => {
 
       {/* Lesson Content */}
       {displayTable && (
-        <table className="table-auto mt-4 bg-white rounded-xl overflow-hidden shadow-md">
+        <table className="table-auto mt-4 bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-md">
           <thead>
-            <tr className="bg-gray-100 text-sm sm:text-base">
+            <tr className="bg-gray-100 dark:bg-slate-800 text-sm sm:text-base">
               <th className="p-3">Kanji</th>
               <th className="p-3">Readings</th>
               <th className="p-3">Meaning</th>
@@ -47,11 +47,11 @@ const KanjiLesson = ({ data }) => {
           <tbody>
             {data.kanji.map((kanji) => (
               <tr key={`id=${kanji.meanings}`}>
-                <td className="w-fit border-2 p-2 sm:p-4 text-xl font-bold md:font-normal sm:text-2xl md:text-5xl lg:text-7xl text-center">
+                <td className="w-fit border-2 dark:border-gray-700 p-2 sm:p-4 text-xl font-bold md:font-normal sm:text-2xl md:text-5xl lg:text-7xl text-center">
                   {kanji.character}
                 </td>
-                <td className="w-1/2 border-2 p-2 sm:p-4 sm:text-2xl md:text-3xl">{kanji.readings}</td>
-                <td className="w-1/2 border-2 p-2 sm:p-4 md:text-xl">{kanji.meanings}</td>
+                <td className="w-1/2 border-2 dark:border-gray-700 p-2 sm:p-4 sm:text-2xl md:text-3xl">{kanji.readings}</td>
+                <td className="w-1/2 border-2 dark:border-gray-700 p-2 sm:p-4 md:text-xl">{kanji.meanings}</td>
               </tr>
             ))}
           </tbody>

@@ -48,7 +48,7 @@ html {
 }
 
 .sidebar-btn.active {
-  @apply bg-sky-100 border-2 border-sky-300 text-sky-500;
+  @apply bg-red-100 border-2 border-red-300 text-red-500 dark:bg-red-100;
 }
 
 .sidebar-text {
@@ -88,15 +88,19 @@ html {
 }
 
 .chart-filled-container {
-  @apply bg-red-50 border-2 border-primary-shade/40;
+  @apply bg-red-100 border-2 border-primary-shade/40 text-red-900 dark:bg-slate-800 dark:text-gray-100 dark:border-gray-700;
 }
 
 .chart-romaji {
-  @apply font-normal text-sm sm:text-base md:text-lg lg:text-xl italic;
+  @apply font-normal text-red-900 dark:text-gray-100 text-sm sm:text-base md:text-lg lg:text-xl italic;
+}
+
+.chart-empty-container {
+  @apply bg-gray-200/75 dark:bg-slate-800;
 }
 
 .chart-break {
-  @apply my-8 border border-gray-300;
+  @apply my-8 border border-gray-300 dark:border-gray-700;
 }
 
 .quiz-btn-style {

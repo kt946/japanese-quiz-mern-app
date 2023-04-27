@@ -60,14 +60,14 @@ const Profile = () => {
         </div>
         <div className="flex flex-col gap-2 text-center sm:text-left">
           <h2 className="text-2xl font-bold">{user.username}</h2>
-          <p className="text-gray-500">{`Joined ${user.createdAt}`}</p>
+          <p className="text-gray-500 dark:text-gray-400">{`Joined ${user.createdAt}`}</p>
         </div>
       </div>
       {/* Profile Statistics */}
       <div className="box-container-style mb-8 flex flex-col gap-4">
         <h3 className="text-xl font-bold">Statistics</h3>
         <div>
-          <h4 className="text-gray-500">Total XP:</h4>
+          <h4 className="text-gray-500 dark:text-gray-400">Total XP:</h4>
           <h2 className="text-2xl font-bold">{user.experience}</h2>
         </div>
       </div>
