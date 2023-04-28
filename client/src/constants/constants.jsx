@@ -26,10 +26,11 @@ const sidebarNavItems = [
   },
 ];
 
+// All links are placeholders except for Github
 const socialLinks = [
   {
     title: 'Github',
-    url: 'https://github.com/',
+    url: 'https://github.com/kt946/japanese-quiz-mern-app',
     icon: <FaGithub className="social-link" />,
   },
   {

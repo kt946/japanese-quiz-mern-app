@@ -18,6 +18,7 @@ const Footer = () => {
             <Link to="/" className='mx-1 hover:underline underline-offset-4'>Kyle</Link>
           </p>
           {/* Social Media Links */}
+          {/* All links are placeholders except for Github */}
           <div className="flex flex-row flex-wrap justify-center gap-4 order-first sm:order-last">
             {socialLinks.map((link) => (
               <Link

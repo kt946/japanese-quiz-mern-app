@@ -4,6 +4,8 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
+import { Lesson0 } from '../components/Lessons';
+
 const Dashboard = () => {
   // If the user is not logged in, redirect to the login page
   if (!Auth.loggedIn()) {
@@ -41,35 +43,7 @@ const Dashboard = () => {
       <h3 className="font-bold mb-4 text-xl">Lessons</h3>
       {/* Lessons */}
       <div className="flex flex-col gap-4">
-        <div className="text-white banner-container-style bg-gradient-to-r from-orange-600 to-orange-500">
-          <div className="relative p-4 z-10">
-            {/* Header */}
-            <div className="mb-4">
-              <h4 className="font-bold uppercase tracking-wider text-shadow">Lesson 0</h4>
-              <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl text-shadow">Greetings & Numbers</h3>
-            </div>
-
-            {/* Content */}
-            <ul className="sm:text-xl flex flex-col gap-2">
-              <li>
-                <Link
-                  to="/quiz/lessons/lesson-0/greetings"
-                  className="exercise-style"
-                >
-                  Greetings
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/quiz/lessons/lesson-0/numbers"
-                  className="exercise-style"
-                >
-                  Numbers
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
+        {<Lesson0 />}
       </div>
     </section>
   );

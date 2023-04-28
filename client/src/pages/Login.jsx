@@ -107,7 +107,7 @@ const Login = () => {
         {error && (
           <p className="text-red-500 mt-6 flex items-center">
             <FaExclamationCircle className="mr-1" />
-            An error has occurred!
+            Incorrect Credentials
           </p>
         )}
 
