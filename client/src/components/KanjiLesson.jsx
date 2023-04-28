@@ -18,14 +18,14 @@ const KanjiLesson = ({ data }) => {
             {/* Start Quiz Button */}
             <Link
               to={`/quiz/kanji/${data.url}`}
-              className="custom-transition w-full sm:w-32 p-2 sm:px-4 bg-white hover:bg-gray-200 text-gray-800 rounded-xl flex items-center justify-center"
+              className="w-full sm:w-32 p-2 sm:px-4 bg-white hover:bg-gray-200 text-gray-800 rounded-xl flex items-center justify-center"
             >
               Start Quiz
             </Link>
 
             {/* Display Table Button */}
             <button
-              className="custom-transition w-full sm:w-32 p-2 sm:px-4 border-2 border-gray-100 bg-gray-800/30 hover:bg-gray-800/50 backdrop-blur-sm text-shadow rounded-xl"
+              className="w-full sm:w-32 p-2 sm:px-4 border-2 border-gray-100 bg-gray-800/30 hover:bg-gray-800/50 backdrop-blur-sm text-shadow rounded-xl"
               onClick={() => setDisplayTable(!displayTable)}
             >
               {displayTable ? 'Hide Table' : 'Show Table'}
@@ -50,7 +50,9 @@ const KanjiLesson = ({ data }) => {
                 <td className="w-fit border-2 dark:border-gray-700 p-2 sm:p-4 text-xl font-bold md:font-normal sm:text-2xl md:text-5xl lg:text-7xl text-center">
                   {kanji.character}
                 </td>
-                <td className="w-1/2 border-2 dark:border-gray-700 p-2 sm:p-4 sm:text-2xl md:text-3xl">{kanji.readings}</td>
+                <td className="w-1/2 border-2 dark:border-gray-700 p-2 sm:p-4 sm:text-2xl md:text-3xl">
+                  {kanji.readings}
+                </td>
                 <td className="w-1/2 border-2 dark:border-gray-700 p-2 sm:p-4 md:text-xl">{kanji.meanings}</td>
               </tr>
             ))}

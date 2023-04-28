@@ -21,12 +21,12 @@ const Sidebar = () => {
   return (
     <aside
       id="sidebar"
-      className="hidden sm:flex flex-col items-center xl:items-start fixed z-20 w-full h-full min-h-full max-w-[88px] xl:max-w-[300px] p-6 px-4 bg-white dark:bg-slate-800 border-r-2 border-gray-300 dark:border-gray-700 custom-transition"
+      className="hidden sm:flex flex-col items-center xl:items-start fixed z-20 w-full h-full min-h-full max-w-[88px] xl:max-w-[300px] p-6 px-4 bg-white dark:bg-slate-800 border-r-2 border-gray-300 dark:border-gray-700"
     >
       {/* Logo */}
       <NavLink
         to="/dashboard"
-        className="w-fit xl:px-4 flex items-center gap-3 hover:opacity-70 custom-transition"
+        className="w-fit xl:px-4 flex items-center gap-3 hover:opacity-70"
       >
         <img
           src={logo}

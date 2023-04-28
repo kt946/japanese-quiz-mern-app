@@ -90,13 +90,13 @@ const QuizPage = ({ quiz }) => {
             <button
               type="button"
               onClick={() => window.history.back()}
-              className="custom-transition hover:opacity-60 mr-4"
+              className="hover:opacity-60 mr-4"
             >
               <HiX className="w-7 h-7" />
             </button>
 
             {/* Progress Bar */}
-            <div className="bg-gray-300 h-4 w-full rounded-2xl overflow-x-hidden">
+            <div className="bg-gray-300 dark:bg-gray-700 h-4 w-full rounded-2xl overflow-x-hidden">
               <div
                 className={`${
                   progress <= 0 ? 'opacity-0' : ''
@@ -116,15 +116,15 @@ const QuizPage = ({ quiz }) => {
         <div className="grow w-full h-full my-6 flex flex-col justify-center items-center">
           <div className="grow md:grow-0 w-full md:max-w-2xl h-full md:min-h-[450px] flex flex-col justify-around gap-4">
             <h1 className="font-bold text-2xl sm:text-3xl">{question.question}</h1>
-            <div className="grow md:grow-0 h-full grid grid-cols font-medium text-3xl sm:text-4xl gap-2 md:gap-4">
+            <div className="grow md:grow-0 h-full grid grid-cols font-medium text-2xl sm:text-3xl md:text-4xl gap-2 md:gap-4">
               {question.choices.map((choice) => (
                 <button
                   key={`id-${choice}`}
                   type="button"
                   className={`grow md:grow-0 w-full md:py-3 rounded-xl border-2 ${
                     selectedOption === choice
-                      ? 'bg-sky-200 border-2 border-sky-400'
-                      : `border-gray-300 ${!questionState && 'hover:bg-gray-200'}`
+                      ? 'bg-sky-200 border-2 border-sky-400 dark:bg-sky-700'
+                      : `border-gray-300 dark:border-gray-700 ${!questionState && 'hover:bg-gray-200 dark:hover:bg-slate-800'}`
                   }`}
                   onClick={() => setSelectedOption(choice)}
                   disabled={questionState}
@@ -147,7 +147,7 @@ const QuizPage = ({ quiz }) => {
             ? 'bg-[#CEFEA8]'
             : questionState === 'incorrect'
             ? 'bg-[#FED6DD]'
-            : 'md:border-t-2 border-gray-300 '
+            : 'md:border-t-2 border-gray-300 dark:border-gray-700'
         }`}
       >
         <div className="w-full h-full max-w-5xl mx-auto px-4 flex items-center">

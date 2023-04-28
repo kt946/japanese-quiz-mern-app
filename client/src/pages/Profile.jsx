@@ -76,14 +76,14 @@ const Profile = () => {
       <div className="box-container-style mb-8 flex flex-col gap-4">
         <button
           type="button"
-          className="max-w-sm py-3 px-6 bg-primary hover:bg-primary-shade custom-transition text-white font-bold rounded-xl"
+          className="max-w-sm py-3 px-6 bg-primary hover:bg-primary-shade text-white font-bold rounded-xl"
           onClick={() => updateUserExperience(15)}
         >
           Add Experience
         </button>
         <button
           type="button"
-          className="max-w-sm py-3 px-6 bg-primary hover:bg-primary-shade custom-transition text-white font-bold rounded-xl"
+          className="max-w-sm py-3 px-6 bg-primary hover:bg-primary-shade text-white font-bold rounded-xl"
           onClick={() => updateUserExperience(-15)}
         >
           Subtract Experience

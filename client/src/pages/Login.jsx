@@ -113,7 +113,7 @@ const Login = () => {
 
         {/* Submit Button */}
         <button
-          className="w-full mt-6 py-3 px-6 bg-primary hover:bg-primary-shade custom-transition text-white font-bold rounded-xl"
+          className="w-full mt-6 py-3 px-6 bg-primary hover:bg-primary-shade text-white font-bold rounded-xl"
           type="submit"
         >
           {loading ? <AiOutlineLoading className="animate-spin h-6 w-6 mx-auto" /> : 'Log in'}
@@ -123,7 +123,7 @@ const Login = () => {
           Don't have an account?{' '}
           <Link
             to="/signup"
-            className="font-bold text-primary hover:text-primary-shade custom-transition hover:underline"
+            className="font-bold text-primary hover:text-primary-shade hover:underline"
           >
             Sign up
           </Link>

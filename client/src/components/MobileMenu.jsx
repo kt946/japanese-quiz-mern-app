@@ -23,7 +23,7 @@ const MobileMenu = () => {
     // Display Mobile Menu on small screens
     <div
       id="mobileMenu"
-      className="sm:hidden custom-transition w-full h-20 fixed z-50 bottom-0 bg-white dark:bg-slate-800 border-t-2 border-gray-300 dark:border-gray-700"
+      className="sm:hidden w-full h-20 fixed z-50 bottom-0 bg-white dark:bg-slate-800 border-t-2 border-gray-300 dark:border-gray-700"
     >
       <ul className="h-full flex justify-around items-center">
         {/* Navigation Links */}

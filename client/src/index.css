@@ -16,11 +16,11 @@ html {
 }
 
 .custom-transition {
-  @apply transition-all duration-150 ease-in-out;
+  @apply transition-all duration-300 ease-out;
 }
 
 .social-link {
-  @apply w-8 h-8 custom-transition hover:opacity-60;
+  @apply w-8 h-8 hover:opacity-60;
 }
 
 .form-container-style {
@@ -36,11 +36,11 @@ html {
 }
 
 .password-show-btn {
-  @apply absolute inset-y-0 right-0 h-fit w-fit my-auto mr-2 p-2 custom-transition rounded-full hover:bg-gray-300 dark:hover:bg-gray-700;
+  @apply absolute inset-y-0 right-0 h-fit w-fit my-auto mr-2 p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700;
 }
 
 .sidebar-btn {
-  @apply custom-transition p-2 xl:px-4 flex justify-center xl:justify-start items-center font-bold hover:bg-gray-200/75 dark:hover:bg-slate-700 border-2 border-transparent rounded-xl;
+  @apply p-2 xl:px-4 flex justify-center xl:justify-start items-center font-bold hover:bg-gray-200/75 dark:hover:bg-slate-700 border-2 border-transparent rounded-xl;
 }
 
 .sidebar-btn-icon {
@@ -56,19 +56,19 @@ html {
 }
 
 .mobile-btn {
-  @apply custom-transition w-full p-2 xl:px-4 flex items-center font-bold hover:bg-gray-200/75 dark:hover:bg-slate-700 border-2 border-transparent rounded-xl;
+  @apply w-full p-2 xl:px-4 flex items-center font-bold hover:bg-gray-200/75 dark:hover:bg-slate-700 border-2 border-transparent rounded-xl;
 }
 
 .footer-bg-dark {
-  @apply bg-[#2B2D42] text-gray-300;
+  @apply bg-slate-800 text-gray-300;
 }
 
 .tab-style {
-  @apply custom-transition w-full py-2 rounded-t-xl border-b-4 border-transparent hover:border-primary-tint hover:text-primary-tint;
+  @apply w-full py-2 rounded-t-xl border-b-4 border-transparent hover:bg-gray-200/75 dark:hover:bg-slate-700;
 }
 
 .tab-active-style {
-  @apply border-primary bg-red-100 text-primary-shade;
+  @apply bg-red-100 border-red-500 text-red-500 hover:bg-red-100 dark:hover:bg-red-100;
 }
 
 .h1-style {
@@ -104,7 +104,7 @@ html {
 }
 
 .quiz-btn-style {
-  @apply custom-transition h-12 w-full md:max-w-[150px] py-2 px-3 font-bold text-lg rounded-xl;
+  @apply h-12 w-full md:max-w-[150px] py-2 px-3 font-bold text-lg rounded-xl;
 }
 
 .quiz-stat-container {
@@ -112,7 +112,7 @@ html {
 }
 
 .quiz-stat-body {
-  @apply py-2 h-20 flex flex-col justify-center items-center text-lg sm:text-2xl;
+  @apply py-2 h-20 flex flex-col justify-center items-center sm:text-xl md:text-2xl;
 }
 
 .banner-bg-style {
@@ -143,8 +143,8 @@ html {
   @apply border-2 border-[#D7975D] bg-[#F7BE8B] text-[#CD7900];
 }
 
-.excercise-style {
-  @apply custom-transition w-full p-2 sm:p-4 bg-gray-800/30 hover:bg-gray-800/50 rounded-xl text-left text-shadow flex;
+.exercise-style {
+  @apply w-full p-3 sm:p-4 bg-gray-800/30 hover:bg-gray-800/50 rounded-xl text-left text-shadow flex;
 }
 
 .hero-bg {

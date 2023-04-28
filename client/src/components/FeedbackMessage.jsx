@@ -15,7 +15,7 @@ const FeedbackMessage = ({ questionState, answer }) => {
       {/* Message */}
       <div>
         <h2 className="font-bold text-xl">{questionState === 'correct' ? 'Correct!' : 'Correct Solution:'}</h2>
-        {questionState === 'incorrect' && <p className="text-2xl font-semibold">{answer}</p>}
+        {questionState === 'incorrect' && <p className="sm:text-xl md:text-2xl font-semibold">{answer}</p>}
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ const Header = () => {
   const dispatch = useDispatch();
 
   return (
-    <header className="custom-transition bg-white dark:bg-slate-800 border-b border-gray-100 dark:border-gray-900 z-50">
+    <header className="bg-white dark:bg-slate-800 border-b border-gray-100 dark:border-gray-900 z-50">
       <nav className="mx-auto max-w-7xl flex items-center justify-between p-4 lg:px-8">
         {/* Logo image */}
         <Link
@@ -49,7 +49,7 @@ const Header = () => {
           {/* Toggle dark mode */}
           <button
             type="button"
-            className="custom-transition hover:opacity-70"
+            className="hover:opacity-70"
           >
             {darkMode ? (
               <HiOutlineSun
@@ -65,13 +65,13 @@ const Header = () => {
           </button>
           <Link
             to="/login"
-            className="custom-transition py-2 px-4 hover:text-primary-shade"
+            className="py-2 px-4 hover:text-primary-shade"
           >
             Log in
           </Link>
           <Link
             to="/signup"
-            className="custom-transition py-2 px-4 text-white bg-primary hover:bg-primary-shade rounded-xl"
+            className="py-2 px-4 text-white bg-primary hover:bg-primary-shade rounded-xl"
           >
             Sign up
           </Link>

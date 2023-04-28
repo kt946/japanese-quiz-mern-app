@@ -54,7 +54,7 @@ const Dashboard = () => {
               <li>
                 <Link
                   to="/quiz/lessons/lesson-0/greetings"
-                  className="excercise-style"
+                  className="exercise-style"
                 >
                   Greetings
                 </Link>
@@ -62,7 +62,7 @@ const Dashboard = () => {
               <li>
                 <Link
                   to="/quiz/lessons/lesson-0/numbers"
-                  className="excercise-style"
+                  className="exercise-style"
                 >
                   Numbers
                 </Link>

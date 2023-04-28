@@ -24,7 +24,7 @@ const CompleteScreen = ({ quiz }) => {
           </div>
           {/* Card Body */}
           <div className="quiz-stat-body">
-            <h3 className="text-amber-700">{score} %</h3>
+            <h3 className="text-amber-700 dark:text-amber-200">{score} %</h3>
           </div>
         </div>
         {/* XP Card */}
@@ -35,7 +35,7 @@ const CompleteScreen = ({ quiz }) => {
           </div>
           {/* Card Body */}
           <div className="quiz-stat-body">
-            <h3 className="text-sky-700">+{xp} XP</h3>
+            <h3 className="text-sky-700 dark:text-sky-200">+{xp} XP</h3>
           </div>
         </div>
         {/* Time Card */}
@@ -46,7 +46,7 @@ const CompleteScreen = ({ quiz }) => {
           </div>
           {/* Card Body */}
           <div className="quiz-stat-body">
-            <h3 className="text-lime-700">{time}</h3>
+            <h3 className="text-lime-700 dark:text-lime-200">{time}</h3>
           </div>
         </div>
       </div>
