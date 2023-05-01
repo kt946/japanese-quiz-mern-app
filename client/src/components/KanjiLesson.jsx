@@ -47,7 +47,7 @@ const KanjiLesson = ({ data }) => {
           <tbody>
             {data.kanji.map((kanji) => (
               <tr key={`id=${kanji.meanings}`}>
-                <td className="w-fit border-2 dark:border-gray-700 p-2 sm:p-4 text-xl font-bold md:font-normal sm:text-2xl md:text-5xl lg:text-7xl text-center">
+                <td className="w-fit border-2 dark:border-gray-700 p-2 sm:p-4 text-2xl sm:text-3xl md:text-5xl lg:text-7xl text-center scale-150 md:scale-100">
                   {kanji.character}
                 </td>
                 <td className="w-1/2 border-2 dark:border-gray-700 p-2 sm:p-4 sm:text-2xl md:text-3xl">

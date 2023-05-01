@@ -80,7 +80,7 @@ const QuizPage = ({ quiz }) => {
   return (
     <div
       id="characters"
-      className="w-full min-h-screen p-4 py-6 md:p-0 flex flex-col"
+      className="w-full h-screen max-h-screen p-4 py-6 md:p-0 flex flex-col"
     >
       {/* Quiz Header */}
       {!quizComplete && (
@@ -113,23 +113,27 @@ const QuizPage = ({ quiz }) => {
 
       {/* Quiz Main */}
       {!quizComplete && (
-        <div className="grow w-full h-full my-6 flex flex-col justify-center items-center">
-          <div className="grow md:grow-0 w-full md:max-w-2xl h-full md:min-h-[450px] flex flex-col justify-around gap-4">
+        <div className="w-full h-full my-2 flex flex-col md:grid justify-center items-center md:content-center">
+          <div className="w-full max-w-2xl md:w-[600px] h-full md:min-h-[450px] grid grid-cols-1 quiz-main-container gap-2 md:gap-6">
             <h1 className="font-bold text-2xl sm:text-3xl">{question.question}</h1>
-            <div className="grow md:grow-0 h-full grid grid-cols font-medium text-2xl sm:text-3xl md:text-4xl gap-2 md:gap-4">
+            <div className="font-medium text-2xl sm:text-3xl md:text-4xl grid grid-cols-1 gap-2">
               {question.choices.map((choice) => (
                 <button
                   key={`id-${choice}`}
                   type="button"
-                  className={`grow md:grow-0 w-full md:py-3 rounded-xl border-2 ${
+                  className={`w-full h-full p-2 md:py-3 rounded-xl border-2 ${
                     selectedOption === choice
                       ? 'bg-sky-200 border-2 border-sky-400 dark:bg-sky-700'
-                      : `border-gray-300 dark:border-gray-700 ${!questionState && 'hover:bg-gray-200 dark:hover:bg-slate-800'}`
+                      : `border-gray-300 dark:border-gray-700 ${
+                          !questionState && 'hover:bg-gray-200 dark:hover:bg-slate-800'
+                        }`
                   }`}
                   onClick={() => setSelectedOption(choice)}
                   disabled={questionState}
                 >
-                  {choice}
+                  <div className="flex flex-col grow w-full">
+                    <span className="inline-flex justify-center items-center grow">{choice}</span>
+                  </div>
                 </button>
               ))}
             </div>
@@ -142,11 +146,11 @@ const QuizPage = ({ quiz }) => {
 
       {/* Quiz Footer */}
       <div
-        className={`-mx-4 -mb-6 pb-6 md:m-0 md:pb-0 md:h-36 ${
+        className={`-mx-4 -mb-6 mt-4 pb-6 md:m-0 md:pb-0 md:h-36 ${
           questionState === 'correct'
-            ? 'bg-[#CEFEA8]'
+            ? 'bg-[#CEFEA8] dark:bg-slate-800'
             : questionState === 'incorrect'
-            ? 'bg-[#FED6DD]'
+            ? 'bg-[#FED6DD] dark:bg-slate-800'
             : 'md:border-t-2 border-gray-300 dark:border-gray-700'
         }`}
       >

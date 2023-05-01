@@ -17,36 +17,38 @@ const CompleteScreen = ({ quiz }) => {
       {/* Quiz Statistics Cards */}
       <div className="w-full max-w-2xl flex flex-row gap-2 sm:gap-4 md:gap-8 font-bold">
         {/* Score Card */}
-        <div className="quiz-stat-container border-amber-500">
+        <div className="quiz-stat-container bg-amber-400">
           {/* Card Header */}
-          <div className="bg-amber-200 p-2">
-            <h2 className="uppercase text-amber-700">Score</h2>
+          <div className="p-1">
+            <h2 className="uppercase">Score</h2>
           </div>
           {/* Card Body */}
           <div className="quiz-stat-body">
-            <h3 className="text-amber-700 dark:text-amber-200">{score} %</h3>
+            <h3 className="text-amber-700 dark:text-amber-400">{score} %</h3>
           </div>
         </div>
+
         {/* XP Card */}
-        <div className="quiz-stat-container border-sky-500">
+        <div className="quiz-stat-container bg-sky-400">
           {/* Card Header */}
-          <div className="bg-sky-200 p-2">
-            <h2 className="uppercase text-sky-700">Earned</h2>
+          <div className="p-1">
+            <h2 className="uppercase">Earned</h2>
           </div>
           {/* Card Body */}
           <div className="quiz-stat-body">
-            <h3 className="text-sky-700 dark:text-sky-200">+{xp} XP</h3>
+            <h3 className="text-sky-700 dark:text-sky-400">+{xp} XP</h3>
           </div>
         </div>
+
         {/* Time Card */}
-        <div className="quiz-stat-container border-lime-500">
+        <div className="quiz-stat-container bg-lime-400">
           {/* Card Header */}
-          <div className="bg-lime-200 p-2">
-            <h2 className="uppercase text-lime-700">Time</h2>
+          <div className="p-1">
+            <h2 className="uppercase">Time</h2>
           </div>
           {/* Card Body */}
           <div className="quiz-stat-body">
-            <h3 className="text-lime-700 dark:text-lime-200">{time}</h3>
+            <h3 className="text-lime-700 dark:text-lime-400">{time}</h3>
           </div>
         </div>
       </div>

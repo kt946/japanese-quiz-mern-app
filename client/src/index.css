@@ -48,7 +48,7 @@ html {
 }
 
 .sidebar-btn.active {
-  @apply bg-red-100 border-2 border-red-300 text-red-500 dark:bg-red-100;
+  @apply bg-red-100 border-2 border-red-300 text-red-500 dark:bg-transparent dark:text-red-300;
 }
 
 .sidebar-text {
@@ -103,16 +103,20 @@ html {
   @apply my-8 border border-gray-300 dark:border-gray-700;
 }
 
+.quiz-main-container {
+  @apply overflow-x-hidden overflow-y-auto grid-rows-[min-content_minmax(0,_1fr)];
+}
+
 .quiz-btn-style {
   @apply h-12 w-full md:max-w-[150px] py-2 px-3 font-bold text-lg rounded-xl;
 }
 
 .quiz-stat-container {
-  @apply w-full h-full border-4 rounded-xl overflow-hidden flex flex-col;
+  @apply rounded-xl w-full h-full p-[2px] sm:p-1 overflow-hidden flex flex-col text-sm sm:text-base text-slate-800;
 }
 
 .quiz-stat-body {
-  @apply py-2 h-20 flex flex-col justify-center items-center sm:text-xl md:text-2xl;
+  @apply bg-gray-50 dark:bg-slate-900 rounded-xl py-2 h-16 sm:h-20 flex flex-col justify-center items-center text-base sm:text-xl md:text-2xl;
 }
 
 .banner-bg-style {
