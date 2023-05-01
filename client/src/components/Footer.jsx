@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Copyright */}
           <p className="text-sm text-center sm:text-left flex items-center">
             Made with <FaHeart className="mx-1" /> by
-            <Link to="/" className='mx-1 hover:underline underline-offset-4'>Kyle</Link>
+            <Link to="https://github.com/kt946" className='mx-1 hover:underline underline-offset-4'>Kyle</Link>
           </p>
           {/* Social Media Links */}
           {/* All links are placeholders except for Github */}
