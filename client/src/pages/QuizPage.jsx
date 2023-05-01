@@ -26,11 +26,11 @@ const QuizPage = ({ quiz }) => {
     if (answer === question.answer) {
       setQuestionState('correct');
       quiz.incrementNumCorrect();
-      quiz.incrementProgress(20);
+      quiz.incrementProgress();
     } else {
       setQuestionState('incorrect');
       quiz.incrementNumIncorrect();
-      quiz.decrementProgress(10);
+      quiz.decrementProgress();
     }
   };
 

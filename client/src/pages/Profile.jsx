@@ -1,11 +1,9 @@
 import React from 'react';
 import Auth from '../utils/auth';
 
-import { useQuery, useMutation } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
 import { AiOutlineLoading } from 'react-icons/ai';
-
-import { UPDATE_EXPERIENCE } from '../utils/mutations';
 
 const Profile = () => {
   // If the user is not logged in, redirect to the login page
@@ -20,29 +18,6 @@ const Profile = () => {
 
   // get the first letter of the user's username
   const firstLetter = user.username?.charAt(0).toUpperCase();
-
-  // DELETE later
-  // set up the mutation for updating user's experience
-  const [updateExperience] = useMutation(UPDATE_EXPERIENCE);
-
-  // update current user's experience
-  const updateUserExperience = async (experience) => {
-    // increment the user's current experience
-    let currentExperience = user.experience;
-    currentExperience += experience;
-
-    try {
-      // execute the mutation
-      await updateExperience({
-        // pass the new experience value to the mutation under the experience variable
-        variables: {
-          experience: currentExperience,
-        },
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   return (
     <section
@@ -70,24 +45,6 @@ const Profile = () => {
           <h4 className="text-gray-500 dark:text-gray-400">Total XP:</h4>
           <h2 className="text-2xl font-bold">{user.experience}</h2>
         </div>
-      </div>
-
-      {/* Temporary, DELETE Later */}
-      <div className="box-container-style mb-8 flex flex-col gap-4">
-        <button
-          type="button"
-          className="max-w-sm py-3 px-6 bg-primary hover:bg-primary-shade text-white font-bold rounded-xl"
-          onClick={() => updateUserExperience(15)}
-        >
-          Add Experience
-        </button>
-        <button
-          type="button"
-          className="max-w-sm py-3 px-6 bg-primary hover:bg-primary-shade text-white font-bold rounded-xl"
-          onClick={() => updateUserExperience(-15)}
-        >
-          Subtract Experience
-        </button>
       </div>
     </section>
   );

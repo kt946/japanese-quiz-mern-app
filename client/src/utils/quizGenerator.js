@@ -75,8 +75,8 @@ class QuizGenerator {
   }
 
   // increment progress and check if complete
-  incrementProgress(num) {
-    this.progress += num;
+  incrementProgress() {
+    this.progress += 6.25;
     if (this.progress >= 100) {
       this.progress = 100;
       this.endQuiz();
@@ -84,8 +84,8 @@ class QuizGenerator {
   }
 
   // decrement progress
-  decrementProgress(num) {
-    this.progress -= num;
+  decrementProgress() {
+    this.progress -= 3;
     if (this.progress < 0) {
       this.progress = 0;
     }
