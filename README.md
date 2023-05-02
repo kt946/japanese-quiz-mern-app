@@ -1,5 +1,7 @@
 # Sakura Study
 
+![SakuraStudyBanner](https://user-images.githubusercontent.com/103476893/235792567-191bd114-efb2-422b-9f50-db69138e6582.jpg "Sakura Study Logo")
+
 ## Description
 
 Sakura Study is a MERN language learning app designed to help people study Japanese using a gamified approach similar to Duolingo. The app is based on material from the popular Japanese textbook Genki, 3rd edition and provides users with the opportunity to practice hiragana, katakana, kanji, vocabulary, and phrases. The app also includes leaderboards for users to compete with each other and track their progress. Please note that while Sakura Study provides quizzes to help study the material, it does not teach users the Japanese language like the Genki textbooks.
@@ -71,6 +73,18 @@ To use Sakura Study, follow these steps:
 8. To start a quiz, click on a 'Start Quiz' button in a section and begin answering questions. Select the correct choice for each question and click on the 'Check' button to check your answer. You can also skip questions by clicking the skip button. Correct answers will increase your progress while incorrect answers or skipped questions will decrease your progress. Once the progress bar is filled, the quiz will end and you will be taken to the results page. 
 
 ## Screenshots
+
+![homepage-screenshot](https://user-images.githubusercontent.com/103476893/235795535-2701cb95-338d-49a6-a5c4-7774f1db172a.png "Homepage Screenshot")
+
+![characters-screenshot](https://user-images.githubusercontent.com/103476893/235795705-d80a7564-3091-4528-9417-0bb3055426ce.png "Characters Page Screenshot")
+
+![leaderboards-screenshot](https://user-images.githubusercontent.com/103476893/235795716-68deaf03-bb9e-444e-85c3-d705a2ce9fc4.png "Leaderboards Page Screenshot")
+
+![profile-screenshot](https://user-images.githubusercontent.com/103476893/235795721-ddb6477f-5968-4146-92c7-af18c54fde33.png "Profile Page Screenshot")
+
+![quiz-screenshot](https://user-images.githubusercontent.com/103476893/235795730-2b91f782-6734-4ab4-9230-9b4e46d291d8.png "Quiz Screenshot")
+
+![darkmode-screenshot](https://user-images.githubusercontent.com/103476893/235795741-70df97d7-3f4e-4da0-97b5-276f7f36fb54.png "Dark Mode Screenshot")
 
 ## Technologies Used
 
