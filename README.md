@@ -4,7 +4,7 @@
 
 ## Description
 
-Sakura Study is a MERN language learning app designed to help people study Japanese using a gamified approach similar to Duolingo. The app is based on material from the popular Japanese textbook Genki, 3rd edition and provides users with the opportunity to practice hiragana, katakana, kanji, vocabulary, and phrases. The app also includes leaderboards for users to compete with each other and track their progress. Please note that while Sakura Study provides quizzes to help study the material, it does not teach users the Japanese language like the Genki textbooks.
+Sakura Study is a MERN language learning app designed to help people study Japanese using a gamified approach similar to Duolingo. The app is based on material from the popular Japanese textbook Genki: An Integrated Course in Elementary Japanese (3rd edition) and provides users with the opportunity to practice hiragana, katakana, kanji, vocabulary, and phrases. The app also includes leaderboards for users to compete with each other and track their progress. Please note that while Sakura Study provides quizzes to help study the material, it does not teach users the Japanese language like the Genki textbooks.
 
 ⭐ Note: The website may require some time for the server to spin up.
 
