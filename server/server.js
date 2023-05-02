@@ -1,3 +1,4 @@
+// Made by Kyle (https://github.com/kt946)
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express'; // import ApolloServer for GraphQL
 import * as dotenv from 'dotenv';

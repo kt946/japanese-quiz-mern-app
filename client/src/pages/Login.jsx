@@ -17,6 +17,7 @@ const Login = () => {
 
   const [showPassword, setShowPassword] = useState(false); // state for toggling password visibility
   const [login, { loading, error }] = useMutation(LOGIN); // use the useMutation hook to execute the LOGIN mutation
+  const [errorMessage, setErrorMessage] = useState(''); // state for displaying error message
 
   const formRef = useRef(null); // reference to the form element
 
@@ -36,6 +37,16 @@ const Login = () => {
       Auth.login(data.login.token);
     } catch (error) {
       console.error(error);
+
+      // set error message based on error message from server
+      switch (true) {
+        case error.message.includes('Incorrect credentials'):
+          setErrorMessage('Incorrect credentials');
+          break;
+        default:
+          setErrorMessage('Something went wrong');
+          break;
+      }
     }
   };
 
@@ -105,9 +116,9 @@ const Login = () => {
 
         {/* Error Message */}
         {error && (
-          <p className="text-red-500 mt-6 flex items-center">
+          <p className="text-red-500 mt-6 inline-flex items-center text-sm sm:text-base">
             <FaExclamationCircle className="mr-1" />
-            Incorrect Credentials
+            {errorMessage}
           </p>
         )}
 

@@ -17,6 +17,7 @@ const Signup = () => {
 
   const [showPassword, setShowPassword] = useState(false); // state for toggling password visibility
   const [addUser, { loading, error }] = useMutation(ADD_USER); // use the useMutation hook to execute the ADD_USER mutation
+  const [errorMessage, setErrorMessage] = useState(''); // state for displaying error message
 
   const formRef = useRef(null); // reference to the form element
 
@@ -36,6 +37,26 @@ const Signup = () => {
       Auth.login(data.addUser.token);
     } catch (error) {
       console.error(error);
+
+      // set error message based on error message from server
+      // username or email already exists, password shorter than 5 characters
+      switch (true) {
+        case error.message.includes('username_1 dup key'):
+          setErrorMessage('Username already exists');
+          break;
+        case error.message.includes('email_1 dup key'):
+          setErrorMessage('Email already exists');
+          break;
+        case error.message.includes('Must match an email address'):
+          setErrorMessage('Email must be a valid address');
+          break;
+        case error.message.includes('shorter than the minimum allowed length'):
+          setErrorMessage('Password must be at least 5 characters');
+          break;
+        default:
+          setErrorMessage('Something went wrong');
+          break;
+      }
     }
   };
 
@@ -121,9 +142,9 @@ const Signup = () => {
 
         {/* Error Message */}
         {error && (
-          <p className="text-red-500 mt-6 flex items-center">
+          <p className="text-red-500 mt-6 inline-flex items-center text-sm sm:text-base">
             <FaExclamationCircle className="mr-1" />
-            An error has occurred!
+            {errorMessage}
           </p>
         )}
 

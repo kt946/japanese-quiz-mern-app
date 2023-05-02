@@ -43,7 +43,7 @@ const dateFormat = (timestamp, { monthLength = '', dateSuffix = false } = {}) =>
 
   const year = dateObj.getFullYear();
 
-  const formattedTimeStamp = `${formattedMonth} ${dayOfMonth}, ${year}`;
+  const formattedTimeStamp = `${formattedMonth} ${dayOfMonth}, ${year}`; // format as "Month Day, Year"
 
   return formattedTimeStamp;
 };

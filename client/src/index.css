@@ -104,7 +104,7 @@ html {
 }
 
 .quiz-main-container {
-  @apply overflow-x-hidden overflow-y-auto grid-rows-[min-content_minmax(0,_1fr)];
+  @apply overflow-x-hidden overflow-y-auto grid grid-cols-1 grid-rows-[min-content_minmax(0,_1fr)];
 }
 
 .quiz-btn-style {

@@ -1,3 +1,4 @@
+// Made by Kyle (https://github.com/kt946)
 // class to generate quiz
 class QuizGenerator {
   constructor(...arrays) {
@@ -11,12 +12,9 @@ class QuizGenerator {
     this.elapsedTime = null;
   }
 
+  // return progress
   getProgress() {
     return this.progress;
-  }
-
-  getQuizType() {
-    return this.quizType;
   }
 
   // end the quiz timer

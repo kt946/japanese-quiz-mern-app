@@ -50,16 +50,15 @@ const Header = () => {
           <button
             type="button"
             className="hover:opacity-70"
+            onClick={() => dispatch(TOGGLE_DARKMODE())}
           >
             {darkMode ? (
               <HiOutlineSun
                 className="w-6 h-6"
-                onClick={() => dispatch(TOGGLE_DARKMODE())}
               />
             ) : (
               <HiOutlineMoon
                 className="w-6 h-6"
-                onClick={() => dispatch(TOGGLE_DARKMODE())}
               />
             )}
           </button>
