@@ -147,7 +147,7 @@ const QuizPage = ({ quiz }) => {
 
       {/* Quiz Footer */}
       <div
-        className={`-mx-4 -mb-6 mt-4 pb-6 md:m-0 md:pb-0 md:h-36 ${
+        className={`-mx-4 -mb-6 mt-4 pb-6 md:m-0 md:pb-0 md:h-36 md:min-h-[144px] ${
           questionState === 'correct'
             ? 'bg-[#CEFEA8] dark:bg-slate-800'
             : questionState === 'incorrect'
