@@ -41,7 +41,7 @@ The MONGODB_URI is the connection string to your MongoDB database. The JWT_SECRE
 
 ## Features
 
-Sakura Study provides a range of features to help users learn Japanese including:
+Sakura Study provides a range of features to help users study Japanese including:
 
 - Practice exercises for Hiragana, Katakana, Kanji, vocabulary, and phrases
 - Track progress and compete with other users through leaderboards
@@ -74,17 +74,17 @@ To use Sakura Study, follow these steps:
 
 ## Screenshots
 
-![homepage-screenshot](https://user-images.githubusercontent.com/103476893/235795535-2701cb95-338d-49a6-a5c4-7774f1db172a.png "Homepage Screenshot")
+![homepage-screenshot](https://user-images.githubusercontent.com/103476893/236004214-8d6d83cd-2da8-4c5d-80de-b73d3ff52401.png "Homepage Screenshot")
 
-![characters-screenshot](https://user-images.githubusercontent.com/103476893/235795705-d80a7564-3091-4528-9417-0bb3055426ce.png "Characters Page Screenshot")
+![characters-screenshot](https://user-images.githubusercontent.com/103476893/236004396-ca697d4d-8f88-4f0d-a984-2e23c86001eb.png "Characters Page Screenshot")
 
-![leaderboards-screenshot](https://user-images.githubusercontent.com/103476893/235795716-68deaf03-bb9e-444e-85c3-d705a2ce9fc4.png "Leaderboards Page Screenshot")
+![leaderboards-screenshot](https://user-images.githubusercontent.com/103476893/236004651-b7ec2888-c19f-4678-9f38-1124988bbe4b.png "Leaderboards Page Screenshot")
 
-![profile-screenshot](https://user-images.githubusercontent.com/103476893/235795721-ddb6477f-5968-4146-92c7-af18c54fde33.png "Profile Page Screenshot")
+![profile-screenshot](https://user-images.githubusercontent.com/103476893/236004699-44ce7f1c-a649-43eb-a051-f6f32f17c271.png "Profile Page Screenshot")
 
-![quiz-screenshot](https://user-images.githubusercontent.com/103476893/235795730-2b91f782-6734-4ab4-9230-9b4e46d291d8.png "Quiz Screenshot")
+![quiz-screenshot](https://user-images.githubusercontent.com/103476893/236004756-fbe09636-c37d-456c-9475-65c3fde118cc.png "Quiz Screenshot")
 
-![darkmode-screenshot](https://user-images.githubusercontent.com/103476893/235795741-70df97d7-3f4e-4da0-97b5-276f7f36fb54.png "Dark Mode Screenshot")
+![darkmode-screenshot](https://user-images.githubusercontent.com/103476893/236004790-f5a9ea30-56e6-46fa-a68d-db221d19a6dd.png "Dark Mode Screenshot")
 
 ## Technologies Used
 
