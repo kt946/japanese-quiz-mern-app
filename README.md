@@ -107,7 +107,7 @@ Contributions to Sakura Study are welcome and encouraged! If you'd like to contr
 
 ## Credits
 
-- DuoLingo: A language-learning website.
+- Duolingo: A language-learning website.
 - Genki: A Japanese textbook series.
 - [kt946](https://github.com/kt946) - Project creator
 
