@@ -60,15 +60,18 @@ const Leaderboards = () => {
           {sortedUsers.map((user, index) => (
             <div
               key={`id-${user.username}`}
-              className="w-full h-full flex items-center p-2 px-4 gap-4 rounded-xl odd:bg-slate-900/5 dark:odd:bg-slate-900/50 overflow-hidden"
+              className="w-auto flex items-center p-2 px-4 gap-4 rounded-xl odd:bg-slate-900/5 dark:odd:bg-slate-900/50"
             >
-              <h3 className={`ranking-index-style ${rank(index)}`}>{index + 1}</h3>
-              <div className="w-12 h-12 bg-primary rounded-full flex justify-center items-center uppercase font-bold text-2xl text-white">
-                {user.username?.charAt(0).toUpperCase()}
+              <span className={`ranking-index-style ${rank(index)}`}>{index + 1}</span>
+              <div className="w-12 h-12 shrink-0">
+                <div className="w-12 h-12 bg-primary rounded-full flex justify-center items-center uppercase font-bold text-2xl text-white">
+                  {user.username?.charAt(0).toUpperCase()}
+                </div>
               </div>
-              <div className="flex flex-col ">
-                <h3 className="font-bold">{user.username}</h3>
-                <p className="text-gray-500 dark:text-gray-400">{user.experience} XP</p>
+
+              <div className="flex flex-col flex-grow overflow-hidden">
+                <h3 className="font-bold truncate">{user.username}</h3>
+                <p className="text-gray-500 dark:text-gray-400 truncate">{user.experience} XP</p>
               </div>
             </div>
           ))}
