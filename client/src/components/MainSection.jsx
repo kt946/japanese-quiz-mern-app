@@ -97,6 +97,10 @@ const MainSection = () => {
                   path="lesson-5"
                   element={<QuizPage quiz={new HiraKataKanjiQuiz('kanji', kanjiData.lesson5.kanji)} />}
                 />
+                <Route
+                  path="lesson-6"
+                  element={<QuizPage quiz={new HiraKataKanjiQuiz('kanji', kanjiData.lesson6.kanji)} />}
+                />
               </Route>
               <Route path="lessons">
                 <Route

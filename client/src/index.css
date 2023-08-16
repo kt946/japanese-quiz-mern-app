@@ -144,6 +144,7 @@ html {
   @apply w-full p-3 sm:p-4 bg-gray-800/30 hover:bg-gray-800/50 rounded-xl text-left text-shadow flex;
 }
 
+/* Backgrounds Start */
 .hero-bg {
   background-image: url('./assets/waves.svg'), url('./assets/endless-clouds.svg');
   background-size: 105%, 80px;
@@ -192,6 +193,14 @@ html {
   -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
   mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
 }
+
+.bg-i-like-food {
+  background: url('./assets/bannerBG/bg-i-like-food.svg') repeat;
+  background-size: 250px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+}
+/* Backgrounds End */
 
 .text-shadow {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);

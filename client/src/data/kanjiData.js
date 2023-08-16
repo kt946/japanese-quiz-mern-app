@@ -1,7 +1,8 @@
 // array of objects of kanji characters grouped by subject
+// includes on-yomii and kun-yomi readings
 const kanjiData = {
   lesson3: {
-    lessonNumber: 3,
+    unitNumber: 3,
     url: 'lesson-3',
     subject: 'Daily Life',
     kanji: [
@@ -98,7 +99,7 @@ const kanjiData = {
     ],
   },
   lesson4: {
-    lessonNumber: 4,
+    unitNumber: 4,
     url: 'lesson-4',
     subject: "Mary's Weekend",
     kanji: [
@@ -189,7 +190,7 @@ const kanjiData = {
     ],
   },
   lesson5: {
-    lessonNumber: 5,
+    unitNumber: 5,
     url: 'lesson-5',
     subject: 'Travel',
     kanji: [
@@ -276,6 +277,103 @@ const kanjiData = {
         readings: 'の',
         romaji: 'no',
         meanings: 'to drink',
+      },
+    ],
+  },
+  lesson6: {
+    unitNumber: 6,
+    url: 'lesson-6',
+    subject: 'My Favorite Restaurant',
+    kanji: [
+      {
+        character: '東',
+        readings: 'とう, ひがし',
+        romaji: 'too, higashi',
+        meanings: 'east',
+      },
+      {
+        character: '西',
+        readings: 'にし',
+        romaji: 'nishi',
+        meanings: 'west',
+      },
+      {
+        character: '南',
+        readings: 'みなみ',
+        romaji: 'minami',
+        meanings: 'south',
+      },
+      {
+        character: '北',
+        readings: 'きた',
+        romaji: 'kita',
+        meanings: 'north',
+      },
+      {
+        character: '口',
+        readings: 'こう, ぐち, くち',
+        romaji: 'koo, guchi, kuchi',
+        meanings: 'mouth',
+      },
+      {
+        character: '出',
+        readings: 'で',
+        romaji: 'de',
+        meanings: 'to exit',
+      },
+      {
+        character: '右',
+        readings: 'みぎ',
+        romaji: 'migi',
+        meanings: 'right',
+      },
+      {
+        character: '左',
+        readings: 'ひだり',
+        romaji: 'hidari',
+        meanings: 'left',
+      },
+      {
+        character: '分',
+        readings: 'ふん, ぷん',
+        romaji: 'fun, pun',
+        meanings: 'minute; to divide',
+      },
+      {
+        character: '先',
+        readings: 'せん',
+        romaji: 'sen',
+        meanings: 'ahead',
+      },
+      {
+        character: '生',
+        readings: 'せい',
+        romaji: 'sei',
+        meanings: 'birth',
+      },
+      {
+        character: '大',
+        readings: 'だい, おお',
+        romaji: 'dai, oo',
+        meanings: 'big',
+      },
+      {
+        character: '学',
+        readings: 'がく',
+        romaji: 'gaku',
+        meanings: 'learning',
+      },
+      {
+        character: '外',
+        readings: 'がい, そと',
+        romaji: 'gai, soto',
+        meanings: 'outside',
+      },
+      {
+        character: '国',
+        readings: 'こく, ごく',
+        romaji: 'koku, goku',
+        meanings: 'country',
       },
     ],
   },

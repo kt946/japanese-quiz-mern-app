@@ -25,6 +25,12 @@ const KanjiChart = () => {
           <KanjiLesson data={kanjiData.lesson5} />
           <div className="banner-bg-style bg-autumn" />
         </div>
+
+        {/* Lesson 6 */}
+        <div className="banner-container-style bg-gradient-to-r from-[#c20323] to-[#ef233c]">
+          <KanjiLesson data={kanjiData.lesson6} />
+          <div className="banner-bg-style bg-i-like-food" />
+        </div>
       </div>
     </section>
   );
