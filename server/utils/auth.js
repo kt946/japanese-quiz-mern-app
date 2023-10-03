@@ -4,7 +4,7 @@ import * as dotenv from 'dotenv'; // import the dotenv package
 dotenv.config(); // Load environment variables from .env file
 
 const secret = process.env.JWT_SECRET; // set the secret to the environment variable
-const expiration = process.env.JWT_EXPIRATION; // set the expiration time
+const expiration = '2h'; // set the expiration time
 
 // This will sign the token with the user's username, email, and _id properties.
 const signToken = ({ username, email, _id }) => {

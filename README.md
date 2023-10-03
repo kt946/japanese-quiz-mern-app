@@ -31,10 +31,9 @@ To install Sakura Study on, follow these steps:
 ```
 MONGODB_URI
 JWT_SECRET
-JWT_EXPIRATION
 ```
 
-The MONGODB_URI is the connection string to your MongoDB database. The JWT_SECRET can be any string of your choice. The JWT_EXPIRATION is the time (e.g. '3h') that the JWT token will expire after.
+The MONGODB_URI is the connection string to your MongoDB database. The JWT_SECRET can be any string of your choice.
 
 4. Run `npm run dev` at the root directory to start the development server and launch the app in your browser.
 5. Navigate to http://localhost:5173/ to view the project.
