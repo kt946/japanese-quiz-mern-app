@@ -85,22 +85,13 @@ const MainSection = () => {
                 }
               />
               <Route path="kanji">
-                <Route
-                  path="lesson-3"
-                  element={<QuizPage quiz={new HiraKataKanjiQuiz('kanji', kanjiData.lesson3.kanji)} />}
-                />
-                <Route
-                  path="lesson-4"
-                  element={<QuizPage quiz={new HiraKataKanjiQuiz('kanji', kanjiData.lesson4.kanji)} />}
-                />
-                <Route
-                  path="lesson-5"
-                  element={<QuizPage quiz={new HiraKataKanjiQuiz('kanji', kanjiData.lesson5.kanji)} />}
-                />
-                <Route
-                  path="lesson-6"
-                  element={<QuizPage quiz={new HiraKataKanjiQuiz('kanji', kanjiData.lesson6.kanji)} />}
-                />
+                {kanjiData.map((lesson) => (
+                  <Route
+                    key={lesson.url}
+                    path={lesson.url}
+                    element={<QuizPage quiz={new HiraKataKanjiQuiz('kanji', lesson.kanji)} />}
+                  />
+                ))}
               </Route>
               <Route path="lessons">
                 <Route

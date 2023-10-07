@@ -1,10 +1,12 @@
 // array of objects of kanji characters grouped by subject
 // includes on-yomii and kun-yomi readings
-const kanjiData = {
-  lesson3: {
-    unitNumber: 3,
+const kanjiData = [
+  {
+    lessonNumber: 3,
     url: 'lesson-3',
     title: 'Daily Life',
+    backgroundColor: 'bg-gradient-to-r from-blue-600 to-blue-500',
+    backgroundImage: 'bg-curtain',
     kanji: [
       {
         character: '一',
@@ -98,10 +100,12 @@ const kanjiData = {
       },
     ],
   },
-  lesson4: {
-    unitNumber: 4,
+  {
+    lessonNumber: 4,
     url: 'lesson-4',
     title: "Mary's Weekend",
+    backgroundColor: 'bg-gradient-to-r from-orange-600 to-orange-500',
+    backgroundImage: 'bg-circles',
     kanji: [
       {
         character: '日',
@@ -189,10 +193,12 @@ const kanjiData = {
       },
     ],
   },
-  lesson5: {
-    unitNumber: 5,
+  {
+    lessonNumber: 5,
     url: 'lesson-5',
     title: 'Travel',
+    backgroundColor: 'bg-gradient-to-r from-lime-600 to-lime-400',
+    backgroundImage: 'bg-autumn',
     kanji: [
       {
         character: '山',
@@ -280,10 +286,12 @@ const kanjiData = {
       },
     ],
   },
-  lesson6: {
-    unitNumber: 6,
+  {
+    lessonNumber: 6,
     url: 'lesson-6',
     title: 'My Favorite Restaurant',
+    backgroundColor: 'bg-gradient-to-r from-[#c20323] to-[#ef233c]',
+    backgroundImage: 'bg-i-like-food',
     kanji: [
       {
         character: '東',
@@ -377,10 +385,12 @@ const kanjiData = {
       },
     ],
   },
-  lesson7: {
-    unitNumber: 7,
+  {
+    lessonNumber: 7,
     url: 'lesson-7',
     title: "Mary's Letter",
+    backgroundColor: 'bg-gradient-to-r from-purple-600 to-purple-500',
+    backgroundImage: 'bg-groovy',
     kanji: [
       {
         character: '京',
@@ -468,10 +478,12 @@ const kanjiData = {
       },
     ],
   },
-  lesson8: {
-    unitNumber: 8,
+  {
+    lessonNumber: 8,
     url: 'lesson-8',
     title: 'Japanese Office Workers',
+    backgroundColor: 'bg-gradient-to-r from-cyan-600 to-cyan-400',
+    backgroundImage: 'bg-signal',
     kanji: [
       {
         character: '員',
@@ -559,10 +571,12 @@ const kanjiData = {
       },
     ],
   },
-  lesson9: {
-    unitNumber: 9,
+  {
+    lessonNumber: 9,
     url: 'lesson-9',
     title: "Sora's Diary",
+    backgroundColor: 'bg-gradient-to-r from-emerald-600 to-emerald-400',
+    backgroundImage: 'bg-bathroom-floor',
     kanji: [
       {
         character: '午',
@@ -656,10 +670,12 @@ const kanjiData = {
       },
     ],
   },
-  lesson10: {
-    unitNumber: 10,
+  {
+    lessonNumber: 10,
     url: 'lesson-10',
     title: 'The Folktale Kasajizo',
+    backgroundColor: 'bg-gradient-to-r from-amber-500 to-amber-400',
+    backgroundImage: 'bg-bamboo',
     kanji: [
       {
         character: '住',
@@ -747,10 +763,12 @@ const kanjiData = {
       },
     ],
   },
-  lesson11: {
-    unitNumber: 11,
+  {
+    lessonNumber: 11,
     url: 'lesson-11',
     title: 'Looking for Friends/Members',
+    backgroundColor: 'bg-gradient-to-r from-indigo-600 to-indigo-500',
+    backgroundImage: 'bg-jigsaw',
     kanji: [
       {
         character: '手',
@@ -850,10 +868,12 @@ const kanjiData = {
       },
     ],
   },
-  lesson12: {
-    unitNumber: 12,
+  {
+    lessonNumber: 12,
     url: 'lesson-12',
     title: 'Tanabata Festival',
+    backgroundColor: 'bg-gradient-to-r from-rose-600 to-rose-500',
+    backgroundImage: 'bg-leaf',
     kanji: [
       {
         character: '昔',
@@ -941,6 +961,6 @@ const kanjiData = {
       },
     ],
   },
-};
+];
 
 export default kanjiData;
