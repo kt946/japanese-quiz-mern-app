@@ -31,6 +31,42 @@ const KanjiChart = () => {
           <KanjiLesson data={kanjiData.lesson6} />
           <div className="banner-bg-style bg-i-like-food" />
         </div>
+
+        {/* Lesson 7 */}
+        <div className="banner-container-style bg-gradient-to-r from-purple-600 to-purple-500">
+          <KanjiLesson data={kanjiData.lesson7} />
+          <div className="banner-bg-style bg-groovy" />
+        </div>
+
+        {/* Lesson 8 */}
+        <div className="banner-container-style bg-gradient-to-r from-cyan-600 to-cyan-400">
+          <KanjiLesson data={kanjiData.lesson8} />
+          <div className="banner-bg-style bg-signal" />
+        </div>
+
+        {/* Lesson 9 */}
+        <div className="banner-container-style bg-gradient-to-r from-emerald-600 to-emerald-400">
+          <KanjiLesson data={kanjiData.lesson9} />
+          <div className="banner-bg-style bg-bathroom-floor" />
+        </div>
+
+        {/* Lesson 10 */}
+        <div className="banner-container-style bg-gradient-to-r from-amber-500 to-amber-400">
+          <KanjiLesson data={kanjiData.lesson10} />
+          <div className="banner-bg-style bg-bamboo" />
+        </div>
+
+        {/* Lesson 11 */}
+        <div className="banner-container-style bg-gradient-to-r from-indigo-600 to-indigo-500">
+          <KanjiLesson data={kanjiData.lesson11} />
+          <div className="banner-bg-style bg-jigsaw" />
+        </div>
+
+        {/* Lesson 12 */}
+        <div className="banner-container-style bg-gradient-to-r from-rose-600 to-rose-500">
+          <KanjiLesson data={kanjiData.lesson12} />
+          <div className="banner-bg-style bg-leaf" />
+        </div>
       </div>
     </section>
   );

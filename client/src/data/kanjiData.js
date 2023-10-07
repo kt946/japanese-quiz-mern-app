@@ -898,7 +898,7 @@ const kanjiData = {
         meanings: 'to use',
       },
       {
-        character: '連',
+        character: '働',
         readings: 'はたら',
         romaji: 'hatara',
         meanings: 'to work',

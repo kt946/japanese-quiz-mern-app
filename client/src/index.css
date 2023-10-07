@@ -162,22 +162,22 @@ html {
 .bg-curtain {
   background: url('./assets/bannerBG/bg-curtain.svg') repeat;
   background-size: 60px;
-  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07));
-  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07));
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
 }
 
 .bg-circles {
   background: url('./assets/bannerBG/bg-circles.svg') repeat;
   background-size: 60px;
-  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07));
-  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07));
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
 }
 
 .bg-autumn {
   background: url('./assets/bannerBG/bg-autumn.svg') repeat;
   background-size: 80px;
-  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07));
-  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07));
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
 }
 
 .bg-connections {
@@ -199,6 +199,48 @@ html {
   background-size: 250px;
   -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
   mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+}
+
+.bg-groovy {
+  background: url('./assets/bannerBG/bg-groovy.svg') repeat;
+  background-size: 30px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15));
+}
+
+.bg-signal {
+  background: url('./assets/bannerBG/bg-signal.svg') repeat;
+  background-size: 100px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15));
+}
+
+.bg-bathroom-floor {
+  background: url('./assets/bannerBG/bg-bathroom-floor.svg') repeat;
+  background-size: 100px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+}
+
+.bg-bamboo {
+  background: url('./assets/bannerBG/bg-bamboo.svg') repeat;
+  background-size: 30px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15));
+}
+
+.bg-jigsaw {
+  background: url('./assets/bannerBG/bg-jigsaw.svg') repeat;
+  background-size: 150px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+}
+
+.bg-leaf {
+  background: url('./assets/bannerBG/bg-leaf.svg') repeat;
+  background-size: 100px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15));
+  mask-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15));
 }
 /* Backgrounds End */
 
