@@ -4,7 +4,7 @@ const kanjiData = {
   lesson3: {
     unitNumber: 3,
     url: 'lesson-3',
-    subject: 'Daily Life',
+    title: 'Daily Life',
     kanji: [
       {
         character: '一',
@@ -101,7 +101,7 @@ const kanjiData = {
   lesson4: {
     unitNumber: 4,
     url: 'lesson-4',
-    subject: "Mary's Weekend",
+    title: "Mary's Weekend",
     kanji: [
       {
         character: '日',
@@ -192,7 +192,7 @@ const kanjiData = {
   lesson5: {
     unitNumber: 5,
     url: 'lesson-5',
-    subject: 'Travel',
+    title: 'Travel',
     kanji: [
       {
         character: '山',
@@ -283,7 +283,7 @@ const kanjiData = {
   lesson6: {
     unitNumber: 6,
     url: 'lesson-6',
-    subject: 'My Favorite Restaurant',
+    title: 'My Favorite Restaurant',
     kanji: [
       {
         character: '東',
@@ -380,7 +380,7 @@ const kanjiData = {
   lesson7: {
     unitNumber: 7,
     url: 'lesson-7',
-    subject: "Mary's Letter",
+    title: "Mary's Letter",
     kanji: [
       {
         character: '京',
@@ -396,8 +396,8 @@ const kanjiData = {
       },
       {
         character: '小',
-        readings: 'しょう, ちい',
-        romaji: 'shou, chii',
+        readings: 'ちい',
+        romaji: 'chii',
         meanings: 'small',
       },
       {
@@ -456,14 +456,14 @@ const kanjiData = {
       },
       {
         character: '帰',
-        readings: 'き, かえ',
-        romaji: 'ki, kae',
+        readings: 'かえ',
+        romaji: 'kae',
         meanings: 'to return',
       },
       {
         character: '入',
-        readings: 'にゅう, はい',
-        romaji: 'nyuu, hai',
+        readings: 'はい',
+        romaji: 'hai',
         meanings: 'to enter',
       },
     ],
@@ -471,7 +471,7 @@ const kanjiData = {
   lesson8: {
     unitNumber: 8,
     url: 'lesson-8',
-    subject: 'Japanese Office Workers',
+    title: 'Japanese Office Workers',
     kanji: [
       {
         character: '員',
@@ -505,8 +505,8 @@ const kanjiData = {
       },
       {
         character: '事',
-        readings: 'じ, ごと, こと',
-        romaji: 'ji, goto, koto',
+        readings: 'ごと',
+        romaji: 'goto',
         meanings: 'thing',
       },
       {
@@ -523,32 +523,32 @@ const kanjiData = {
       },
       {
         character: '休',
-        readings: 'きゅう, やす',
-        romaji: 'kyuu, yasu',
+        readings: 'やす',
+        romaji: 'yasu',
         meanings: 'to rest',
       },
       {
         character: '言',
-        readings: 'げん, い, こと',
-        romaji: 'gen, i, koto',
+        readings: 'い',
+        romaji: 'i',
         meanings: 'to say',
       },
       {
         character: '読',
-        readings: 'どく, よ',
-        romaji: 'doku, yo',
+        readings: 'よ',
+        romaji: 'yo',
         meanings: 'to read',
       },
       {
         character: '思',
-        readings: 'し, おも',
-        romaji: 'shi, omo',
+        readings: 'おも',
+        romaji: 'omo',
         meanings: 'to think',
       },
       {
         character: '次',
-        readings: 'じ, つぎ',
-        romaji: 'ji, tsugi',
+        readings: 'つぎ',
+        romaji: 'tsugi',
         meanings: 'next',
       },
       {
@@ -562,7 +562,7 @@ const kanjiData = {
   lesson9: {
     unitNumber: 9,
     url: 'lesson-9',
-    subject: "Sora's Diary",
+    title: "Sora's Diary",
     kanji: [
       {
         character: '午',
@@ -584,44 +584,44 @@ const kanjiData = {
       },
       {
         character: '名',
-        readings: 'めい, みょう, な',
-        romaji: 'mei, myou, na',
+        readings: 'な',
+        romaji: 'na',
         meanings: 'name',
       },
       {
         character: '白',
-        readings: 'はく, しろ',
-        romaji: 'haku, shiro',
+        readings: 'しろ',
+        romaji: 'shiro',
         meanings: 'white',
       },
       {
         character: '雨',
-        readings: 'う, あめ',
-        romaji: 'u, ame',
+        readings: 'あめ',
+        romaji: 'ame',
         meanings: 'rain',
       },
       {
         character: '書',
-        readings: 'しょ, か',
-        romaji: 'sho, ka',
+        readings: 'か',
+        romaji: 'ka',
         meanings: 'to write',
       },
       {
         character: '友',
-        readings: 'ゆう, とも',
-        romaji: 'yuu, tomo',
+        readings: 'とも',
+        romaji: 'tomo',
         meanings: 'friend',
       },
       {
         character: '間',
-        readings: 'かん, げん, あいだ',
-        romaji: 'kan, gen, aida',
+        readings: 'かん, あいだ',
+        romaji: 'kan, aida',
         meanings: 'between',
       },
       {
         character: '家',
-        readings: 'か, いえ',
-        romaji: 'ka, ie',
+        readings: 'いえ',
+        romaji: 'ie',
         meanings: 'house',
       },
       {
@@ -632,26 +632,26 @@ const kanjiData = {
       },
       {
         character: '少',
-        readings: 'しょう, すこ, すく',
-        romaji: 'shou, suko, suku',
+        readings: 'すこ',
+        romaji: 'suko',
         meanings: 'little',
       },
       {
         character: '古',
-        readings: 'こ, ふる',
-        romaji: 'ko, furu',
+        readings: 'ふる',
+        romaji: 'furu',
         meanings: 'old',
       },
       {
         character: '知',
-        readings: 'ち, し',
-        romaji: 'chi, shi',
+        readings: 'し',
+        romaji: 'shi',
         meanings: 'to know',
       },
       {
         character: '来',
-        readings: 'らい, く, き, こ',
-        romaji: 'rai, ku, ki, ko',
+        readings: 'く, き, こ',
+        romaji: 'ku, ki, ko',
         meanings: 'to come',
       },
     ],
@@ -659,18 +659,18 @@ const kanjiData = {
   lesson10: {
     unitNumber: 10,
     url: 'lesson-10',
-    subject: 'The Folktale Kasajizo',
+    title: 'The Folktale Kasajizo',
     kanji: [
       {
         character: '住',
-        readings: 'じゅう, す',
-        romaji: 'juu, su',
+        readings: 'す',
+        romaji: 'su',
         meanings: 'to live',
       },
       {
         character: '正',
-        readings: 'しょう, せい, ただ',
-        romaji: 'shou, sei, tada',
+        readings: 'しょう',
+        romaji: 'shou',
         meanings: 'right/correct',
       },
       {
@@ -681,44 +681,44 @@ const kanjiData = {
       },
       {
         character: '売',
-        readings: 'ばい, う',
+        readings: 'う',
         romaji: 'u',
         meanings: 'to sell',
       },
       {
         character: '買',
-        readings: 'ばい, か',
+        readings: 'か',
         romaji: 'ka',
         meanings: 'to buy',
       },
       {
         character: '町',
-        readings: 'ちょう, まち',
-        romaji: 'chou, machi',
+        readings: 'まち',
+        romaji: 'machi',
         meanings: 'town',
       },
       {
         character: '長',
-        readings: 'ちょう, なが',
-        romaji: 'chou, naga',
+        readings: 'なが',
+        romaji: 'naga',
         meanings: 'long',
       },
       {
         character: '道',
-        readings: 'どう, みち',
-        romaji: 'dou, michi',
-        meanings: 'road',
+        readings: 'みち',
+        romaji: 'michi',
+        meanings: 'way; road',
       },
       {
         character: '雪',
-        readings: 'せつ, ゆき',
-        romaji: 'setsu, yuki',
+        readings: 'ゆき',
+        romaji: 'yuki',
         meanings: 'snow',
       },
       {
         character: '立',
-        readings: 'りつ, た',
-        romaji: 'ritsu, ta',
+        readings: 'た',
+        romaji: 'ta',
         meanings: 'to stand',
       },
       {
@@ -729,20 +729,20 @@ const kanjiData = {
       },
       {
         character: '夜',
-        readings: 'や, よる, よ',
-        romaji: 'ya, yoru, yo',
+        readings: 'よる',
+        romaji: 'yoru',
         meanings: 'night',
       },
       {
         character: '朝',
-        readings: 'ちょう, あさ',
-        romaji: 'chou, asa',
+        readings: 'あさ',
+        romaji: 'asa',
         meanings: 'morning',
       },
       {
         character: '持',
-        readings: 'じ, も',
-        romaji: 'ji, mo',
+        readings: 'も',
+        romaji: 'mo',
         meanings: 'to hold',
       },
     ],
@@ -750,7 +750,7 @@ const kanjiData = {
   lesson11: {
     unitNumber: 11,
     url: 'lesson-11',
-    subject: 'Looking for Friends/Members',
+    title: 'Looking for Friends/Members',
     kanji: [
       {
         character: '手',
@@ -796,14 +796,14 @@ const kanjiData = {
       },
       {
         character: '映',
-        readings: 'えい, うつ',
-        romaji: 'ei, utsu',
+        readings: 'えい',
+        romaji: 'ei',
         meanings: 'to reflect',
       },
       {
         character: '画',
-        readings: 'が, かく',
-        romaji: 'ga, kaku',
+        readings: 'が',
+        romaji: 'ga',
         meanings: 'picture',
       },
       {
@@ -853,7 +853,7 @@ const kanjiData = {
   lesson12: {
     unitNumber: 12,
     url: 'lesson-12',
-    subject: 'Tanabata Festival',
+    title: 'Tanabata Festival',
     kanji: [
       {
         character: '昔',
