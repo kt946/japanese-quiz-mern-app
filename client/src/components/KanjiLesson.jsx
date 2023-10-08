@@ -51,16 +51,17 @@ const KanjiLesson = ({ data }) => {
                   <td className="w-fit border-2 dark:border-gray-700 p-2 sm:p-4 text-2xl sm:text-3xl md:text-5xl lg:text-7xl text-center scale-150 md:scale-100">
                     {kanji.character}
                   </td>
-                  <td className="w-1/2 border-2 dark:border-gray-700 p-2 sm:p-4 text-2xl md:text-3xl">
+                  <td className="w-1/2 border-2 dark:border-gray-700 p-2 sm:p-4 text-xl sm:text-2xl md:text-3xl">
                     <div className="grid gap-2">
-                      {kanji.readings.split(',').map((reading) => (
-                        <p
-                          key={`id-${reading}`}
-                          className="bg-red-100 dark:bg-slate-700 p-1 rounded-lg w-fit"
-                        >
-                          {reading}
-                        </p>
-                      ))}
+                      {kanji.readings &&
+                        kanji.readings.split(',').map((reading) => (
+                          <p
+                            key={`id-${reading}`}
+                            className="bg-red-100 dark:bg-slate-700 p-1 rounded-lg w-fit"
+                          >
+                            {reading}
+                          </p>
+                        ))}
                     </div>
                   </td>
                   <td className="w-1/2 border-2 dark:border-gray-700 p-2 sm:p-4 md:text-xl">{kanji.meanings}</td>

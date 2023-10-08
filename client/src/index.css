@@ -41,7 +41,7 @@ html {
 }
 
 .sidebar-btn.active {
-  @apply bg-red-100 border-2 border-red-300 text-red-500 dark:bg-transparent dark:text-red-300;
+  @apply bg-red-100 border-2 border-red-300 text-red-500 dark:bg-transparent dark:text-red-400 dark:border-red-400 dark:bg-slate-700;
 }
 
 .sidebar-text {
@@ -61,7 +61,7 @@ html {
 }
 
 .tab-active-style {
-  @apply bg-red-100 border-red-500 text-red-500 hover:bg-red-100 dark:hover:bg-red-100;
+  @apply border-red-500 text-red-500 dark:border-red-400 dark:text-red-400 ;
 }
 
 .h1-style {

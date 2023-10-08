@@ -36,7 +36,7 @@ class QuizGenerator {
     // add correct answer to array
     const choices = [correctAnswer];
 
-    // while loop to generate 3 random choices, must not include correct answer or duplicate choices
+    // while loop to generate 3 random choices, must not include the correct answer,duplicate choices, or null values
     while (choices.length < 4) {
       // choose random item from selected data array
       const randomItem = this.selectedDataArray[Math.floor(Math.random() * this.selectedDataArray.length)];
@@ -57,8 +57,8 @@ class QuizGenerator {
           randomChoice = randomItem.character;
       }
 
-      // add choice to array if not already in array
-      if (!choices.includes(randomChoice)) {
+      // add choice to array if it is not null and not already in array
+      if (randomChoice && !choices.includes(randomChoice)) {
         choices.push(randomChoice);
       }
     }
@@ -142,7 +142,7 @@ class HiraKataKanjiQuiz extends QuizGenerator {
     }
   }
 
-  // generate hiragana or kanji question, both have romaji and character
+  // generate hiragana or katakana question, both have romaji and character
   generateHiraKataQuestion(randomQuestion) {
     // initialize variables for question, answer, and choices
     let question, answer, choices;
@@ -167,6 +167,25 @@ class HiraKataKanjiQuiz extends QuizGenerator {
     // initialize variables for question, answer, and choices
     let question, answer, choices;
 
+    // if randomQuestion has no readings, use meanings or character for question
+    // use for certain kanji that have no readings but have a special meaning such as repetition
+    if (!randomQuestion.readings) {
+      // randomly choose between meanings and character for question
+      if (Math.random() < 0.5) {
+        question = `Select the correct meaning(s) for "${randomQuestion.character}"`;
+        answer = randomQuestion.meanings;
+        choices = this.generateAnswerOptions(answer, 'meanings');
+      } else {
+        question = `Select the correct character(s) for "${randomQuestion.meanings}"`;
+        answer = randomQuestion.character;
+        choices = this.generateAnswerOptions(answer, 'character');
+      }
+
+      // return question object
+      return { question, answer, choices };
+    }
+
+    // Default case for kanji question
     // randomly choose between readings, meanings, and character for question
     const randomIndex = Math.floor(Math.random() * 4);
 

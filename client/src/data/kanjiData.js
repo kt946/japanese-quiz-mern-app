@@ -883,8 +883,8 @@ const kanjiData = [
       },
       {
         character: '々',
-        readings: 'symbol of repetition of kanji',
-        romaji: 'symbol of repetition of kanji',
+        readings: '',
+        romaji: '',
         meanings: 'symbol of repetition of kanji',
       },
       {
