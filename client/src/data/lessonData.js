@@ -497,6 +497,166 @@ const lessonData = [
           },
         ],
       },
+      {
+        unitTitle: 'Time (Hours)',
+        unitUrl: 'time-hours',
+        unitContent: [
+          {
+            character: 'いちじ',
+            meanings: '01:00',
+          },
+          {
+            character: 'にじ',
+            meanings: '02:00',
+          },
+          {
+            character: 'さんじ',
+            meanings: '03:00',
+          },
+          {
+            character: 'よじ',
+            meanings: '04:00',
+          },
+          {
+            character: 'ごじ',
+            meanings: '05:00',
+          },
+          {
+            character: 'ろくじ',
+            meanings: '06:00',
+          },
+          {
+            character: 'しちじ',
+            meanings: '07:00',
+          },
+          {
+            character: 'はちじ',
+            meanings: '08:00',
+          },
+          {
+            character: 'くじ',
+            meanings: '09:00',
+          },
+          {
+            character: 'じゅうじ',
+            meanings: '10:00',
+          },
+          {
+            character: 'じゅういちじ',
+            meanings: '11:00',
+          },
+          {
+            character: 'じゅうにじ',
+            meanings: '12:00',
+          },
+          {
+            character: 'いちじはん',
+            meanings: '01:30',
+          },
+        ],
+      },
+      {
+        unitTitle: 'Time (Minutes)',
+        unitUrl: 'time-minutes',
+        unitContent: [
+          {
+            character: 'いっぷん',
+            meanings: '00:01',
+          },
+          {
+            character: 'にふん',
+            meanings: '00:02',
+          },
+          {
+            character: 'さんぷん',
+            meanings: '00:03',
+          },
+          {
+            character: 'よんぷん',
+            meanings: '00:04',
+          },
+          {
+            character: 'ごふん',
+            meanings: '00:05',
+          },
+          {
+            character: 'ろっぷん',
+            meanings: '00:06',
+          },
+          {
+            character: 'ななふん',
+            meanings: '00:07',
+          },
+          {
+            character: 'はっぷん／はちふん',
+            meanings: '00:08',
+          },
+          {
+            character: 'きゅうふん',
+            meanings: '00:09',
+          },
+          {
+            character: 'じゅっぷん',
+            meanings: '00:10',
+          },
+          {
+            character: 'じゅういっぷん',
+            meanings: '00:11',
+          },
+          {
+            character: 'じゅうにふん',
+            meanings: '00:12',
+          },
+          {
+            character: 'じゅうさんぷん',
+            meanings: '00:13',
+          },
+          {
+            character: 'じゅうよんぷん',
+            meanings: '00:14',
+          },
+          {
+            character: 'じゅうごふん',
+            meanings: '00:15',
+          },
+          {
+            character: 'じゅうろっぷん',
+            meanings: '00:16',
+          },
+          {
+            character: 'じゅうななふん',
+            meanings: '00:17',
+          },
+          {
+            character: 'じゅうはっぷん／じゅうはちふん',
+            meanings: '00:18',
+          },
+          {
+            character: 'じゅうきゅうふん',
+            meanings: '00:19',
+          },
+          {
+            character: 'にじゅっぷん',
+            meanings: '00:20',
+          },
+          {
+            character: 'にじゅっぷん',
+            meanings: '00:21',
+          },
+          {
+            character: 'さんじゅっぷん',
+            meanings: '00:30',
+          },
+          {
+            character: 'よんじゅっぷん',
+            meanings: '00:40',
+          },
+          {
+            character: 'ごじゅっぷん',
+            meanings: '00:50',
+          },
+        ],
+      },
     ],
   },
 ];
