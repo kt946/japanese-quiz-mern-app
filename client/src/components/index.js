@@ -11,6 +11,7 @@ import SkipButton from './SkipButton';
 import FeedbackMessage from './FeedbackMessage';
 import ContinueButton from './ContinueButton';
 import MobileMenu from './MobileMenu';
+import LessonContainer from './Lessons/LessonContainer';
 
 export {
   MainSection,
@@ -26,4 +27,5 @@ export {
   FeedbackMessage,
   ContinueButton,
   MobileMenu,
+  LessonContainer
 };

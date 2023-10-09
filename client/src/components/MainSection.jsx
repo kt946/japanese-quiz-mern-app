@@ -94,14 +94,28 @@ const MainSection = () => {
                 ))}
               </Route>
               <Route path="lessons">
-                <Route
+                {lessonData.map((lesson) => (
+                  <Route
+                    key={lesson.lessonUrl}
+                    path={lesson.lessonUrl}
+                  >
+                    {lesson.lessonUnits.map((unit) => (
+                      <Route
+                        key={unit.unitUrl}
+                        path={unit.unitUrl}
+                        element={<QuizPage quiz={new VocabQuiz(unit.unitContent)} />}
+                      />
+                    ))}
+                  </Route>
+                ))}
+                {/* <Route
                   path="lesson-0/greetings"
                   element={<QuizPage quiz={new VocabQuiz(lessonData.lesson0.greetings.vocabulary)} />}
                 />
                 <Route
                   path="lesson-0/numbers"
                   element={<QuizPage quiz={new VocabQuiz(lessonData.lesson0.greetings.numbers)} />}
-                />
+                /> */}
               </Route>
             </Route>
             <Route

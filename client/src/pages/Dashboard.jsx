@@ -4,7 +4,8 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
-import { Lesson0 } from '../components/Lessons';
+import { LessonContainer } from '../components';
+import { lessonData } from '../data';
 
 const Dashboard = () => {
   // If the user is not logged in, redirect to the login page
@@ -43,7 +44,12 @@ const Dashboard = () => {
       <h3 className="font-bold mb-4 text-xl">Lessons</h3>
       {/* Lessons */}
       <div className="flex flex-col gap-4">
-        {<Lesson0 />}
+        {lessonData.map((lesson) => (
+          <LessonContainer
+            key={lesson.lessonUrl}
+            lesson={lesson}
+          />
+        ))}
       </div>
     </section>
   );
