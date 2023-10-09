@@ -234,7 +234,7 @@ class VocabQuiz extends QuizGenerator {
     // initialize variables for question, answer, and choices
     let question, answer, choices;
 
-    // randomly choose between romaji and character for question
+    // randomly choose between meanings and characters for question
     if (Math.random() < 0.5) {
       question = `Select the correct meaning(s) for "${randomQuestion.character}"`;
       answer = randomQuestion.meanings;

@@ -4,106 +4,87 @@ const lessonData = [
   {
     lessonNumber: 0,
     lessonTitle: 'Greetings and Numbers',
-    lessonUrl: 'lessons-0',
+    lessonUrl: 'lesson-0',
     lessonUnits: [
       {
         unitTitle: 'Greetings',
         unitUrl: 'greetings',
         unitContent: [
-          // { character: '', romaji: '', meanings: '' },
+          // { character: '', meanings: '' },
           {
             character: 'おはよう。',
-            romaji: 'Ohayoo',
             meanings: 'Good morning.',
           },
           {
             character: 'おはようございます。',
-            romaji: 'Ohayoo gozaimasu',
             meanings: 'Good morning. (polite)',
           },
           {
             character: 'こんにちは。',
-            romaji: 'Konnichiwa',
             meanings: 'Good afternoon.',
           },
           {
             character: 'こんばんは。',
-            romaji: 'Konbanwa',
             meanings: 'Good evening.',
           },
           {
             character: 'さようなら。',
-            romaji: 'Sayoonara',
             meanings: 'Goodbye.',
           },
           {
             character: 'おやすみ (なさい)。',
-            romaji: 'Oyasumi (nasai)',
             meanings: 'Good night. (polite)',
           },
           {
             character: 'ありがとう。',
-            romaji: 'Arigatoo',
             meanings: 'Thank you.',
           },
           {
             character: 'ありがとうございます。',
-            romaji: 'Arigatoo gozaimasu',
             meanings: 'Thank you. (polite)',
           },
           {
             character: 'すみません。',
-            romaji: 'Sumimasen',
             meanings: "Excuse me.; I'm sorry.",
           },
           {
             character: 'いいえ。',
-            romaji: 'Iie',
             meanings: 'No.; Not at all.',
           },
           {
             character: 'いってきます。',
-            romaji: 'Itte kimasu',
             meanings: "I'll go and come back.",
           },
           {
             character: 'いってらっしゃい。',
-            romaji: 'Itterasshai',
             meanings: 'Please go and come back.',
           },
           {
             character: 'ただいま。',
-            romaji: 'Tadaima',
             meanings: "I'm home.",
           },
           {
             character: 'おかえりなさい。',
-            romaji: 'Okaeri (nasai)',
             meanings: 'Welcome home.',
           },
           {
             character: 'いただきます。',
-            romaji: 'Itadakimasu',
             meanings: 'Thank you for the meal. (before eating)',
           },
           {
             character: 'ごちそうさま(でした)。',
-            romaji: 'Gochisoosama (deshita)',
             meanings: 'Thank you for the meal. (after eating)',
           },
           {
             character: 'はじめまして。',
-            romaji: 'Hajimemashite',
             meanings: 'How do you do?',
           },
           {
             character: '~です',
-            romaji: '...desu',
             meanings: 'I am...',
           },
           {
             character: 'よろしくおねがいします。',
-            romaji: 'Yoroshiku onegai shimasu',
             meanings: 'Nice to meet you.',
           },
         ],
@@ -114,149 +95,405 @@ const lessonData = [
         unitContent: [
           {
             character: 'ぜろ/れい',
-            romaji: 'zero/rei',
             meanings: '0',
           },
           {
             character: 'いち',
-            romaji: 'ichi',
             meanings: '1',
           },
           {
             character: 'に',
-            romaji: 'ni',
             meanings: '2',
           },
           {
             character: 'さん',
-            romaji: 'san',
             meanings: '3',
           },
           {
             character: 'よん/し/(よ)',
-            romaji: 'yon/shi/(yo)',
             meanings: '4',
           },
           {
             character: 'ご',
-            romaji: 'go',
             meanings: '5',
           },
           {
             character: 'ろく',
-            romaji: 'roku',
             meanings: '6',
           },
           {
             character: 'なな/しち',
-            romaji: 'nana/shichi',
             meanings: '7',
           },
 
           {
             character: 'はち',
-            romaji: 'hachi',
             meanings: '8',
           },
           {
             character: 'きゅう/く',
-            romaji: 'kyuu/ku',
             meanings: '9',
           },
           {
             character: 'じゅう',
-            romaji: 'juu',
             meanings: '10',
           },
           {
             character: 'じゅういち',
-            romaji: 'juuichi',
             meanings: '11',
           },
           {
             character: 'じゅうに',
-            romaji: 'juuni',
             meanings: '12',
           },
           {
             character: 'じゅうさん',
-            romaji: 'juusan',
             meanings: '13',
           },
           {
             character: 'じゅうよん/じゅうし',
-            romaji: 'juuyon/juushi',
             meanings: '14',
           },
           {
             character: 'じゅうご',
-            romaji: 'juugo',
             meanings: '15',
           },
           {
             character: 'じゅうろく',
-            romaji: 'juuroku',
             meanings: '16',
           },
           {
             character: 'じゅうなな/じゅうしち',
-            romaji: 'juunana/juushichi',
             meanings: '17',
           },
           {
             character: 'じゅうはち',
-            romaji: 'juuhachi',
             meanings: '18',
           },
           {
             character: 'じゅうきゅう/じゅうく',
-            romaji: 'juukyuu/juuku',
             meanings: '19',
           },
           {
             character: 'にじゅう',
-            romaji: 'nijuu',
             meanings: '20',
           },
           {
             character: 'さんじゅう',
-            romaji: 'sanjuu',
             meanings: '30',
           },
           {
             character: 'よんじゅう',
-            romaji: 'yonjuu',
             meanings: '40',
           },
           {
             character: 'ごじゅう',
-            romaji: 'gojuu',
             meanings: '50',
           },
           {
             character: 'ろくじゅう',
-            romaji: 'rokujuu',
             meanings: '60',
           },
           {
             character: 'ななじゅう',
-            romaji: 'nanajuu',
             meanings: '70',
           },
           {
             character: 'はちじゅう',
-            romaji: 'hachijuu',
             meanings: '80',
           },
           {
             character: 'きゅうじゅう',
-            romaji: 'kyuujuu',
             meanings: '90',
           },
           {
             character: 'ひゃく',
-            romaji: 'hyaku',
             meanings: '100',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    lessonNumber: 1,
+    lessonTitle: 'New Friends',
+    lessonUrl: 'lesson-1',
+    lessonUnits: [
+      {
+        unitTitle: 'Vocabulary',
+        unitUrl: 'vocabulary',
+        unitContent: [
+          {
+            character: 'だいがく',
+            meanings: 'college; university',
+          },
+          {
+            character: 'こうこう',
+            meanings: 'high school',
+          },
+          {
+            character: 'がくせい',
+            meanings: 'student',
+          },
+          {
+            character: 'だいがくせい',
+            meanings: 'college student',
+          },
+          {
+            character: 'りゅうがくせい',
+            meanings: 'international student',
+          },
+          {
+            character: 'せんせい',
+            meanings: 'teacher; Professor ...',
+          },
+          {
+            character: '～ねんせい',
+            meanings: '... year student',
+          },
+          {
+            character: 'いちねんせい',
+            meanings: 'first-year student',
+          },
+          {
+            character: 'せんこう',
+            meanings: 'major',
+          },
+          {
+            character: 'わたし',
+            meanings: 'I',
+          },
+          {
+            character: 'ともだち',
+            meanings: 'friend',
+          },
+          {
+            character: '～さん',
+            meanings: 'Mr./Ms. ...',
+          },
+          {
+            character: '～じん',
+            meanings: '... people',
+          },
+          {
+            character: 'にほんじん',
+            meanings: 'Japanese people',
+          },
+          {
+            character: 'いま',
+            meanings: 'now',
+          },
+          {
+            character: 'ごぜん',
+            meanings: 'a.m.',
+          },
+          {
+            character: 'ごご',
+            meanings: 'p.m.',
+          },
+          {
+            character: '～じ',
+            meanings: "o'clock",
+          },
+          {
+            character: 'いちじ',
+            meanings: "one o'clock",
+          },
+          {
+            character: 'はん',
+            meanings: 'half',
+          },
+          {
+            character: 'にじはん',
+            meanings: 'half past two; two thirty',
+          },
+          {
+            character: 'にほん',
+            meanings: 'Japan',
+          },
+          {
+            character: 'アメリカ',
+            meanings: 'America',
+          },
+          {
+            character: '～ご',
+            meanings: '... language',
+          },
+          {
+            character: 'にほんご',
+            meanings: 'Japanese language',
+          },
+          {
+            character: '～さい',
+            meanings: '... years old',
+          },
+          {
+            character: 'でんわ',
+            meanings: 'telephone',
+          },
+          {
+            character: '～ばん',
+            meanings: 'number ...',
+          },
+          {
+            character: 'ばんごう',
+            meanings: 'number',
+          },
+          {
+            character: 'なん／なに',
+            meanings: 'what',
+          },
+          {
+            character: 'あのう',
+            meanings: 'um...',
+          },
+          {
+            character: 'はい',
+            meanings: 'yes',
+          },
+          {
+            character: 'そうです',
+            meanings: "That's right.",
+          },
+          {
+            character: 'そうですか',
+            meanings: 'I see.; Is that so?',
+          },
+          {
+            character: 'くに',
+            meanings: 'country',
+          },
+          {
+            character: 'イギリス',
+            meanings: 'Britain',
+          },
+          {
+            character: 'オーストラリア',
+            meanings: 'Australia',
+          },
+          {
+            character: 'かんこく',
+            meanings: 'Korea',
+          },
+          {
+            character: 'カナダ',
+            meanings: 'Canada',
+          },
+          {
+            character: 'ちゅうごく',
+            meanings: 'China',
+          },
+          {
+            character: 'インド',
+            meanings: 'India',
+          },
+          {
+            character: 'エジプト',
+            meanings: 'Egypt',
+          },
+          {
+            character: 'フィリピン',
+            meanings: 'Philippines',
+          },
+          {
+            character: 'アジアけんきゅう',
+            meanings: 'Asian studies',
+          },
+          {
+            character: 'けいざい',
+            meanings: 'economics',
+          },
+          {
+            character: 'こうがく',
+            meanings: 'engineering',
+          },
+          {
+            character: 'こくさいかんけい',
+            meanings: 'international relations',
+          },
+          {
+            character: 'コンピューター',
+            meanings: 'computer',
+          },
+          {
+            character: 'せいじ',
+            meanings: 'politics',
+          },
+          {
+            character: 'せいぶつがく',
+            meanings: 'biology',
+          },
+          {
+            character: 'ビジネス',
+            meanings: 'business',
+          },
+          {
+            character: 'ぶんがく',
+            meanings: 'literature',
+          },
+          {
+            character: 'れきし',
+            meanings: 'history',
+          },
+          {
+            character: 'しごと',
+            meanings: 'job; occupation',
+          },
+          {
+            character: 'いしゃ',
+            meanings: 'doctor',
+          },
+          {
+            character: 'かいしゃいん',
+            meanings: 'office worker',
+          },
+          {
+            character: 'かんごし',
+            meanings: 'nurse',
+          },
+          {
+            character: 'こうこうせい',
+            meanings: 'high school student',
+          },
+          {
+            character: 'しゅふ',
+            meanings: 'housewife',
+          },
+          {
+            character: 'だいがくいんせい',
+            meanings: 'graduate student',
+          },
+          {
+            character: 'べんごし',
+            meanings: 'lawyer',
+          },
+          {
+            character: 'かぞく',
+            meanings: 'family',
+          },
+          {
+            character: 'おかあさん',
+            meanings: 'mother',
+          },
+          {
+            character: 'おとうさん',
+            meanings: 'father',
+          },
+          {
+            character: 'おねえさん',
+            meanings: 'older sister',
+          },
+          {
+            character: 'おにいさん',
+            meanings: 'older brother',
+          },
+          {
+            character: 'いもうと',
+            meanings: 'younger sister',
+          },
+          {
+            character: 'おとうと',
+            meanings: 'younger brother',
           },
         ],
       },
