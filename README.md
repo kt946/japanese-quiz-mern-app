@@ -1,10 +1,10 @@
 # Sakura Study
 
-![SakuraStudyBanner](https://user-images.githubusercontent.com/103476893/235792567-191bd114-efb2-422b-9f50-db69138e6582.jpg "Sakura Study Logo")
+![SakuraStudyBanner](https://user-images.githubusercontent.com/103476893/235792567-191bd114-efb2-422b-9f50-db69138e6582.jpg 'Sakura Study Logo')
 
 ## Description
 
-Sakura Study is a MERN language learning app designed to help people study Japanese using a gamified approach similar to Duolingo. The app is based on material from the popular Japanese textbook Genki: An Integrated Course in Elementary Japanese (3rd edition) and provides users with the opportunity to practice hiragana, katakana, kanji, vocabulary, and phrases. The app also includes leaderboards for users to compete with each other and track their progress. Please note that while Sakura Study provides quizzes to help study the material, it does not teach users the Japanese language like the Genki textbooks.
+Sakura Study is a MERN (MongoDB, Express.js, React, Node.js) language learning app designed to help people study Japanese using a gamified approach, similar to Duolingo. The app offers exercises for users to practice material from the popular Japanese textbook, [Genki: An Integrated Course in Elementary Japanese (3rd edition)](https://genki3.japantimes.co.jp/en/), including hiragana, katakana, kanji, vocabulary, and phrases. It also features leaderboards for users to compete with each other and track their progress, along with a dark mode feature. It was created to assist students of all ages and levels in learning Japanese in a fun and engaging way through self-study.
 
 ⭐ Note: The website may require some time for the server to spin up.
 
@@ -55,8 +55,6 @@ Future features include:
 - More practice exercises
 - Achievements
 - Profile settings
-- Improved UI
-- Improved state management
 
 ## Usage
 
@@ -69,21 +67,21 @@ To use Sakura Study, follow these steps:
 5. Access the Profile page to view your statistics and progress. As of now, it only tracks your total xp.
 6. Toggle dark mode on or off depending on your preferences.
 7. When you are done with your session, log out to protect your account.
-8. To start a quiz, click on a 'Start Quiz' button in a section and begin answering questions. Select the correct choice for each question and click on the 'Check' button to check your answer. You can also skip questions by clicking the skip button. Correct answers will increase your progress while incorrect answers or skipped questions will decrease your progress. Once the progress bar is filled, the quiz will end and you will be taken to the results page. 
+8. To start a quiz, click on a 'Start Quiz' button in a section and begin answering questions. Select the correct choice for each question and click on the 'Check' button to check your answer. You can also skip questions by clicking the skip button. Correct answers will increase your progress while incorrect answers or skipped questions will decrease your progress. Once the progress bar is filled, the quiz will end and you will be taken to the results page.
 
 ## Screenshots
 
-![homepage-screenshot](https://user-images.githubusercontent.com/103476893/236004214-8d6d83cd-2da8-4c5d-80de-b73d3ff52401.png "Homepage Screenshot")
+![homepage-screenshot](https://user-images.githubusercontent.com/103476893/236004214-8d6d83cd-2da8-4c5d-80de-b73d3ff52401.png 'Homepage Screenshot')
 
-![characters-screenshot](https://user-images.githubusercontent.com/103476893/236004396-ca697d4d-8f88-4f0d-a984-2e23c86001eb.png "Characters Page Screenshot")
+![characters-screenshot](https://user-images.githubusercontent.com/103476893/236004396-ca697d4d-8f88-4f0d-a984-2e23c86001eb.png 'Characters Page Screenshot')
 
-![leaderboards-screenshot](https://user-images.githubusercontent.com/103476893/236004651-b7ec2888-c19f-4678-9f38-1124988bbe4b.png "Leaderboards Page Screenshot")
+![leaderboards-screenshot](https://user-images.githubusercontent.com/103476893/236004651-b7ec2888-c19f-4678-9f38-1124988bbe4b.png 'Leaderboards Page Screenshot')
 
-![profile-screenshot](https://user-images.githubusercontent.com/103476893/236004699-44ce7f1c-a649-43eb-a051-f6f32f17c271.png "Profile Page Screenshot")
+![profile-screenshot](https://user-images.githubusercontent.com/103476893/236004699-44ce7f1c-a649-43eb-a051-f6f32f17c271.png 'Profile Page Screenshot')
 
-![quiz-screenshot](https://user-images.githubusercontent.com/103476893/236004756-fbe09636-c37d-456c-9475-65c3fde118cc.png "Quiz Screenshot")
+![quiz-screenshot](https://user-images.githubusercontent.com/103476893/236004756-fbe09636-c37d-456c-9475-65c3fde118cc.png 'Quiz Screenshot')
 
-![darkmode-screenshot](https://user-images.githubusercontent.com/103476893/236004790-f5a9ea30-56e6-46fa-a68d-db221d19a6dd.png "Dark Mode Screenshot")
+![darkmode-screenshot](https://user-images.githubusercontent.com/103476893/236004790-f5a9ea30-56e6-46fa-a68d-db221d19a6dd.png 'Dark Mode Screenshot')
 
 ## Technologies Used
 
@@ -99,6 +97,7 @@ Sakura Study is built using a variety of technologies including:
 - GraphQL
 - JWT
 - Tailwind CSS
+- Affinity Designer -  Original logo and image designs by [kt946](https://github.com/kt946)
 
 ## Contributing
 
@@ -106,8 +105,8 @@ Contributions to Sakura Study are welcome and encouraged! If you'd like to contr
 
 ## Credits
 
-- Duolingo: A language-learning website.
-- Genki: A Japanese textbook series.
+- [Duolingo](https://www.duolingo.com/): A language-learning website.
+- [Genki: An Integrated Course in Elementary Japanese (3rd edition)](https://genki3.japantimes.co.jp/en/): A Japanese textbook series.
 - [kt946](https://github.com/kt946) - Project creator
 
 ## Links
