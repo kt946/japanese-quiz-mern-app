@@ -11,7 +11,7 @@ const KanjiLesson = ({ data }) => {
         {/* Header */}
         <div className="text-gray-100">
           {/* Lesson Number and Pages*/}
-          <h4 className="font-bold opacity-75 uppercase tracking-wider text-shadow">
+          <h4 className="font-bold opacity-80 uppercase tracking-wider text-shadow">
             Lesson {data.lessonNumber}, {data.lessonPages}
           </h4>
           <div className="flex flex-col sm:flex-row justify-between">
