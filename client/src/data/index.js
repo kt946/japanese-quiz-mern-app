@@ -1,6 +1,6 @@
-import hiraganaData from './hiraganaData.js';
-import katakanaData from './katakanaData.js';
-import kanjiData from './kanjiData.js';
-import lessonData from './lessonData.js';
+import hiraganaData from './hiragana/hiraganaData.js';
+import katakanaData from './katakana/katakanaData.js';
+import kanjiData from './kanji/kanjiData.js';
+import lessonData from './lessons';
 
 export { hiraganaData, katakanaData, kanjiData, lessonData };
