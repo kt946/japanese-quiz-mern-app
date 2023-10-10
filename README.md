@@ -72,32 +72,32 @@ To use Sakura Study, follow these steps:
 ## Screenshots
 
 ![homepage-screenshot](https://user-images.githubusercontent.com/103476893/236004214-8d6d83cd-2da8-4c5d-80de-b73d3ff52401.png 'Homepage Screenshot')
-<p align="center"">This is the home page, where users start their journey.</p>
+<p align="center">This is the home page, where users start their journey.</p>
 
 ---
 
 ![characters-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/7e2eb62f-20f0-413e-9885-ee53cf100d06.png 'Characters Page Screenshot')
-<p align="center"">At the Characters page, users can begin learning hiragana, katakana, and kanji.</p>
+<p align="center">At the Characters page, users can begin learning hiragana, katakana, and kanji.</p>
 
 ---
 
 ![leaderboards-screenshot](https://user-images.githubusercontent.com/103476893/236004651-b7ec2888-c19f-4678-9f38-1124988bbe4b.png 'Leaderboards Page Screenshot')
-<p align="center"">Climb the ranks and compete with fellow learners on our leaderboards.</p>
+<p align="center">Climb the ranks and compete with fellow learners on our leaderboards.</p>
 
 ---
 
 ![profile-screenshot](https://user-images.githubusercontent.com/103476893/236004699-44ce7f1c-a649-43eb-a051-f6f32f17c271.png 'Profile Page Screenshot')
-<p align="center"">View your progress on your profile page.</p>
+<p align="center">View your progress on your profile page.</p>
 
 ---
 
 ![quiz-screenshot](https://user-images.githubusercontent.com/103476893/236004756-fbe09636-c37d-456c-9475-65c3fde118cc.png 'Quiz Screenshot')
-<p align="center"">Test your knowledge and reinforce your learning with interactive quizzes.</p>
+<p align="center">Test your knowledge and reinforce your learning with interactive quizzes.</p>
 
 ---
 
 ![darkmode-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/1638304f-c5c0-47ac-a33c-b6095f67b512.png 'Dark Mode Screenshot')
-<p align="center"">Switch to Dark Mode for a comfortable, nighttime-friendly experience.</p>
+<p align="center">Switch to Dark Mode for a comfortable, nighttime-friendly experience.</p>
 
 ---
 
