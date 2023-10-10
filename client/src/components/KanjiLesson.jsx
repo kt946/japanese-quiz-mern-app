@@ -10,8 +10,10 @@ const KanjiLesson = ({ data }) => {
       <div className="relative p-4 z-10">
         {/* Header */}
         <div className="text-gray-100">
-          {/* Lesson Number */}
-          <h4 className="font-bold uppercase tracking-wider text-shadow">Lesson {data.lessonNumber}</h4>
+          {/* Lesson Number and Pages*/}
+          <h4 className="font-bold opacity-75 uppercase tracking-wider text-shadow">
+            Lesson {data.lessonNumber}, {data.lessonPages}
+          </h4>
           <div className="flex flex-col sm:flex-row justify-between">
             {/* Subject Title */}
             <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl text-shadow">{data.title}</h3>

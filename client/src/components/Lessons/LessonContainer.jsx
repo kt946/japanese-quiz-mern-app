@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 
 const LessonContainer = ({ lesson }) => {
   return (
-    <div className="text-white banner-container-style bg-gradient-to-r from-orange-600 to-orange-500">
+    <section className="text-white banner-container-style bg-gradient-to-r from-orange-600 to-orange-500">
       <div className="relative p-4 z-10">
         {/* Header */}
         <div className="mb-4">
-          <h4 className="font-bold uppercase tracking-wider text-shadow">Lesson {lesson.lessonNumber}</h4>
-          <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl text-shadow">{lesson.lessonTitle}</h3>
+          <p className="font-bold opacity-75 uppercase tracking-wider text-shadow">
+            Lesson {lesson.lessonNumber}, {lesson.lessonPages}
+          </p>
+          <h4 className="font-bold text-2xl sm:text-3xl md:text-4xl text-shadow">{lesson.lessonTitle}</h4>
         </div>
 
         {/* Content */}
@@ -25,7 +27,7 @@ const LessonContainer = ({ lesson }) => {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

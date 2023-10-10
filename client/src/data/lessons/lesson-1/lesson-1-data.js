@@ -2,6 +2,7 @@ const lesson_1_data = {
   lessonNumber: 1,
   lessonTitle: 'New Friends',
   lessonUrl: 'lesson-1',
+  lessonPages: 'Genki I: p.36-55',
   lessonUnits: [
     {
       unitTitle: 'Vocabulary',

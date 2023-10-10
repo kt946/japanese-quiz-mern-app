@@ -3,6 +3,7 @@
 const kanjiData = [
   {
     lessonNumber: 3,
+    lessonPages: 'Genki I: p.304-307',
     url: 'lesson-3',
     title: 'Daily Life',
     backgroundColor: 'bg-gradient-to-r from-blue-600 to-blue-500',
@@ -102,6 +103,7 @@ const kanjiData = [
   },
   {
     lessonNumber: 4,
+    lessonPages: 'Genki I: p.308-311',
     url: 'lesson-4',
     title: "Mary's Weekend",
     backgroundColor: 'bg-gradient-to-r from-orange-600 to-orange-500',
@@ -195,6 +197,7 @@ const kanjiData = [
   },
   {
     lessonNumber: 5,
+    lessonPages: 'Genki I: p.312-317',
     url: 'lesson-5',
     title: 'Travel',
     backgroundColor: 'bg-gradient-to-r from-lime-600 to-lime-400',
@@ -288,6 +291,7 @@ const kanjiData = [
   },
   {
     lessonNumber: 6,
+    lessonPages: 'Genki I: p.318-323',
     url: 'lesson-6',
     title: 'My Favorite Restaurant',
     backgroundColor: 'bg-gradient-to-r from-[#c20323] to-[#ef233c]',
@@ -387,6 +391,7 @@ const kanjiData = [
   },
   {
     lessonNumber: 7,
+    lessonPages: 'Genki I: p.324-328',
     url: 'lesson-7',
     title: "Mary's Letter",
     backgroundColor: 'bg-gradient-to-r from-purple-600 to-purple-500',
@@ -480,6 +485,7 @@ const kanjiData = [
   },
   {
     lessonNumber: 8,
+    lessonPages: 'Genki I: p.329-333',
     url: 'lesson-8',
     title: 'Japanese Office Workers',
     backgroundColor: 'bg-gradient-to-r from-cyan-600 to-cyan-400',
@@ -573,6 +579,7 @@ const kanjiData = [
   },
   {
     lessonNumber: 9,
+    lessonPages: 'Genki I: p.334-339',
     url: 'lesson-9',
     title: "Sora's Diary",
     backgroundColor: 'bg-gradient-to-r from-emerald-600 to-emerald-400',
@@ -672,6 +679,7 @@ const kanjiData = [
   },
   {
     lessonNumber: 10,
+    lessonPages: 'Genki I: p.340-345',
     url: 'lesson-10',
     title: 'The Folktale Kasajizo',
     backgroundColor: 'bg-gradient-to-r from-amber-500 to-amber-400',
@@ -765,6 +773,7 @@ const kanjiData = [
   },
   {
     lessonNumber: 11,
+    lessonPages: 'Genki I: p.346-351',
     url: 'lesson-11',
     title: 'Looking for Friends/Members',
     backgroundColor: 'bg-gradient-to-r from-indigo-600 to-indigo-500',
@@ -870,6 +879,7 @@ const kanjiData = [
   },
   {
     lessonNumber: 12,
+    lessonPages: 'Genki I: p.352-356',
     url: 'lesson-12',
     title: 'Tanabata Festival',
     backgroundColor: 'bg-gradient-to-r from-rose-600 to-rose-500',

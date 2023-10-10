@@ -1,5 +1,6 @@
 const lesson_0_data = {
   lessonNumber: 0,
+  lessonPages: 'Genki I: p.20-35',
   lessonTitle: 'Greetings and Numbers',
   lessonUrl: 'lesson-0',
   lessonUnits: [
