@@ -72,32 +72,54 @@ To use Sakura Study, follow these steps:
 ## Screenshots
 
 ![homepage-screenshot](https://user-images.githubusercontent.com/103476893/236004214-8d6d83cd-2da8-4c5d-80de-b73d3ff52401.png 'Homepage Screenshot')
+<p align="center"">This is the home page, where users start their journey.</p>
 
-![characters-screenshot](https://user-images.githubusercontent.com/103476893/236004396-ca697d4d-8f88-4f0d-a984-2e23c86001eb.png 'Characters Page Screenshot')
+---
+
+![characters-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/7e2eb62f-20f0-413e-9885-ee53cf100d06.png 'Characters Page Screenshot')
+<p align="center"">At the Characters page, users can begin learning hiragana, katakana, and kanji.</p>
+
+---
 
 ![leaderboards-screenshot](https://user-images.githubusercontent.com/103476893/236004651-b7ec2888-c19f-4678-9f38-1124988bbe4b.png 'Leaderboards Page Screenshot')
+<p align="center"">Climb the ranks and compete with fellow learners on our leaderboards.</p>
+
+---
 
 ![profile-screenshot](https://user-images.githubusercontent.com/103476893/236004699-44ce7f1c-a649-43eb-a051-f6f32f17c271.png 'Profile Page Screenshot')
+<p align="center"">View your progress on your profile page.</p>
+
+---
 
 ![quiz-screenshot](https://user-images.githubusercontent.com/103476893/236004756-fbe09636-c37d-456c-9475-65c3fde118cc.png 'Quiz Screenshot')
+<p align="center"">Test your knowledge and reinforce your learning with interactive quizzes.</p>
 
-![darkmode-screenshot](https://user-images.githubusercontent.com/103476893/236004790-f5a9ea30-56e6-46fa-a68d-db221d19a6dd.png 'Dark Mode Screenshot')
+---
+
+![darkmode-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/1638304f-c5c0-47ac-a33c-b6095f67b512.png 'Dark Mode Screenshot')
+<p align="center"">Switch to Dark Mode for a comfortable, nighttime-friendly experience.</p>
+
+---
+
+![tablet-smartphone-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/1b9d8a7d-c38c-4001-85c6-911df752fe09 'Tablet and Smartphone Screenshot')
+<p align="center">Mobile responsive design ensures a seamless experience on desktops, tablets, and smartphones.</p>
 
 ## Technologies Used
 
 Sakura Study is built using a variety of technologies including:
 
-- Vite
-- React
-- React Router
-- Redux
-- Node.js
-- Express
-- MongoDB
-- GraphQL
-- JWT
-- Tailwind CSS
-- Affinity Designer -  Original logo and image designs by [kt946](https://github.com/kt946)
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/)
+- [React Router](https://reactrouter.com/en/main)
+- [Redux](https://redux.js.org/)
+- [Node.js](https://nodejs.org/en)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [GraphQL](https://graphql.org/)
+- [JWT](https://jwt.io/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Hero Patterns](https://heropatterns.com/) - Background patterns
+- [Affinity Designer](https://affinity.serif.com/en-us/) -  Original logo and image designs by [kt946](https://github.com/kt946)
 
 ## Contributing
 
