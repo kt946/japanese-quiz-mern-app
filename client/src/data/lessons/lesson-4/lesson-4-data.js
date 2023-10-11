@@ -258,6 +258,84 @@ const lesson_4_data = {
         },
       ],
     },
+    {
+      unitTitle: 'Kanji',
+      unitUrl: 'kanji',
+      unitContent: [
+        {
+          character: '日本',
+          readings: 'にほん',
+        },
+        {
+          character: '日曜日',
+          readings: 'にちようび',
+        },
+        {
+          character: '本',
+          readings: 'ほん',
+        },
+        {
+          character: '日本人',
+          readings: 'にほんじん',
+        },
+        {
+          character: '一人で',
+          readings: 'ひとりで',
+        },
+        {
+          character: 'この人',
+          readings: 'このひと',
+        },
+        {
+          character: '月曜日',
+          readings: 'げつようび',
+        },
+        {
+          character: '一月',
+          readings: 'いちがつ',
+        },
+        {
+          character: '火曜日',
+          readings: 'かようび',
+        },
+        {
+          character: '水曜日',
+          readings: 'すいようび',
+        },
+        {
+          character: '水',
+          readings: 'みず',
+        },
+        {
+          character: '木曜日',
+          readings: 'もくようび',
+        },
+        {
+          character: '金曜日',
+          readings: 'きんようび',
+        },
+        {
+          character: '土曜日',
+          readings: 'どようび',
+        },
+        {
+          character: '上',
+          readings: 'うえ',
+        },
+        {
+          character: '下',
+          readings: 'した',
+        },
+        {
+          character: '中',
+          readings: 'なか',
+        },
+        {
+          character: '三時半',
+          readings: 'さんじはん',
+        },
+      ],
+    },
   ],
 };
 
