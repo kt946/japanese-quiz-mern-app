@@ -8,9 +8,10 @@ const LessonContainer = ({ lesson }) => {
         {/* Header */}
         <div className="mb-4">
           <p className="font-bold opacity-80 uppercase tracking-wider text-shadow">
-            Lesson {lesson.lessonNumber}, {lesson.lessonPages}
+            Lesson {lesson.lessonNumber}
           </p>
           <h4 className="font-bold text-2xl sm:text-3xl md:text-4xl text-shadow">{lesson.lessonTitle}</h4>
+          <p className="font-bold opacity-80 tracking-wider text-shadow">{lesson.lessonPages}</p>
         </div>
 
         {/* Content */}

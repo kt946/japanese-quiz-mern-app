@@ -11,12 +11,13 @@ const KanjiLesson = ({ data }) => {
         {/* Header */}
         <div className="text-gray-100">
           {/* Lesson Number and Pages*/}
-          <h4 className="font-bold opacity-80 uppercase tracking-wider text-shadow">
-            Lesson {data.lessonNumber}, {data.lessonPages}
-          </h4>
+          <p className="font-bold opacity-80 uppercase tracking-wider text-shadow">Lesson {data.lessonNumber}</p>
           <div className="flex flex-col sm:flex-row justify-between">
             {/* Subject Title */}
-            <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl text-shadow">{data.title}</h3>
+            <div>
+              <h4 className="font-bold text-2xl sm:text-3xl md:text-4xl text-shadow">{data.title}</h4>
+              <p className="font-bold opacity-80 tracking-wider text-shadow">{data.lessonPages}</p>
+            </div>
             <div className="flex items-end mt-4 sm:mt-0 gap-4 font-bold">
               {/* Start Quiz Button */}
               <Link
