@@ -352,6 +352,88 @@ const lesson_2_data = {
         },
       ],
     },
+    {
+      unitTitle: 'Useful Expressions (In the Classroom)',
+      unitUrl: 'useful-expressions',
+      unitContent: [
+        {
+          character: 'こくばん',
+          meanings: 'blackboard',
+        },
+        {
+          character: 'でんき',
+          meanings: 'light',
+        },
+        {
+          character: 'カーテン',
+          meanings: 'curtain',
+        },
+        {
+          character: 'つくえ',
+          meanings: 'desk',
+        },
+        {
+          character: 'けしゴム',
+          meanings: 'eraser',
+        },
+        {
+          character: 'じしょ',
+          meanings: 'dictionary',
+        },
+        {
+          character: 'えんぴつ',
+          meanings: 'pencil',
+        },
+        {
+          character: 'ドア',
+          meanings: 'door',
+        },
+        {
+          character: 'ほん',
+          meanings: 'book',
+        },
+        {
+          character: 'まど',
+          meanings: 'window',
+        },
+        {
+          character: 'いす',
+          meanings: 'chair',
+        },
+        {
+          character: 'わかりましたか。',
+          meanings: 'Do you understand?',
+        },
+        {
+          character: 'わかりました。',
+          meanings: 'I understand./I understood.',
+        },
+        {
+          character: 'わかりません',
+          meanings: "I don't understand./I don't know.",
+        },
+        {
+          character: 'ゆっくりいってください。',
+          meanings: 'Please say it slowly.',
+        },
+        {
+          character: 'もういちどいってください。',
+          meanings: 'Please say it again.',
+        },
+        {
+          character: 'ちょっとまってください。',
+          meanings: 'Please wait for a while.',
+        },
+        {
+          character: 'きいてください。',
+          meanings: 'Please listen./Please ask.',
+        },
+        {
+          character: '10ページをみてください。',
+          meanings: 'Please look at page 10.',
+        },
+      ],
+    },
   ],
 };
 
