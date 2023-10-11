@@ -6,7 +6,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { Home, Login, Signup, NoMatch, Dashboard, Characters, Leaderboards, Profile, QuizPage } from '../pages';
 
 import Auth from '../utils/auth';
-import { HiraKataKanjiQuiz, VocabQuiz } from '../utils/quizGenerator';
+import { HiraKataKanjiQuiz, VocabQuiz, KanjiQuiz } from '../utils/quizGenerator';
 import { hiraganaData, katakanaData, kanjiData, lessonData } from '../data';
 
 const MainSection = () => {
@@ -103,7 +103,13 @@ const MainSection = () => {
                       <Route
                         key={unit.unitUrl}
                         path={unit.unitUrl}
-                        element={<QuizPage quiz={new VocabQuiz(unit.unitContent)} />}
+                        element={
+                          unit.unitUrl === 'kanji' ? (
+                            <QuizPage quiz={new KanjiQuiz(unit.unitContent)} />
+                          ) : (
+                            <QuizPage quiz={new VocabQuiz(unit.unitContent)} />
+                          )
+                        }
                       />
                     ))}
                   </Route>

@@ -250,4 +250,34 @@ class VocabQuiz extends QuizGenerator {
   }
 }
 
-export { HiraKataKanjiQuiz, VocabQuiz };
+// KanjiQuiz class extends from QuizGenerator; for kanji readings
+// for practicing words using kanji
+class KanjiQuiz extends QuizGenerator {
+  constructor(...arrays) {
+    super(...arrays);
+  }
+
+  generateQuestion() {
+    // choose random item from selected data array to create question
+    const randomQuestion = this.selectedDataArray[Math.floor(Math.random() * this.selectedDataArray.length)];
+
+    // initialize variables for question, answer, and choices
+    let question, answer, choices;
+
+    // randomly choose between readings and characters for question
+    if (Math.random() < 0.5) {
+      question = `Select the correct readings(s) for "${randomQuestion.character}"`;
+      answer = randomQuestion.readings;
+      choices = this.generateAnswerOptions(answer, 'readings');
+    } else {
+      question = `Select the correct character(s) for "${randomQuestion.readings}"`;
+      answer = randomQuestion.character;
+      choices = this.generateAnswerOptions(answer, 'character');
+    }
+
+    // return question object
+    return { question, answer, choices };
+  }
+}
+
+export { HiraKataKanjiQuiz, VocabQuiz, KanjiQuiz };

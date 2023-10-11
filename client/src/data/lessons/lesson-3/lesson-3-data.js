@@ -234,6 +234,140 @@ const lesson_3_data = {
         },
       ],
     },
+    {
+      unitTitle: 'Kanji',
+      unitUrl: 'kanji',
+      unitContent: [
+        {
+          character: '一',
+          readings: 'いち',
+        },
+        {
+          character: '一時',
+          readings: 'いちじ',
+        },
+        {
+          character: '二',
+          readings: 'に',
+        },
+        {
+          character: '二時',
+          readings: 'にじ',
+        },
+        {
+          character: '三',
+          readings: 'さん',
+        },
+        {
+          character: '三時',
+          readings: 'さんじ',
+        },
+        {
+          character: '四',
+          readings: 'よん',
+        },
+        {
+          character: '四時',
+          readings: 'よじ',
+        },
+        {
+          character: '五',
+          readings: 'ご',
+        },
+        {
+          character: '五時',
+          readings: 'ごじ',
+        },
+        {
+          character: '六',
+          readings: 'ろく',
+        },
+        {
+          character: '六時',
+          readings: 'ろくじ',
+        },
+        {
+          character: '六百',
+          readings: 'ろっぴゃく',
+        },
+        {
+          character: '七',
+          readings: 'しち／なな',
+        },
+        {
+          character: '七時',
+          readings: 'しちじ',
+        },
+        {
+          character: '八',
+          readings: 'はち',
+        },
+        {
+          character: '八時',
+          readings: 'はちじ',
+        },
+        {
+          character: '八百',
+          readings: 'はっぴゃく',
+        },
+        {
+          character: '九',
+          readings: 'きゅう',
+        },
+        {
+          character: '九時',
+          readings: 'くじ',
+        },
+        {
+          character: '十',
+          readings: 'じゅう',
+        },
+        {
+          character: '十時',
+          readings: 'じゅうじ',
+        },
+        {
+          character: '百',
+          readings: 'ひゃく',
+        },
+        {
+          character: '三百',
+          readings: 'さんびゃく',
+        },
+        {
+          character: '千',
+          readings: 'せん',
+        },
+        {
+          character: '三千',
+          readings: 'さんぜん',
+        },
+        {
+          character: '八千',
+          readings: 'はっせん',
+        },
+        {
+          character: '千円',
+          readings: 'せんえん',
+        },
+        {
+          character: '一万',
+          readings: 'いちまん',
+        },
+        {
+          character: '十万',
+          readings: 'じゅうまん',
+        },
+        {
+          character: '百万',
+          readings: 'ひゃくまん',
+        },
+        {
+          character: '百円',
+          readings: 'ひゃくえん',
+        },
+      ],
+    },
   ],
 };
 
