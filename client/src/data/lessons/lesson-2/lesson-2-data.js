@@ -238,6 +238,120 @@ const lesson_2_data = {
         },
       ],
     },
+    {
+      unitTitle: 'Numbers',
+      unitUrl: 'numbers',
+      unitContent: [
+        {
+          character: 'ひゃく',
+          meanings: '100',
+        },
+        {
+          character: 'にひゃく',
+          meanings: '200',
+        },
+        {
+          character: 'さんびゃく',
+          meanings: '300',
+        },
+        {
+          character: 'よんひゃく',
+          meanings: '400',
+        },
+        {
+          character: 'ごひゃく',
+          meanings: '500',
+        },
+        {
+          character: 'ろっぴゃく',
+          meanings: '600',
+        },
+        {
+          character: 'ななひゃく',
+          meanings: '700',
+        },
+        {
+          character: 'はっぴゃく',
+          meanings: '800',
+        },
+        {
+          character: 'きゅうひゃく',
+          meanings: '900',
+        },
+        {
+          character: 'せん',
+          meanings: '1,000',
+        },
+        {
+          character: 'にせん',
+          meanings: '2,000',
+        },
+        {
+          character: 'さんぜん',
+          meanings: '3,000',
+        },
+        {
+          character: 'よんせん',
+          meanings: '4,000',
+        },
+        {
+          character: 'ごせん',
+          meanings: '5,000',
+        },
+        {
+          character: 'ろくせん',
+          meanings: '6,000',
+        },
+        {
+          character: 'ななせん',
+          meanings: '7,000',
+        },
+        {
+          character: 'はっせん',
+          meanings: '8,000',
+        },
+        {
+          character: 'きゅうせん',
+          meanings: '9,000',
+        },
+        {
+          character: 'いちまん',
+          meanings: '10,000',
+        },
+        {
+          character: 'にまん',
+          meanings: '20,000',
+        },
+        {
+          character: 'さんまん',
+          meanings: '30,000',
+        },
+        {
+          character: 'よんまん',
+          meanings: '40,000',
+        },
+        {
+          character: 'ごまん',
+          meanings: '50,000',
+        },
+        {
+          character: 'ろくまん',
+          meanings: '60,000',
+        },
+        {
+          character: 'ななまん',
+          meanings: '70,000',
+        },
+        {
+          character: 'はちまん',
+          meanings: '80,000',
+        },
+        {
+          character: 'きゅうまん',
+          meanings: '90,000',
+        },
+      ],
+    },
   ],
 };
 
