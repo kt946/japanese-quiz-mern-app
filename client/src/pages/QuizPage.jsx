@@ -116,7 +116,9 @@ const QuizPage = ({ quiz }) => {
       {!quizComplete && (
         <div className="w-full h-full my-2 flex flex-col md:grid justify-center items-center md:content-center">
           <div className="w-full max-w-2xl md:w-[600px] h-full md:min-h-[450px] quiz-main-container gap-2 md:gap-6">
-            <h1 className="font-bold text-2xl sm:text-3xl">{question.question}</h1>
+            <h1 className="font-bold text-2xl sm:text-3xl">
+              {question.questionDirection} <span className='whitespace-nowrap'>"{question.questionTerm}"</span>
+            </h1>
             <div className="font-medium text-2xl sm:text-3xl md:text-4xl grid grid-cols-1 gap-2">
               {question.choices.map((choice) => (
                 <button
