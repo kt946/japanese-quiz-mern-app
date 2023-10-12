@@ -198,6 +198,104 @@ const lesson_6_data = {
         },
       ],
     },
+    {
+      unitTitle: 'Kanji',
+      unitUrl: 'kanji',
+      unitContent: [
+        {
+          character: '東',
+          readings: 'ひがし',
+        },
+        {
+          character: '東口',
+          readings: 'ひがしぐち',
+        },
+        {
+          character: '西',
+          readings: 'にし',
+        },
+        {
+          character: '西口',
+          readings: 'にしぐち',
+        },
+        {
+          character: '南',
+          readings: 'みなみ',
+        },
+        {
+          character: '南口',
+          readings: 'みなみぐち',
+        },
+        {
+          character: '北',
+          readings: 'きた',
+        },
+        {
+          character: '北口',
+          readings: 'きたぐち',
+        },
+        {
+          character: '出る',
+          readings: 'でる',
+        },
+        {
+          character: '出口',
+          readings: 'でぐち',
+        },
+        {
+          character: '出かける',
+          readings: 'でかける',
+        },
+        {
+          character: '右',
+          readings: 'みぎ',
+        },
+        {
+          character: '左',
+          readings: 'ひだり',
+        },
+        {
+          character: '五分',
+          readings: 'ごふん',
+        },
+        {
+          character: '十分',
+          readings: 'じゅっぷん／じっぷん',
+        },
+        {
+          character: '先生',
+          readings: 'せんせい',
+        },
+        {
+          character: '学生',
+          readings: 'がくせい',
+        },
+        {
+          character: '大学生',
+          readings: 'だいがくせい',
+        },
+        {
+          character: '大きい',
+          readings: 'おおきい',
+        },
+        {
+          character: '大学',
+          readings: 'だいがく',
+        },
+        {
+          character: '外国',
+          readings: 'がいこく',
+        },
+        {
+          character: '外国人',
+          readings: 'がいこくじん',
+        },
+        {
+          character: '中国',
+          readings: 'ちゅうごく',
+        },
+      ],
+    },
   ],
 };
 
