@@ -304,7 +304,7 @@ const lesson_4_data = {
         },
         {
           character: '水',
-          readings: 'みず',
+          readings: 'みず/すい',
         },
         {
           character: '木曜日',
