@@ -234,6 +234,88 @@ const lesson_7_data = {
         },
       ],
     },
+    {
+      unitTitle: 'Kanji',
+      unitUrl: 'kanji',
+      unitContent: [
+        {
+          character: '東京',
+          readings: 'とうきょう',
+        },
+        {
+          character: '京子',
+          readings: 'きょうこ',
+        },
+        {
+          character: '子ども',
+          readings: 'こども',
+        },
+        {
+          character: '小さい',
+          readings: 'ちいさい',
+        },
+        {
+          character: '会う',
+          readings: 'あう',
+        },
+        {
+          character: '会社',
+          readings: 'かいしゃ',
+        },
+        {
+          character: '父',
+          readings: 'ちち',
+        },
+        {
+          character: 'お父さん',
+          readings: 'おとうさん',
+        },
+        {
+          character: '母',
+          readings: 'はは',
+        },
+        {
+          character: 'お母さん',
+          readings: 'おかあさん',
+        },
+        {
+          character: '高い',
+          readings: 'たかい',
+        },
+        {
+          character: '高校',
+          readings: 'こうこう',
+        },
+        {
+          character: '高校生',
+          readings: 'こうこうせい',
+        },
+        {
+          character: '学校',
+          readings: 'がっこう',
+        },
+        {
+          character: '毎日',
+          readings: 'まいにち',
+        },
+        {
+          character: '日本語',
+          readings: 'にほんご',
+        },
+        {
+          character: '文学',
+          readings: 'ぶんがく',
+        },
+        {
+          character: '帰る',
+          readings: 'かえる',
+        },
+        {
+          character: '入る',
+          readings: 'はいる',
+        },
+      ],
+    },
   ],
 };
 
