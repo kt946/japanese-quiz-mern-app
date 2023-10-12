@@ -218,6 +218,76 @@ const lesson_5_data = {
         },
       ],
     },
+    {
+      unitTitle: 'Kanji',
+      unitUrl: 'kanji',
+      unitContent: [
+        {
+          character: '山',
+          readings: 'やま',
+        },
+        {
+          character: '山川さん',
+          readings: 'やまかわさん',
+        },
+        {
+          character: '川',
+          readings: 'かわ',
+        },
+        {
+          character: '元気な',
+          readings: 'げんきな',
+        },
+        {
+          character: '天気',
+          readings: 'てんき',
+        },
+        {
+          character: '私',
+          readings: 'わたし',
+        },
+        {
+          character: '今',
+          readings: 'いま',
+        },
+        {
+          character: '今日',
+          readings: 'きょう',
+        },
+        {
+          character: '田中さん',
+          readings: 'たなかさん',
+        },
+        {
+          character: '山田さん',
+          readings: 'やまださん',
+        },
+        {
+          character: '女の人',
+          readings: 'おんなのひと',
+        },
+        {
+          character: '男の人',
+          readings: 'おとこのひと',
+        },
+        {
+          character: '見る',
+          readings: 'みる',
+        },
+        {
+          character: '行く',
+          readings: 'いく',
+        },
+        {
+          character: '食べる',
+          readings: 'たべる',
+        },
+        {
+          character: '飲む',
+          readings: 'のむ',
+        },
+      ],
+    },
   ],
 };
 
