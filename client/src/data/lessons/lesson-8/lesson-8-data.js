@@ -230,6 +230,84 @@ const lesson_8_data = {
         },
       ],
     },
+    {
+      unitTitle: 'Kanji',
+      unitUrl: 'kanji',
+      unitContent: [
+        {
+          character: '会社員',
+          readings: 'かいしゃいん',
+        },
+        {
+          character: '新しい',
+          readings: 'あたらしい',
+        },
+        {
+          character: '新聞',
+          readings: 'しんぶん',
+        },
+        {
+          character: '聞く',
+          readings: 'きく',
+        },
+        {
+          character: '作る',
+          readings: 'つくる',
+        },
+        {
+          character: '仕事',
+          readings: 'しごと',
+        },
+        {
+          character: '電車',
+          readings: 'でんしゃ',
+        },
+        {
+          character: '電気',
+          readings: 'でんき',
+        },
+        {
+          character: '車',
+          readings: 'くるま',
+        },
+        {
+          character: '休む',
+          readings: 'やすむ',
+        },
+        {
+          character: '休み',
+          readings: 'やすみ',
+        },
+        {
+          character: '言う',
+          readings: 'いう',
+        },
+        {
+          character: '読む',
+          readings: 'よむ',
+        },
+        {
+          character: '思う',
+          readings: 'おもう',
+        },
+        {
+          character: '次',
+          readings: 'つぎ',
+        },
+        {
+          character: '何',
+          readings: 'なに',
+        },
+        {
+          character: '何時',
+          readings: 'なんじ',
+        },
+        {
+          character: '何人',
+          readings: 'なんにん',
+        },
+      ],
+    },
   ],
 };
 
