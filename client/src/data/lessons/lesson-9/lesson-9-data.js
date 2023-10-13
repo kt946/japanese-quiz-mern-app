@@ -230,6 +230,112 @@ const lesson_9_data = {
         },
       ],
     },
+    {
+      unitTitle: 'Kanji',
+      unitUrl: 'kanji',
+      unitContent: [
+        {
+          character: '午前',
+          meanings: 'ごぜん',
+        },
+        {
+          character: '午後',
+          meanings: 'ごご',
+        },
+        {
+          character: '午前中',
+          meanings: 'ごぜんちゅう',
+        },
+        {
+          character: '〜の後',
+          meanings: '〜のあと',
+        },
+        {
+          character: '後で',
+          meanings: 'あとで',
+        },
+        {
+          character: '後ろ',
+          meanings: 'うしろ',
+        },
+        {
+          character: '前',
+          meanings: 'まえ',
+        },
+        {
+          character: '名前',
+          meanings: 'なまえ',
+        },
+        {
+          character: '白い',
+          meanings: 'しろい',
+        },
+        {
+          character: '雨',
+          meanings: 'あめ',
+        },
+        {
+          character: '書く',
+          meanings: 'かく',
+        },
+        {
+          character: '友だち',
+          meanings: 'ともだち',
+        },
+        {
+          character: '時間',
+          meanings: 'じかん',
+        },
+        {
+          character: '二時間',
+          meanings: 'にじかん',
+        },
+        {
+          character: '間',
+          meanings: 'あいだ',
+        },
+        {
+          character: '家',
+          meanings: 'いえ',
+        },
+        {
+          character: '話す',
+          meanings: 'はなす',
+        },
+        {
+          character: '話',
+          meanings: 'はなし',
+        },
+        {
+          character: '電話',
+          meanings: 'でんわ',
+        },
+        {
+          character: '少し',
+          meanings: 'すこし',
+        },
+        {
+          character: '古い',
+          meanings: 'ふるい',
+        },
+        {
+          character: '知る',
+          meanings: 'しる',
+        },
+        {
+          character: '来る',
+          meanings: 'くる',
+        },
+        {
+          character: '来ます',
+          meanings: 'きます',
+        },
+        {
+          character: '来ない',
+          meanings: 'こない',
+        },
+      ],
+    },
   ],
 };
 
