@@ -32,7 +32,7 @@ const Dashboard = () => {
         </div>
         <div className="banner-bg-style bg-parkay-floor" />
       </div>
-      <div className="box-container-style mb-8 max-w-2xl">
+      <div className="mb-8">
         <p>
           These quizzes are intended to aid you in practicing the material you've learned in each lesson of{' '}
           <strong>Genki: An Integrated Course in Elementary Japanese textbooks (Third Edition)</strong>.

@@ -33,18 +33,6 @@ const Characters = () => {
         {/* Page Heading */}
         <h1 className="h1-style mb-8">Characters</h1>
 
-        {/* Banner */}
-        <div className="banner-container-style text-white text-shadow bg-gradient-to-r from-primary to-red-800">
-          <div className="relative p-8 z-10">
-            <h2 className="banner-heading mb-3">Let's learn {activeTab}!</h2>
-            <p className="text-lg">{charBannerText[activeTab]}</p>
-          </div>
-          <div className="banner-bg-style bg-clouds" />
-        </div>
-      </div>
-
-      {/* Content */}
-      <div>
         {/* Tabs */}
         <div className="mb-8 border-b-2 border-b-gray-300 dark:border-gray-700 flex justify-center sm:justify-start">
           <div className="w-full sm:max-w-md grid grid-cols-3 font-bold sm:text-lg text-center">
@@ -61,6 +49,18 @@ const Characters = () => {
           </div>
         </div>
 
+        {/* Banner */}
+        <div className="banner-container-style text-white text-shadow bg-gradient-to-r from-primary to-red-800">
+          <div className="relative p-8 z-10">
+            <h2 className="banner-heading mb-3">Let's learn {activeTab}!</h2>
+            <p className="text-lg">{charBannerText[activeTab]}</p>
+          </div>
+          <div className="banner-bg-style bg-clouds" />
+        </div>
+      </div>
+
+      {/* Content */}
+      <div>
         {/* Start Quiz Button for Hiragana and Katakana */}
         {(activeTab === 'Hiragana' || activeTab === 'Katakana') && (
           <div className="mb-8 flex justify-center sm:justify-start">

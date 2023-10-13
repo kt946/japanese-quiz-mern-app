@@ -7,6 +7,7 @@ import lesson_5_data from './lesson-5/lesson-5-data';
 import lesson_6_data from './lesson-6/lesson-6-data';
 import lesson_7_data from './lesson-7/lesson-7-data';
 import lesson_8_data from './lesson-8/lesson-8-data';
+import lesson_9_data from './lesson-9/lesson-9-data';
 
 const lessonData = [
   lesson_0_data,
@@ -18,6 +19,7 @@ const lessonData = [
   lesson_6_data,
   lesson_7_data,
   lesson_8_data,
+  lesson_9_data,
 ];
 
 export default lessonData;

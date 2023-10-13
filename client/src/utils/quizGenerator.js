@@ -237,8 +237,6 @@ class VocabQuiz extends QuizGenerator {
   }
 
   generateQuestion() {
-    console.log(this.quizType);
-
     // choose random item from selected data array to create question
     const randomQuestion = this.selectedDataArray[Math.floor(Math.random() * this.selectedDataArray.length)];
 
