@@ -234,6 +234,88 @@ const lesson_10_data = {
         },
       ],
     },
+    {
+      unitTitle: 'Kanji',
+      unitUrl: 'kanji',
+      unitContent: [
+        {
+          character: '住む',
+          readings: 'to live',
+        },
+        {
+          character: 'お正月',
+          readings: 'New Year',
+        },
+        {
+          character: '三年生',
+          readings: 'third-year student',
+        },
+        {
+          character: '来年',
+          readings: 'next year',
+        },
+        {
+          character: '今年',
+          readings: 'this year',
+        },
+        {
+          character: '年',
+          readings: 'year',
+        },
+        {
+          character: '売る',
+          readings: 'to sell',
+        },
+        {
+          character: '買う',
+          readings: 'to buy',
+        },
+        {
+          character: '町',
+          readings: 'town',
+        },
+        {
+          character: '長い',
+          readings: 'long',
+        },
+        {
+          character: '道',
+          readings: 'road',
+        },
+        {
+          character: '雪',
+          readings: 'snow',
+        },
+        {
+          character: '立つ',
+          readings: 'to stand',
+        },
+        {
+          character: '自分',
+          readings: 'oneself',
+        },
+        {
+          character: '夜',
+          readings: 'night',
+        },
+        {
+          character: '朝',
+          readings: 'morning',
+        },
+        {
+          character: '今朝',
+          readings: 'this morning',
+        },
+        {
+          character: '持つ',
+          readings: 'to carry; to hold',
+        },
+        {
+          character: '持ってくる',
+          readings: 'to bring',
+        },
+      ],
+    },
   ],
 };
 
