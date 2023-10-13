@@ -262,6 +262,80 @@ const lesson_11_data = {
         },
       ],
     },
+    {
+      unitTitle: 'Kanji',
+      unitUrl: 'kanji',
+      unitContent: [
+        {
+          character: '手紙',
+          readings: 'てがみ',
+        },
+        {
+          character: '歌手',
+          readings: 'かしゅ',
+        },
+        {
+          character: '好きな',
+          readings: 'すきな',
+        },
+        {
+          character: '大好きな',
+          readings: 'だいすきな',
+        },
+        {
+          character: '近く',
+          readings: 'ちかく',
+        },
+        {
+          character: '近所',
+          readings: 'きんじょ',
+        },
+        {
+          character: '明るい',
+          readings: 'あかるい',
+        },
+        {
+          character: '病院',
+          readings: 'びょういん',
+        },
+        {
+          character: '病気',
+          readings: 'びょうき',
+        },
+        {
+          character: '映画',
+          readings: 'えいが',
+        },
+        {
+          character: '歌う',
+          readings: 'うたう',
+        },
+        {
+          character: '歌',
+          readings: 'うた',
+        },
+        {
+          character: '川口市',
+          readings: 'かわぐちし',
+        },
+        {
+          character: 'いろいろな所',
+          readings: 'いろいろなところ',
+        },
+        {
+          character: '勉強する',
+          readings: 'べんきょうする',
+        },
+        {
+          character: '有名な',
+          readings: 'ゆうめいな',
+        },
+        {
+          character: '旅行',
+          readings: 'りょこう',
+        },
+      ],
+    },
   ],
 };
 
