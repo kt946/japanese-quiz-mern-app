@@ -236,103 +236,103 @@ const lesson_9_data = {
       unitContent: [
         {
           character: '午前',
-          meanings: 'ごぜん',
+          readings: 'ごぜん',
         },
         {
           character: '午後',
-          meanings: 'ごご',
+          readings: 'ごご',
         },
         {
           character: '午前中',
-          meanings: 'ごぜんちゅう',
+          readings: 'ごぜんちゅう',
         },
         {
           character: '〜の後',
-          meanings: '〜のあと',
+          readings: '〜のあと',
         },
         {
           character: '後で',
-          meanings: 'あとで',
+          readings: 'あとで',
         },
         {
           character: '後ろ',
-          meanings: 'うしろ',
+          readings: 'うしろ',
         },
         {
           character: '前',
-          meanings: 'まえ',
+          readings: 'まえ',
         },
         {
           character: '名前',
-          meanings: 'なまえ',
+          readings: 'なまえ',
         },
         {
           character: '白い',
-          meanings: 'しろい',
+          readings: 'しろい',
         },
         {
           character: '雨',
-          meanings: 'あめ',
+          readings: 'あめ',
         },
         {
           character: '書く',
-          meanings: 'かく',
+          readings: 'かく',
         },
         {
           character: '友だち',
-          meanings: 'ともだち',
+          readings: 'ともだち',
         },
         {
           character: '時間',
-          meanings: 'じかん',
+          readings: 'じかん',
         },
         {
           character: '二時間',
-          meanings: 'にじかん',
+          readings: 'にじかん',
         },
         {
           character: '間',
-          meanings: 'あいだ',
+          readings: 'あいだ',
         },
         {
           character: '家',
-          meanings: 'いえ',
+          readings: 'いえ',
         },
         {
           character: '話す',
-          meanings: 'はなす',
+          readings: 'はなす',
         },
         {
           character: '話',
-          meanings: 'はなし',
+          readings: 'はなし',
         },
         {
           character: '電話',
-          meanings: 'でんわ',
+          readings: 'でんわ',
         },
         {
           character: '少し',
-          meanings: 'すこし',
+          readings: 'すこし',
         },
         {
           character: '古い',
-          meanings: 'ふるい',
+          readings: 'ふるい',
         },
         {
           character: '知る',
-          meanings: 'しる',
+          readings: 'しる',
         },
         {
           character: '来る',
-          meanings: 'くる',
+          readings: 'くる',
         },
         {
           character: '来ます',
-          meanings: 'きます',
+          readings: 'きます',
         },
         {
           character: '来ない',
-          meanings: 'こない',
+          readings: 'こない',
         },
       ],
     },
