@@ -222,6 +222,92 @@ const lesson_12_data = {
         },
       ],
     },
+    {
+      unitTitle: 'Kanji',
+      unitUrl: 'kanji',
+      unitContent: [
+        {
+          character: '昔',
+          readings: 'むかし',
+        },
+        {
+          character: '昔々',
+          readings: 'むかしむかし',
+        },
+        {
+          character: '人々',
+          readings: 'ひとびと',
+        },
+        {
+          character: '神さま',
+          readings: 'かみさま',
+        },
+        {
+          character: '神社',
+          readings: 'じんじゃ',
+        },
+        {
+          character: '早い',
+          readings: 'はやい',
+        },
+        {
+          character: '起きる',
+          readings: 'おきる',
+        },
+        {
+          character: '牛',
+          readings: 'うし',
+        },
+        {
+          character: '使う',
+          readings: 'つかう',
+        },
+        {
+          character: '働く',
+          readings: 'はたらく',
+        },
+        {
+          character: '連れて帰る',
+          readings: 'つれてかえる',
+        },
+        {
+          character: '別れる',
+          readings: 'わかれる',
+        },
+        {
+          character: '別に',
+          readings: 'べつに',
+        },
+        {
+          character: '一度',
+          readings: 'いちど',
+        },
+        {
+          character: '今度',
+          readings: 'こんど',
+        },
+        {
+          character: '赤',
+          readings: 'あか',
+        },
+        {
+          character: '赤い',
+          readings: 'あかい',
+        },
+        {
+          character: '青',
+          readings: 'あお',
+        },
+        {
+          character: '青い',
+          readings: 'あおい',
+        },
+        {
+          character: '色',
+          readings: 'いろ',
+        },
+      ],
+    },
   ],
 };
 
