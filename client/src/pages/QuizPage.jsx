@@ -152,12 +152,12 @@ const QuizPage = ({ quiz }) => {
 
       {/* Quiz Footer */}
       <div
-        className={`-mx-4 -mb-6 mt-4 max-md:pb-6 md:m-0 md:h-36 md:min-h-[144px] md:border-t-2 border-gray-300 dark:border-gray-700 ${
+        className={`-mx-4 -mb-6 mt-4 max-md:pb-6 md:m-0 md:h-36 md:min-h-[144px] md:border-t-2 ${
           questionState === 'correct'
-            ? 'border-[#CEFEA8] bg-[#CEFEA8] dark:bg-slate-800'
+            ? 'border-[#CEFEA8] bg-[#CEFEA8] dark:bg-slate-800 dark:border-gray-700'
             : questionState === 'incorrect'
-            ? 'border-[#FED6DD] bg-[#FED6DD] dark:bg-slate-800'
-            : ''
+            ? 'border-[#FED6DD] bg-[#FED6DD] dark:bg-slate-800 dark:border-gray-700'
+            : 'border-gray-300 dark:border-gray-700'
         }`}
       >
         <div className="w-full h-full max-w-5xl mx-auto px-4 flex items-center">
