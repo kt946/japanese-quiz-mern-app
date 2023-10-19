@@ -76,7 +76,7 @@ To use Sakura Study, follow these steps:
 
 ---
 
-![characters-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/7e2eb62f-20f0-413e-9885-ee53cf100d06.png 'Characters Page Screenshot')
+![characters-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/fff713f6-e232-4413-b671-f02e572ca646.png 'Characters Page Screenshot')
 <p align="center">At the Characters page, users can begin learning hiragana, katakana, and kanji.</p>
 
 ---
@@ -86,22 +86,22 @@ To use Sakura Study, follow these steps:
 
 ---
 
-![profile-screenshot](https://user-images.githubusercontent.com/103476893/236004699-44ce7f1c-a649-43eb-a051-f6f32f17c271.png 'Profile Page Screenshot')
+![profile-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/09066e35-20d6-47b7-b436-048c97be9f10.png 'Profile Page Screenshot')
 <p align="center">View your progress on your profile page.</p>
 
 ---
 
-![quiz-screenshot](https://user-images.githubusercontent.com/103476893/236004756-fbe09636-c37d-456c-9475-65c3fde118cc.png 'Quiz Screenshot')
+![quiz-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/fdc95ca2-9bb2-43a3-b09c-9f0150ccd070.png 'Quiz Screenshot')
 <p align="center">Test your knowledge and reinforce your learning with interactive quizzes.</p>
 
 ---
 
-![darkmode-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/1638304f-c5c0-47ac-a33c-b6095f67b512.png 'Dark Mode Screenshot')
+![darkmode-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/a42d8a31-9b12-48e2-8491-c7001f764cb1.png 'Dark Mode Screenshot')
 <p align="center">Switch to Dark Mode for a comfortable, nighttime-friendly experience.</p>
 
 ---
 
-![tablet-smartphone-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/1b9d8a7d-c38c-4001-85c6-911df752fe09 'Tablet and Smartphone Screenshot')
+![tablet-smartphone-screenshot](https://github.com/kt946/japanese-quiz-mern-app/assets/103476893/bcd98d15-1539-47cc-bb1b-351ddf209364.png 'Tablet and Smartphone Screenshot')
 <p align="center">Mobile responsive design ensures a seamless experience on desktops, tablets, and smartphones.</p>
 
 ## Technologies Used
