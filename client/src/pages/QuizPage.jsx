@@ -3,7 +3,8 @@ import { Navigate } from 'react-router-dom';
 import Auth from '../utils/auth';
 
 import { HiX } from 'react-icons/hi';
-import { CheckButton, NextButton, SkipButton, FeedbackMessage, ContinueButton } from '../components';
+import { AiOutlineLoading } from 'react-icons/ai';
+import { FeedbackMessage, Button } from '../components';
 import { CompleteScreen } from './';
 
 import { useQuery, useMutation } from '@apollo/client';
@@ -68,12 +69,12 @@ const QuizPage = ({ quiz }) => {
           experience: currentExperience,
         },
       });
-
+    } catch (error) {
+      console.error(error);
+    } finally {
       // set the quiz to complete and render the complete screen
       setQuizComplete(true);
       setQuestionState(null);
-    } catch (error) {
-      console.error(error);
     }
   };
 
@@ -117,7 +118,7 @@ const QuizPage = ({ quiz }) => {
         <div className="w-full h-full my-2 flex flex-col md:grid justify-center items-center md:content-center">
           <div className="w-full max-w-2xl md:w-[600px] h-full md:min-h-[450px] quiz-main-container gap-2 md:gap-6">
             <h1 className="font-bold text-2xl sm:text-3xl">
-              {question.questionDirection} <span className='whitespace-nowrap'>"{question.questionTerm}"</span>
+              {question.questionDirection} <span className="whitespace-nowrap">"{question.questionTerm}"</span>
             </h1>
             <div className="font-medium text-2xl sm:text-3xl md:text-4xl grid grid-cols-1 gap-2">
               {question.choices.map((choice) => (
@@ -163,7 +164,13 @@ const QuizPage = ({ quiz }) => {
             <div className="w-full flex flex-col md:flex-row justify-between md:items-center">
               {!questionState ? (
                 // Skip Button
-                <SkipButton checkAnswer={checkAnswer} />
+                // <SkipButton checkAnswer={checkAnswer} />
+                <Button
+                  type="button"
+                  style="hidden md:inline-block text-sky-500 border-2 border-sky-500 bg-transparent hover:bg-gray-200 dark:hover:bg-slate-800"
+                  onClick={() => checkAnswer('skip')}
+                  title="Skip"
+                />
               ) : (
                 // Feedback Message
                 <FeedbackMessage
@@ -175,16 +182,34 @@ const QuizPage = ({ quiz }) => {
               {/* Check and Next Buttons */}
               {!questionState ? (
                 // Check Button
-                <CheckButton
-                  selectedOption={selectedOption}
-                  checkAnswer={checkAnswer}
+                <Button
+                  type="button"
+                  style={
+                    !selectedOption
+                      ? 'text-gray-500 bg-gray-300'
+                      : 'text-white dark:text-slate-800 bg-[#58CC02] dark:bg-lime-500 hover:bg-[#4CAD02] dark:hover:bg-lime-600'
+                  }
+                  onClick={() => checkAnswer(selectedOption)}
+                  disabled={!selectedOption}
+                  title="Check"
                 />
               ) : (
                 // Next Button
-                <NextButton
-                  questionState={questionState}
-                  cycleNextQuestion={cycleNextQuestion}
-                  loading={loading}
+                <Button
+                  type="button"
+                  style={`text-white dark:text-slate-800 ${
+                    questionState === 'correct'
+                      ? 'bg-[#58CC02] dark:bg-lime-500 hover:bg-[#4CAD02] dark:hover:bg-lime-600'
+                      : 'bg-red-600 dark:bg-red-400 hover:bg-red-700 dark:hover:bg-red-500'
+                  }`}
+                  onClick={() => cycleNextQuestion()}
+                  title={
+                    loading ? (
+                      <AiOutlineLoading className="text-white dark:text-slate-800 animate-spin h-6 w-6 mx-auto" />
+                    ) : (
+                      'Next'
+                    )
+                  }
                 />
               )}
             </div>
@@ -193,7 +218,12 @@ const QuizPage = ({ quiz }) => {
           {/* Continue Button */}
           {quizComplete && (
             <div className="w-full flex justify-end">
-              <ContinueButton />
+              <Button
+                type="button"
+                style="text-white dark:text-slate-800 bg-[#58CC02] hover:bg-[#4CAD02]"
+                onClick={() => history.back()}
+                title="Continue"
+              />
             </div>
           )}
         </div>

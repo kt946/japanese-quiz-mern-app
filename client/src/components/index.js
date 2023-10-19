@@ -5,13 +5,10 @@ import HiraganaChart from './HiraganaChart';
 import KatakanaChart from './KatakanaChart';
 import KanjiChart from './KanjiChart';
 import MainSection from './MainSection';
-import NextButton from './NextButton';
-import CheckButton from './CheckButton';
-import SkipButton from './SkipButton';
 import FeedbackMessage from './FeedbackMessage';
-import ContinueButton from './ContinueButton';
 import MobileMenu from './MobileMenu';
-import LessonContainer from './Lessons/LessonContainer';
+import LessonContainer from './LessonContainer';
+import Button from './Button';
 
 export {
   MainSection,
@@ -21,11 +18,8 @@ export {
   HiraganaChart,
   KatakanaChart,
   KanjiChart,
-  CheckButton,
-  NextButton,
-  SkipButton,
   FeedbackMessage,
-  ContinueButton,
   MobileMenu,
-  LessonContainer
+  LessonContainer,
+  Button,
 };
