@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import Auth from '../utils/auth';
-
 import { HiX } from 'react-icons/hi';
 import { AiOutlineLoading } from 'react-icons/ai';
+import { BsFillSkipForwardFill, BsArrowClockwise } from 'react-icons/bs';
+import { HiCheck, HiArrowRight } from 'react-icons/hi';
+
 import { FeedbackMessage, Button } from '../components';
 import { CompleteScreen } from './';
 
@@ -150,12 +152,12 @@ const QuizPage = ({ quiz }) => {
 
       {/* Quiz Footer */}
       <div
-        className={`-mx-4 -mb-6 mt-4 pb-6 md:m-0 md:pb-0 md:h-36 md:min-h-[144px] ${
+        className={`-mx-4 -mb-6 mt-4 max-md:pb-6 md:m-0 md:h-36 md:min-h-[144px] md:border-t-2 border-gray-300 dark:border-gray-700 ${
           questionState === 'correct'
-            ? 'bg-[#CEFEA8] dark:bg-slate-800'
+            ? 'border-[#CEFEA8] bg-[#CEFEA8] dark:bg-slate-800'
             : questionState === 'incorrect'
-            ? 'bg-[#FED6DD] dark:bg-slate-800'
-            : 'md:border-t-2 border-gray-300 dark:border-gray-700'
+            ? 'border-[#FED6DD] bg-[#FED6DD] dark:bg-slate-800'
+            : ''
         }`}
       >
         <div className="w-full h-full max-w-5xl mx-auto px-4 flex items-center">
@@ -164,12 +166,12 @@ const QuizPage = ({ quiz }) => {
             <div className="w-full flex flex-col md:flex-row justify-between md:items-center">
               {!questionState ? (
                 // Skip Button
-                // <SkipButton checkAnswer={checkAnswer} />
                 <Button
                   type="button"
-                  style="hidden md:inline-block text-sky-500 border-2 border-sky-500 bg-transparent hover:bg-gray-200 dark:hover:bg-slate-800"
+                  btnStyle="hidden md:flex justify-center items-center gap-2 text-sky-500 border-2 border-sky-500 bg-transparent hover:bg-gray-200 dark:hover:bg-slate-800"
                   onClick={() => checkAnswer('skip')}
                   title="Skip"
+                  icon={<BsFillSkipForwardFill className="w-6 h-6" />}
                 />
               ) : (
                 // Feedback Message
@@ -184,30 +186,34 @@ const QuizPage = ({ quiz }) => {
                 // Check Button
                 <Button
                   type="button"
-                  style={
-                    !selectedOption
-                      ? 'text-gray-500 bg-gray-300'
-                      : 'text-white dark:text-slate-800 bg-[#58CC02] dark:bg-lime-500 hover:bg-[#4CAD02] dark:hover:bg-lime-600'
-                  }
+                  btnStyle={`flex justify-center items-center gap-2
+                   ${
+                     !selectedOption
+                       ? 'text-gray-500 bg-gray-300'
+                       : 'text-white dark:text-slate-800 bg-[#58CC02] dark:bg-lime-500 hover:bg-[#4CAD02] dark:hover:bg-lime-600'
+                   }
+                      `}
                   onClick={() => checkAnswer(selectedOption)}
                   disabled={!selectedOption}
                   title="Check"
+                  icon={<HiCheck className="w-6 h-6" />}
                 />
               ) : (
                 // Next Button
                 <Button
                   type="button"
-                  style={`text-white dark:text-slate-800 ${
+                  btnStyle={`flex justify-center items-center gap-2 text-white dark:text-slate-800 ${
                     questionState === 'correct'
                       ? 'bg-[#58CC02] dark:bg-lime-500 hover:bg-[#4CAD02] dark:hover:bg-lime-600'
                       : 'bg-red-600 dark:bg-red-400 hover:bg-red-700 dark:hover:bg-red-500'
                   }`}
                   onClick={() => cycleNextQuestion()}
-                  title={
+                  title={!loading && 'Next'}
+                  icon={
                     loading ? (
                       <AiOutlineLoading className="text-white dark:text-slate-800 animate-spin h-6 w-6 mx-auto" />
                     ) : (
-                      'Next'
+                      <HiArrowRight className="w-5 h-5" />
                     )
                   }
                 />
@@ -215,14 +221,24 @@ const QuizPage = ({ quiz }) => {
             </div>
           )}
 
-          {/* Continue Button */}
           {quizComplete && (
-            <div className="w-full flex justify-end">
+            <div className="w-full flex justify-between gap-2">
+              {/* Try Again Button */}
               <Button
                 type="button"
-                style="text-white dark:text-slate-800 bg-[#58CC02] hover:bg-[#4CAD02]"
+                btnStyle="flex justify-center items-center gap-2 text-sky-500 border-2 border-sky-500 bg-transparent hover:bg-gray-200 dark:hover:bg-slate-800"
+                onClick={() => window.location.reload()}
+                title="Try Again"
+                icon={<BsArrowClockwise className="w-5 h-5 stroke-1" />}
+              />
+
+              {/* Continue Button */}
+              <Button
+                type="button"
+                btnStyle="flex justify-center items-center gap-2 text-white dark:text-slate-800 bg-[#58CC02] hover:bg-[#4CAD02]"
                 onClick={() => history.back()}
                 title="Continue"
+                icon={<HiArrowRight className="w-5 h-5" />}
               />
             </div>
           )}

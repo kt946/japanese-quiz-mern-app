@@ -1,8 +1,8 @@
-const Button = ({ type, style, onClick, disabled, title, icon }) => {
+const Button = ({ type, btnStyle, onClick, disabled, title, icon }) => {
   return (
     <button
       type={type}
-      className={`quiz-btn-style ${style}`}
+      className={`quiz-btn-style ${btnStyle}`}
       onClick={onClick}
       disabled={disabled}
     >
