@@ -46,7 +46,7 @@ class QuizGenerator {
    * Generates an array of answer options for a quiz question.
    * The options include the correct answer and three additional random choices.
    *
-   * @param {string | Array} correctAnswer - The correct answer for the question.
+   * @param {string} correctAnswer - The correct answer for the question.
    * @param {string} answerType - The type of answer ('romaji', 'readings', 'meanings', or defaulting to 'character').
    * @returns {Array} - A shuffled array containing the correct answer and three random choices.
    */
