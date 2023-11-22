@@ -1,5 +1,5 @@
 // This contains the routes for the app and additional styling for the app depending on logged in state and path
-import React from 'react';
+import { useEffect } from 'react';
 import { Header, Footer, Sidebar, MobileMenu } from '.';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
@@ -13,6 +13,13 @@ const MainSection = () => {
   const loggedIn = Auth.loggedIn();
   // returns true if locations includes /quiz
   const quizLocation = useLocation().pathname.includes('/quiz');
+  
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // Scroll to the top of the page on route change
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>
