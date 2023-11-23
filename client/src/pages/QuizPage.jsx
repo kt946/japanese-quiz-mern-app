@@ -120,8 +120,8 @@ const QuizPage = ({ quiz }) => {
         <div className="w-full h-full my-2 flex flex-col md:grid justify-center items-center md:content-center">
           <div className="w-full max-w-2xl md:w-[600px] h-full md:min-h-[450px] quiz-main-container gap-2 md:gap-6">
             <h1 className="font-bold text-xl sm:text-2xl md:text-3xl">
-              <span className="max-sm:block">{question.questionDirection}</span>{' '}
-              <span className="inline-flex">"{question.questionSubject}"</span>
+              <span>{question.questionDirection}</span>{' '}
+              <span>"{question.questionSubject}"</span>
             </h1>
             <div className="font-medium text-2xl sm:text-3xl md:text-4xl grid grid-cols-1 gap-2">
               {question.choices.map((choice) => (
