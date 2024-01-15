@@ -118,6 +118,7 @@ Sakura Study is built using a variety of technologies including:
 - [GraphQL](https://graphql.org/)
 - [JWT](https://jwt.io/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
 - [Hero Patterns](https://heropatterns.com/) - Background patterns
 - [Affinity Designer](https://affinity.serif.com/en-us/) -  Original logo and image designs by [kt946](https://github.com/kt946)
 
