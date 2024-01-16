@@ -16,8 +16,7 @@ const CompleteScreen = ({ quiz }) => {
       runFireworks();
       await animate('#complete-title', { y: 0 }, { duration: 0.4, delay: 1, ease: easeInOut, type: 'tween' });
       await animate('#divider', { opacity: 1, width: '100%' }, { delay: 0.2, ease: easeInOut });
-      await animate('.quiz-stat-container',{ opacity: 1, y: 0 },{ duration: 0.5, delay: stagger(0.3), ease: easeOut }
-      );
+      await animate('.quiz-stat-container',{ opacity: 1, y: 0 },{ duration: 0.5, delay: stagger(0.3), ease: easeOut });
     };
 
     playAnimations();
@@ -31,7 +30,7 @@ const CompleteScreen = ({ quiz }) => {
     // This div is the animation scope. It will be used to animate the entire component.
     <div
       ref={scope}
-      className="grow flex flex-col justify-center items-center text-center gap-8 overflow-hidden"
+      className="grow flex flex-col justify-center items-center text-center gap-8"
     >
       <h1
         id="complete-title"
