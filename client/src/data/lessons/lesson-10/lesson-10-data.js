@@ -240,79 +240,79 @@ const lesson_10_data = {
       unitContent: [
         {
           character: '住む',
-          readings: 'to live',
+          readings: 'すむ',
         },
         {
           character: 'お正月',
-          readings: 'New Year',
+          readings: 'おしょうがつ',
         },
         {
           character: '三年生',
-          readings: 'third-year student',
+          readings: 'さんねんせい',
         },
         {
           character: '来年',
-          readings: 'next year',
+          readings: 'らいねん',
         },
         {
           character: '今年',
-          readings: 'this year',
+          readings: 'ことし',
         },
         {
           character: '年',
-          readings: 'year',
+          readings: 'とし',
         },
         {
           character: '売る',
-          readings: 'to sell',
+          readings: 'うる',
         },
         {
           character: '買う',
-          readings: 'to buy',
+          readings: 'かう',
         },
         {
           character: '町',
-          readings: 'town',
+          readings: 'まち',
         },
         {
           character: '長い',
-          readings: 'long',
+          readings: 'ながい',
         },
         {
           character: '道',
-          readings: 'road',
+          readings: 'みち',
         },
         {
           character: '雪',
-          readings: 'snow',
+          readings: 'ゆき',
         },
         {
           character: '立つ',
-          readings: 'to stand',
+          readings: 'たつ',
         },
         {
           character: '自分',
-          readings: 'oneself',
+          readings: 'じぶん',
         },
         {
           character: '夜',
-          readings: 'night',
+          readings: 'よる',
         },
         {
           character: '朝',
-          readings: 'morning',
+          readings: 'あさ',
         },
         {
           character: '今朝',
-          readings: 'this morning',
+          readings: 'けさ',
         },
         {
           character: '持つ',
-          readings: 'to carry; to hold',
+          readings: 'もつ',
         },
         {
           character: '持ってくる',
-          readings: 'to bring',
+          readings: 'もってくる',
         },
       ],
     },
