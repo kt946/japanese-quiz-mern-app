@@ -6,8 +6,8 @@ const Button = ({ type, btnStyle, onClick, disabled, title, icon }) => {
       onClick={onClick}
       disabled={disabled}
     >
-      {title}
       {icon}
+      {title}
     </button>
   );
 };
