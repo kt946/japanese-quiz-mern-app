@@ -24,24 +24,7 @@ app.use(express.urlencoded({ extended: true })); // This sets up middleware to p
 app.use(express.json()); // This sets up middleware to parse incoming requests with JSON payloads
 
 if (process.env.NODE_ENV === 'production') {
-  const staticPath = path.join(new URL('../client/dist', import.meta.url).pathname);
-
-  // Serve static files
-  app.use(express.static(staticPath));
-
-  // Serve audio files with correct content type
-  app.use(
-    '/src/assets/sounds',
-    express.static(path.join(staticPath, 'src/assets/sounds'), {
-      setHeaders: (res, filePath) => {
-        if (filePath.endsWith('.wav')) {
-          res.set('Content-Type', 'audio/wav');
-        } else if (filePath.endsWith('.mp3')) {
-          res.set('Content-Type', 'audio/mp3');
-        }
-      },
-    })
-  );
+  app.use(express.static(path.join(new URL('../client/dist', import.meta.url).pathname)));
 }
 
 app.get('*', (req, res) => {

@@ -2,13 +2,14 @@ import { useEffect } from 'react';
 import { useAudio } from 'react-use';
 import { easeInOut, easeOut, stagger, useAnimate } from 'framer-motion';
 import { runFireworks } from '../utils/confetti';
+import finishSound from '../assets/finish.mp3';
 
 const CompleteScreen = ({ quiz }) => {
   // This uses the useAnimate hook from Framer Motion to create a new animation scope.
   const [scope, animate] = useAnimate();
 
   // This hook is used to play the finish audio when the component is mounted.
-  const [finishAudio] = useAudio({ src: '/src/assets/sounds/finish.mp3', autoPlay: true });
+  const [finishAudio] = useAudio({ src: finishSound, autoPlay: true });
 
   // This useEffect hook will run once the component is mounted.
   // It is used to control the animations.

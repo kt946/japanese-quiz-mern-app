@@ -12,12 +12,15 @@ import { useQuery, useMutation } from '@apollo/client';
 import { UPDATE_EXPERIENCE } from '../utils/mutations';
 import { QUERY_ME } from '../utils/queries';
 
+import correctSound from '../assets/correct.wav';
+import incorrectSound from '../assets/incorrect.wav';
+
 const QuizPage = ({ quiz }) => {
   if (!Auth.loggedIn()) return <Navigate to="/login" />;
 
   // This hook is used to play the correct and incorrect audio when the user answers a question.
-  const [correctAudio, _c, correctControls] = useAudio({ src: '/src/assets/sounds/correct.wav' });
-  const [incorrectAudio, _i, incorrectControls] = useAudio({ src: '/src/assets/sounds/incorrect.wav' });
+  const [correctAudio, _c, correctControls] = useAudio({ src: correctSound });
+  const [incorrectAudio, _i, incorrectControls] = useAudio({ src: incorrectSound });
 
   const [selectedOption, setSelectedOption] = useState(null);
   const [questionState, setQuestionState] = useState(null);
