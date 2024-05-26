@@ -86,7 +86,7 @@ const QuizPage = ({ quiz }) => {
   // Keyboard Event Listener to select an option and check the answer or cycle to the next question or continue
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === '1' || event.key === '2' || event.key === '3' || event.key === '4') {
+      if (!questionState && (event.key === '1' || event.key === '2' || event.key === '3' || event.key === '4')) {
         setSelectedOption(question.choices[event.key - 1]);
       } else if (event.key === 'Enter') {
         if (quizComplete) {
