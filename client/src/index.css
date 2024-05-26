@@ -144,6 +144,18 @@ html {
   @apply w-full px-3 py-2 bg-gray-800/30 hover:bg-gray-800/50 rounded-xl text-lg text-left text-shadow flex items-center;
 }
 
+.selected-choice {
+  @apply bg-sky-200 border-sky-400 dark:bg-sky-700
+}
+
+.correct-choice {
+  @apply bg-[#CEFEA8] text-[#4CAD02] border-lime-500 dark:bg-lime-500 dark:text-lime-900 dark:border-lime-900
+}
+
+.incorrect-choice {
+  @apply bg-[#FED6DD] text-red-500 border-red-300 dark:bg-red-400 dark:text-red-900 dark:border-red-900
+}
+
 /* Backgrounds Start */
 .hero-bg {
   background-image: url('./assets/waves.svg'), url('./assets/endless-clouds.svg');

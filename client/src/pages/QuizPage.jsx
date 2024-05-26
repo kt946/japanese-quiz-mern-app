@@ -138,10 +138,10 @@ const QuizPage = ({ quiz }) => {
                     type="button"
                     className={`w-full h-full p-2 md:py-3 rounded-xl border-2 ${
                       selectedOption === choice
-                        ? 'bg-sky-200 border-2 border-sky-400 dark:bg-sky-700'
+                        ? `selected-choice ${questionState === 'correct' && 'correct-choice'} ${questionState === 'incorrect' && 'incorrect-choice'}`
                         : `border-gray-300 dark:border-gray-700 ${
                             !questionState && 'hover:bg-gray-200 dark:hover:bg-slate-800'
-                          }`
+                          } ${questionState === 'incorrect' && choice === question.answer && 'correct-choice dark:border-lime-900'}`
                     }`}
                     onClick={() => setSelectedOption(choice)}
                     disabled={questionState}
