@@ -61,7 +61,7 @@ Future features include:
 To use Sakura Study, follow these steps:
 
 1. Sign up and create an account.
-2. Navigate to the Dashboard to practice vocabulary and phrases from your lessons.
+2. Navigate to the Lessons page to practice vocabulary and phrases from your lessons.
 3. Go to the Characters page to study and practice hiragana, katakana, and kanji from your lessons.
 4. Check the Leaderboards to track of your progress and see other users' progress.
 5. Access the Profile page to view your statistics and progress. As of now, it only tracks your total xp.

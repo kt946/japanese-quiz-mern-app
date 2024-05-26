@@ -1,4 +1,4 @@
-import React from 'react';
+import { Navigate } from 'react-router-dom';
 import Auth from '../utils/auth';
 import { AiOutlineLoading } from 'react-icons/ai';
 
@@ -7,9 +7,7 @@ import { QUERY_USERS } from '../utils/queries';
 
 const Leaderboards = () => {
   // If the user is not logged in, redirect to the login page
-  if (!Auth.loggedIn()) {
-    return <Navigate to="/login" />;
-  }
+  if (!Auth.loggedIn()) return <Navigate to="/login" />;
 
   // get the user data from the server
   const { loading, data } = useQuery(QUERY_USERS);

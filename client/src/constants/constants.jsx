@@ -5,8 +5,8 @@ import { FaGithub } from 'react-icons/fa';
 
 const sidebarNavItems = [
   {
-    title: 'Dashboard',
-    path: '/dashboard',
+    title: 'Lessons',
+    path: '/lessons',
     icon: <HiOutlineHome className="sidebar-btn-icon" />,
   },
   {

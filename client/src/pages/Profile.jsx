@@ -1,4 +1,4 @@
-import React from 'react';
+import { Navigate } from 'react-router-dom';
 import Auth from '../utils/auth';
 
 import { useQuery } from '@apollo/client';
@@ -7,9 +7,7 @@ import { AiOutlineLoading } from 'react-icons/ai';
 
 const Profile = () => {
   // If the user is not logged in, redirect to the login page
-  if (!Auth.loggedIn()) {
-    return <Navigate to="/login" />;
-  }
+  if (!Auth.loggedIn()) return <Navigate to="/login" />;
 
   // get the user's data from the server
   const { data, loading } = useQuery(QUERY_ME);

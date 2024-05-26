@@ -1,4 +1,3 @@
-import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
@@ -7,11 +6,9 @@ import Auth from '../utils/auth';
 import { LessonContainer } from '../components';
 import { lessonData } from '../data';
 
-const Dashboard = () => {
+const Lessons = () => {
   // If the user is not logged in, redirect to the login page
-  if (!Auth.loggedIn()) {
-    return <Navigate to="/login" />;
-  }
+  if (!Auth.loggedIn()) return <Navigate to="/login" />;
 
   // get the user's data from the server
   const { data } = useQuery(QUERY_ME);
@@ -20,10 +17,10 @@ const Dashboard = () => {
 
   return (
     <section
-      id="dashboard"
+      id="lessons"
       className="w-full min-h-screen p-4 md:p-8"
     >
-      <h1 className="h1-style mb-8">Dashboard</h1>
+      <h1 className="h1-style mb-8">Lessons</h1>
       {/* Banner */}
       <div className="mb-8 banner-container-style text-white text-shadow bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="relative p-8 z-10">
@@ -40,8 +37,7 @@ const Dashboard = () => {
         <br />
         <p>Select an exercise from a lesson to begin a quiz.</p>
       </div>
-
-      <h3 className="font-bold mb-4 text-xl">Lessons</h3>
+      
       {/* Lessons */}
       <div className="flex flex-col gap-4">
         {lessonData.map((lesson) => (
@@ -55,4 +51,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Lessons;

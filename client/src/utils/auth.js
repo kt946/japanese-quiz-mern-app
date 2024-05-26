@@ -39,8 +39,8 @@ class AuthService {
     // saves token to localStorage
     localStorage.setItem('id_token', idToken);
 
-    // redirect user to dashboard
-    window.location.assign('/dashboard');
+    // redirect user to lessons
+    window.location.assign('/lessons');
   }
 
   logout() {

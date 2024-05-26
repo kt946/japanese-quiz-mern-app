@@ -10,10 +10,7 @@ import { ADD_USER } from '../utils/mutations'; // import the ADD_USER mutation
 import Auth from '../utils/auth'; // import the Auth utility function
 
 const Signup = () => {
-  const loggedIn = Auth.loggedIn();
-  if (loggedIn) {
-    return <Navigate to="/dashboard" />;
-  }
+  if (Auth.loggedIn()) return <Navigate to="/lessons" />;
 
   const [showPassword, setShowPassword] = useState(false); // state for toggling password visibility
   const [addUser, { loading, error }] = useMutation(ADD_USER); // use the useMutation hook to execute the ADD_USER mutation

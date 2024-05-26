@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import Auth from '../utils/auth';
 import { HiX } from 'react-icons/hi';
 import { AiOutlineLoading } from 'react-icons/ai';
-import { BsFillSkipForwardFill, BsArrowClockwise } from 'react-icons/bs';
-import { HiCheck, HiArrowRight } from 'react-icons/hi';
 
 import { FeedbackMessage, Button } from '../components';
 import { CompleteScreen } from './';
@@ -14,9 +12,7 @@ import { UPDATE_EXPERIENCE } from '../utils/mutations';
 import { QUERY_ME } from '../utils/queries';
 
 const QuizPage = ({ quiz }) => {
-  if (!Auth.loggedIn()) {
-    return <Navigate to="/login" />;
-  }
+  if (!Auth.loggedIn()) return <Navigate to="/login" />;
 
   const [selectedOption, setSelectedOption] = useState(null);
   const [questionState, setQuestionState] = useState(null);

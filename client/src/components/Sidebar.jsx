@@ -25,7 +25,7 @@ const Sidebar = () => {
     >
       {/* Logo */}
       <NavLink
-        to="/dashboard"
+        to="/lessons"
         className="w-fit xl:px-4 flex items-center gap-3 hover:opacity-70"
       >
         <img
