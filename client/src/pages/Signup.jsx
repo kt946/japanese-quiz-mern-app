@@ -160,7 +160,7 @@ const Signup = () => {
           Already have an account?{' '}
           <Link
             to="/login"
-            className="font-bold text-primary hover:text-primary-shade hover:underline"
+            className="font-bold text-red-500 hover:text-primary-shade hover:underline"
           >
             Log in
           </Link>

@@ -64,7 +64,7 @@ const Header = () => {
           </button>
           <Link
             to="/login"
-            className="py-2 px-4 hover:text-primary-shade"
+            className="py-2 px-4 hover:text-primary-shade hover:bg-slate-100 rounded-xl"
           >
             Log in
           </Link>
