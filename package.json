@@ -21,5 +21,8 @@
   "homepage": "https://github.com/kt946/japanese-quiz-mern-app#readme",
   "devDependencies": {
     "concurrently": "^8.0.1"
+  },
+  "dependencies": {
+    "react-use": "^17.5.0"
   }
 }
