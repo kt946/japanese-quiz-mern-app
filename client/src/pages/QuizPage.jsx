@@ -172,7 +172,6 @@ const QuizPage = ({ quiz }) => {
                   btnStyle="hidden md:flex justify-center items-center gap-2 text-sky-500 border-2 border-sky-500 bg-transparent hover:bg-gray-200 dark:hover:bg-slate-800"
                   onClick={() => checkAnswer('skip')}
                   title="Skip"
-                  icon={<BsFillSkipForwardFill className="w-6 h-6" />}
                 />
               ) : (
                 // Feedback Message
@@ -197,7 +196,6 @@ const QuizPage = ({ quiz }) => {
                   onClick={() => checkAnswer(selectedOption)}
                   disabled={!selectedOption}
                   title="Check"
-                  icon={<HiCheck className="w-6 h-6" />}
                 />
               ) : (
                 // Next Button
@@ -210,13 +208,7 @@ const QuizPage = ({ quiz }) => {
                   }`}
                   onClick={() => cycleNextQuestion()}
                   title={!loading && 'Next'}
-                  icon={
-                    loading ? (
-                      <AiOutlineLoading className="text-white dark:text-slate-800 animate-spin h-6 w-6 mx-auto" />
-                    ) : (
-                      <HiArrowRight className="w-5 h-5" />
-                    )
-                  }
+                  icon={loading && <AiOutlineLoading className="text-white dark:text-slate-800 animate-spin h-6 w-6 mx-auto" />}
                 />
               )}
             </div>
@@ -230,7 +222,6 @@ const QuizPage = ({ quiz }) => {
                 btnStyle="flex justify-center items-center gap-2 text-sky-500 border-2 border-sky-500 bg-transparent hover:bg-gray-200 dark:hover:bg-slate-800"
                 onClick={() => window.location.reload()}
                 title="Try Again"
-                icon={<BsArrowClockwise className="w-5 h-5 stroke-1" />}
               />
 
               {/* Continue Button */}
@@ -239,7 +230,6 @@ const QuizPage = ({ quiz }) => {
                 btnStyle="flex justify-center items-center gap-2 text-white dark:text-slate-800 bg-[#58CC02] hover:bg-[#4CAD02]"
                 onClick={() => history.back()}
                 title="Continue"
-                icon={<HiArrowRight className="w-5 h-5" />}
               />
             </div>
           )}
