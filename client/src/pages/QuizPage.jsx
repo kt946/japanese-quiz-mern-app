@@ -15,12 +15,9 @@ import { QUERY_ME } from '../utils/queries';
 const QuizPage = ({ quiz }) => {
   if (!Auth.loggedIn()) return <Navigate to="/login" />;
 
-  // Get the url of the origin
-  const path = window.location.origin;
-
   // This hook is used to play the correct and incorrect audio when the user answers a question.
-  const [correctAudio, _c, correctControls] = useAudio({ src: `${path}/src/assets/sounds/correct.wav` });
-  const [incorrectAudio, _i, incorrectControls] = useAudio({ src: `${path}/src/assets/sounds/incorrect.wav` });
+  const [correctAudio, _c, correctControls] = useAudio({ src: '/src/assets/sounds/correct.wav' });
+  const [incorrectAudio, _i, incorrectControls] = useAudio({ src: '/src/assets/sounds/incorrect.wav' });
 
   const [selectedOption, setSelectedOption] = useState(null);
   const [questionState, setQuestionState] = useState(null);

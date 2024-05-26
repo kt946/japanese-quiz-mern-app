@@ -7,11 +7,8 @@ const CompleteScreen = ({ quiz }) => {
   // This uses the useAnimate hook from Framer Motion to create a new animation scope.
   const [scope, animate] = useAnimate();
 
-  // Get the url of the origin
-  const path = window.location.origin;
-
   // This hook is used to play the finish audio when the component is mounted.
-  const [finishAudio] = useAudio({ src: `${path}/src/assets/sounds/finish.mp3`, autoPlay: true });
+  const [finishAudio] = useAudio({ src: '/src/assets/sounds/finish.mp3', autoPlay: true });
 
   // This useEffect hook will run once the component is mounted.
   // It is used to control the animations.
