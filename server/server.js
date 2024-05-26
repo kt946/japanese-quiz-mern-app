@@ -24,7 +24,17 @@ app.use(express.urlencoded({ extended: true })); // This sets up middleware to p
 app.use(express.json()); // This sets up middleware to parse incoming requests with JSON payloads
 
 if (process.env.NODE_ENV === 'production') {
-app.use(express.static(path.join(new URL('../client/dist', import.meta.url).pathname)));
+  app.use(
+    express.static(path.join(new URL('../client/dist', import.meta.url).pathname), {
+      setHeaders: (res, path) => {
+        if (path.endsWith('.wav')) {
+          res.set('Content-Type', 'audio/wav');
+        } else if (path.endsWith('.mp3')) {
+          res.set('Content-Type', 'audio/mp3');
+        }
+      },
+    })
+  );
 }
 
 app.get('*', (req, res) => {
