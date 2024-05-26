@@ -1,4 +1,4 @@
-import { useState, useTransition } from 'react';
+import { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAudio } from 'react-use';
 import Auth from '../utils/auth';
@@ -86,6 +86,29 @@ const QuizPage = ({ quiz }) => {
     }
   };
 
+  // Keyboard Event Listener to select an option and check the answer or cycle to the next question or continue
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === '1' || event.key === '2' || event.key === '3' || event.key === '4') {
+        setSelectedOption(question.choices[event.key - 1]);
+      } else if (event.key === 'Enter') {
+        if (quizComplete) {
+          window.history.back();
+        } else if (!quizComplete && !questionState && selectedOption) {
+          checkAnswer(selectedOption);
+        } else if (!quizComplete && questionState) {
+          cycleNextQuestion();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedOption, question, questionState]);
+
   return (
     <>
       {correctAudio}
@@ -132,16 +155,23 @@ const QuizPage = ({ quiz }) => {
                 <span>{question.questionDirection}</span> <span>"{question.questionSubject}"</span>
               </h1>
               <div className="font-medium text-2xl sm:text-3xl md:text-4xl grid grid-cols-1 gap-2">
-                {question.choices.map((choice) => (
+                {question.choices.map((choice, index) => (
                   <button
                     key={`id-${choice}`}
+                    id={index + 1}
                     type="button"
                     className={`w-full h-full p-2 md:py-3 rounded-xl border-2 ${
                       selectedOption === choice
-                        ? `selected-choice ${questionState === 'correct' && 'correct-choice'} ${questionState === 'incorrect' && 'incorrect-choice'}`
+                        ? `selected-choice ${questionState === 'correct' && 'correct-choice'} ${
+                            questionState === 'incorrect' && 'incorrect-choice'
+                          }`
                         : `border-gray-300 dark:border-gray-700 ${
                             !questionState && 'hover:bg-gray-200 dark:hover:bg-slate-800'
-                          } ${questionState === 'incorrect' && choice === question.answer && 'correct-choice dark:border-lime-900'}`
+                          } ${
+                            questionState === 'incorrect' &&
+                            choice === question.answer &&
+                            'correct-choice dark:border-lime-900'
+                          }`
                     }`}
                     onClick={() => setSelectedOption(choice)}
                     disabled={questionState}
