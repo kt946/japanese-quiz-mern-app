@@ -141,7 +141,7 @@ html {
 }
 
 .exercise-style {
-  @apply w-full p-3 sm:p-4 bg-gray-800/30 hover:bg-gray-800/50 rounded-xl text-left text-shadow flex;
+  @apply w-full px-3 py-2 bg-gray-800/30 hover:bg-gray-800/50 rounded-xl text-lg text-left text-shadow flex items-center;
 }
 
 /* Backgrounds Start */
