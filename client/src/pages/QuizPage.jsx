@@ -43,6 +43,17 @@ const QuizPage = ({ quiz }) => {
     }
   };
 
+  // returns the style for the selected choice based on certain conditions
+  const setChoiceStyle = (selectedOption) => {
+    if (questionState === 'correct' && selectedOption === question.answer) {
+      return 'correct-choice';
+    } else if (questionState === 'incorrect' && selectedOption === question.answer) {
+      return 'correct-choice';
+    } else if (questionState === 'incorrect') {
+      return 'incorrect-choice';
+    }
+  };
+
   // cycle to next question, or complete quiz
   const cycleNextQuestion = () => {
     if (progress < 100) {
@@ -162,9 +173,7 @@ const QuizPage = ({ quiz }) => {
                     type="button"
                     className={`w-full h-full p-2 md:py-3 rounded-xl border-2 ${
                       selectedOption === choice
-                        ? `selected-choice ${questionState === 'correct' && 'correct-choice'} ${
-                            questionState === 'incorrect' && 'incorrect-choice'
-                          }`
+                        ? `selected-choice ${setChoiceStyle(selectedOption)}`
                         : `border-gray-300 dark:border-gray-700 ${
                             !questionState && 'hover:bg-gray-200 dark:hover:bg-slate-800'
                           } ${
