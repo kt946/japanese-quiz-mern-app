@@ -45,9 +45,7 @@ const QuizPage = ({ quiz }) => {
 
   // returns the style for the selected choice based on certain conditions
   const setChoiceStyle = (selectedOption) => {
-    if (questionState === 'correct' && selectedOption === question.answer) {
-      return 'correct-choice';
-    } else if (questionState === 'incorrect' && selectedOption === question.answer) {
+    if (questionState && selectedOption === question.answer) {
       return 'correct-choice';
     } else if (questionState === 'incorrect') {
       return 'incorrect-choice';
