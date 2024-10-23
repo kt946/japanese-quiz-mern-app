@@ -138,8 +138,6 @@ Contributions to Sakura Study are welcome and encouraged! If you'd like to contr
 
 - [Link to deployed application](https://sakurastudy.herokuapp.com)
 
-- [Alternate link to deployed application](https://sakurastudy.onrender.com/)
-
 - [Link to GitHub repository](https://github.com/kt946/japanese-quiz-mern-app)
 
 ## License
